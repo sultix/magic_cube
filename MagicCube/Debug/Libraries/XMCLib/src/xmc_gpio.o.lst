@@ -1,0 +1,247 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "xmc_gpio.c"
+  16              	 .text
+  17              	.Ltext0:
+ 219              	 .section .text.XMC_GPIO_SetMode,"ax",%progbits
+ 220              	 .align 2
+ 225              	 .global XMC_GPIO_SetMode
+ 226              	 .code 16
+ 227              	 .thumb_func
+ 229              	XMC_GPIO_SetMode:
+ 230              	 .stabd 46,0,0
+   1:../Libraries/XMCLib/src/xmc_gpio.c **** /**
+   2:../Libraries/XMCLib/src/xmc_gpio.c ****  * @file xmc_gpio.c
+   3:../Libraries/XMCLib/src/xmc_gpio.c ****  * @date 2015-06-20
+   4:../Libraries/XMCLib/src/xmc_gpio.c ****  *
+   5:../Libraries/XMCLib/src/xmc_gpio.c ****  * @cond
+   6:../Libraries/XMCLib/src/xmc_gpio.c ****   *************************************************************************************************
+   7:../Libraries/XMCLib/src/xmc_gpio.c ****  * XMClib v2.1.8 - XMC Peripheral Driver Library 
+   8:../Libraries/XMCLib/src/xmc_gpio.c ****  *
+   9:../Libraries/XMCLib/src/xmc_gpio.c ****  * Copyright (c) 2015-2016, Infineon Technologies AG
+  10:../Libraries/XMCLib/src/xmc_gpio.c ****  * All rights reserved.                        
+  11:../Libraries/XMCLib/src/xmc_gpio.c ****  *                                             
+  12:../Libraries/XMCLib/src/xmc_gpio.c ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:../Libraries/XMCLib/src/xmc_gpio.c ****  * following conditions are met:   
+  14:../Libraries/XMCLib/src/xmc_gpio.c ****  *                                                                              
+  15:../Libraries/XMCLib/src/xmc_gpio.c ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:../Libraries/XMCLib/src/xmc_gpio.c ****  * disclaimer.                        
+  17:../Libraries/XMCLib/src/xmc_gpio.c ****  * 
+  18:../Libraries/XMCLib/src/xmc_gpio.c ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:../Libraries/XMCLib/src/xmc_gpio.c ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:../Libraries/XMCLib/src/xmc_gpio.c ****  * 
+  21:../Libraries/XMCLib/src/xmc_gpio.c ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:../Libraries/XMCLib/src/xmc_gpio.c ****  * products derived from this software without specific prior written permission.                  
+  23:../Libraries/XMCLib/src/xmc_gpio.c ****  *                                                                              
+  24:../Libraries/XMCLib/src/xmc_gpio.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:../Libraries/XMCLib/src/xmc_gpio.c ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:../Libraries/XMCLib/src/xmc_gpio.c ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:../Libraries/XMCLib/src/xmc_gpio.c ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:../Libraries/XMCLib/src/xmc_gpio.c ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:../Libraries/XMCLib/src/xmc_gpio.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:../Libraries/XMCLib/src/xmc_gpio.c ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:../Libraries/XMCLib/src/xmc_gpio.c ****  *                                                                              
+  32:../Libraries/XMCLib/src/xmc_gpio.c ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:../Libraries/XMCLib/src/xmc_gpio.c ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:../Libraries/XMCLib/src/xmc_gpio.c ****  **************************************************************************************************
+  35:../Libraries/XMCLib/src/xmc_gpio.c ****  *
+  36:../Libraries/XMCLib/src/xmc_gpio.c ****  * Change History
+  37:../Libraries/XMCLib/src/xmc_gpio.c ****  * --------------
+  38:../Libraries/XMCLib/src/xmc_gpio.c ****  *
+  39:../Libraries/XMCLib/src/xmc_gpio.c ****  * 2015-02-20:
+  40:../Libraries/XMCLib/src/xmc_gpio.c ****  *     - Initial draft <br>
+  41:../Libraries/XMCLib/src/xmc_gpio.c ****  *      
+  42:../Libraries/XMCLib/src/xmc_gpio.c ****  * 2015-06-20:
+  43:../Libraries/XMCLib/src/xmc_gpio.c ****  *     - Removed version macros and declaration of GetDriverVersion API
+  44:../Libraries/XMCLib/src/xmc_gpio.c ****  *
+  45:../Libraries/XMCLib/src/xmc_gpio.c ****  * @endcond
+  46:../Libraries/XMCLib/src/xmc_gpio.c ****  *
+  47:../Libraries/XMCLib/src/xmc_gpio.c ****  */
+  48:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  49:../Libraries/XMCLib/src/xmc_gpio.c **** /*******************************************************************************
+  50:../Libraries/XMCLib/src/xmc_gpio.c ****  * HEADER FILES
+  51:../Libraries/XMCLib/src/xmc_gpio.c ****  *******************************************************************************/
+  52:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  53:../Libraries/XMCLib/src/xmc_gpio.c **** #include <xmc_gpio.h>
+  54:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  55:../Libraries/XMCLib/src/xmc_gpio.c **** /*******************************************************************************
+  56:../Libraries/XMCLib/src/xmc_gpio.c ****  * MACROS
+  57:../Libraries/XMCLib/src/xmc_gpio.c ****  *******************************************************************************/
+  58:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  59:../Libraries/XMCLib/src/xmc_gpio.c **** #define PORT_HWSEL_Msk PORT0_HWSEL_HW0_Msk
+  60:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  61:../Libraries/XMCLib/src/xmc_gpio.c **** /*******************************************************************************
+  62:../Libraries/XMCLib/src/xmc_gpio.c ****  * API IMPLEMENTATION
+  63:../Libraries/XMCLib/src/xmc_gpio.c ****  *******************************************************************************/
+  64:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  65:../Libraries/XMCLib/src/xmc_gpio.c **** void XMC_GPIO_SetMode(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_MODE_t mode)
+  66:../Libraries/XMCLib/src/xmc_gpio.c **** {
+ 232              	.LM0:
+ 233              	.LFBB1:
+ 234 0000 90B5     	 push {r4,r7,lr}
+ 235 0002 83B0     	 sub sp,sp,#12
+ 236 0004 00AF     	 add r7,sp,#0
+ 237 0006 7860     	 str r0,[r7,#4]
+ 238 0008 081C     	 mov r0,r1
+ 239 000a 111C     	 mov r1,r2
+ 240 000c FB1C     	 add r3,r7,#3
+ 241 000e 021C     	 add r2,r0,#0
+ 242 0010 1A70     	 strb r2,[r3]
+ 243 0012 BB1C     	 add r3,r7,#2
+ 244 0014 0A1C     	 add r2,r1,#0
+ 245 0016 1A70     	 strb r2,[r3]
+  67:../Libraries/XMCLib/src/xmc_gpio.c ****   XMC_ASSERT("XMC_GPIO_SetMode: Invalid port", XMC_GPIO_CHECK_PORT(port));
+  68:../Libraries/XMCLib/src/xmc_gpio.c ****   XMC_ASSERT("XMC_GPIO_SetMode: Invalid mode", XMC_GPIO_IsModeValid(mode));
+  69:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  70:../Libraries/XMCLib/src/xmc_gpio.c ****   port->IOCR[(uint32_t)pin >> 2U] &= ~(uint32_t)((uint32_t)PORT_IOCR_PC_Msk << ((uint32_t)PORT_IOCR
+ 247              	.LM1:
+ 248 0018 FB1C     	 add r3,r7,#3
+ 249 001a 1B78     	 ldrb r3,[r3]
+ 250 001c 9B08     	 lsr r3,r3,#2
+ 251 001e DBB2     	 uxtb r3,r3
+ 252 0020 181C     	 mov r0,r3
+ 253 0022 FB1C     	 add r3,r7,#3
+ 254 0024 1B78     	 ldrb r3,[r3]
+ 255 0026 9B08     	 lsr r3,r3,#2
+ 256 0028 DBB2     	 uxtb r3,r3
+ 257 002a 1A1C     	 mov r2,r3
+ 258 002c 7B68     	 ldr r3,[r7,#4]
+ 259 002e 0432     	 add r2,r2,#4
+ 260 0030 9200     	 lsl r2,r2,#2
+ 261 0032 D358     	 ldr r3,[r2,r3]
+ 262 0034 FA1C     	 add r2,r7,#3
+ 263 0036 1278     	 ldrb r2,[r2]
+ 264 0038 0321     	 mov r1,#3
+ 265 003a 0A40     	 and r2,r1
+ 266 003c D200     	 lsl r2,r2,#3
+ 267 003e 111C     	 mov r1,r2
+ 268 0040 F822     	 mov r2,#248
+ 269 0042 8A40     	 lsl r2,r2,r1
+ 270 0044 D243     	 mvn r2,r2
+ 271 0046 1A40     	 and r2,r3
+ 272 0048 111C     	 mov r1,r2
+ 273 004a 7B68     	 ldr r3,[r7,#4]
+ 274 004c 021D     	 add r2,r0,#4
+ 275 004e 9200     	 lsl r2,r2,#2
+ 276 0050 D150     	 str r1,[r2,r3]
+  71:../Libraries/XMCLib/src/xmc_gpio.c ****   port->IOCR[(uint32_t)pin >> 2U] |= (uint32_t)mode << ((uint32_t)PORT_IOCR_PC_Size * ((uint32_t)pi
+ 278              	.LM2:
+ 279 0052 FB1C     	 add r3,r7,#3
+ 280 0054 1B78     	 ldrb r3,[r3]
+ 281 0056 9B08     	 lsr r3,r3,#2
+ 282 0058 DBB2     	 uxtb r3,r3
+ 283 005a 1C1C     	 mov r4,r3
+ 284 005c FB1C     	 add r3,r7,#3
+ 285 005e 1B78     	 ldrb r3,[r3]
+ 286 0060 9B08     	 lsr r3,r3,#2
+ 287 0062 DBB2     	 uxtb r3,r3
+ 288 0064 1A1C     	 mov r2,r3
+ 289 0066 7B68     	 ldr r3,[r7,#4]
+ 290 0068 0432     	 add r2,r2,#4
+ 291 006a 9200     	 lsl r2,r2,#2
+ 292 006c D258     	 ldr r2,[r2,r3]
+ 293 006e BB1C     	 add r3,r7,#2
+ 294 0070 1B78     	 ldrb r3,[r3]
+ 295 0072 F91C     	 add r1,r7,#3
+ 296 0074 0978     	 ldrb r1,[r1]
+ 297 0076 0320     	 mov r0,#3
+ 298 0078 0140     	 and r1,r0
+ 299 007a C900     	 lsl r1,r1,#3
+ 300 007c 8B40     	 lsl r3,r3,r1
+ 301 007e 1A43     	 orr r2,r3
+ 302 0080 111C     	 mov r1,r2
+ 303 0082 7B68     	 ldr r3,[r7,#4]
+ 304 0084 221D     	 add r2,r4,#4
+ 305 0086 9200     	 lsl r2,r2,#2
+ 306 0088 D150     	 str r1,[r2,r3]
+  72:../Libraries/XMCLib/src/xmc_gpio.c **** }
+ 308              	.LM3:
+ 309 008a BD46     	 mov sp,r7
+ 310 008c 03B0     	 add sp,sp,#12
+ 311              	 
+ 312 008e 90BD     	 pop {r4,r7,pc}
+ 314              	.Lscope1:
+ 316              	 .stabd 78,0,0
+ 317              	 .section .text.XMC_GPIO_SetHardwareControl,"ax",%progbits
+ 318              	 .align 2
+ 323              	 .global XMC_GPIO_SetHardwareControl
+ 324              	 .code 16
+ 325              	 .thumb_func
+ 327              	XMC_GPIO_SetHardwareControl:
+ 328              	 .stabd 46,0,0
+  73:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  74:../Libraries/XMCLib/src/xmc_gpio.c **** void XMC_GPIO_SetHardwareControl(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_HWC
+  75:../Libraries/XMCLib/src/xmc_gpio.c **** {
+ 330              	.LM4:
+ 331              	.LFBB2:
+ 332 0000 80B5     	 push {r7,lr}
+ 333 0002 82B0     	 sub sp,sp,#8
+ 334 0004 00AF     	 add r7,sp,#0
+ 335 0006 7860     	 str r0,[r7,#4]
+ 336 0008 081C     	 mov r0,r1
+ 337 000a 111C     	 mov r1,r2
+ 338 000c FB1C     	 add r3,r7,#3
+ 339 000e 021C     	 add r2,r0,#0
+ 340 0010 1A70     	 strb r2,[r3]
+ 341 0012 BB1C     	 add r3,r7,#2
+ 342 0014 0A1C     	 add r2,r1,#0
+ 343 0016 1A70     	 strb r2,[r3]
+  76:../Libraries/XMCLib/src/xmc_gpio.c ****   XMC_ASSERT("XMC_GPIO_SetHardwareControl: Invalid port", XMC_GPIO_CHECK_PORT(port));
+  77:../Libraries/XMCLib/src/xmc_gpio.c ****   XMC_ASSERT("XMC_GPIO_SetHardwareControl: Invalid hwctrl", XMC_GPIO_CHECK_HWCTRL(hwctrl));
+  78:../Libraries/XMCLib/src/xmc_gpio.c **** 
+  79:../Libraries/XMCLib/src/xmc_gpio.c ****   port->HWSEL &= ~(uint32_t)((uint32_t)PORT_HWSEL_Msk << ((uint32_t)pin << 1U));
+ 345              	.LM5:
+ 346 0018 7B68     	 ldr r3,[r7,#4]
+ 347 001a 5B6F     	 ldr r3,[r3,#116]
+ 348 001c FA1C     	 add r2,r7,#3
+ 349 001e 1278     	 ldrb r2,[r2]
+ 350 0020 5200     	 lsl r2,r2,#1
+ 351 0022 111C     	 mov r1,r2
+ 352 0024 0322     	 mov r2,#3
+ 353 0026 8A40     	 lsl r2,r2,r1
+ 354 0028 D243     	 mvn r2,r2
+ 355 002a 1A40     	 and r2,r3
+ 356 002c 7B68     	 ldr r3,[r7,#4]
+ 357 002e 5A67     	 str r2,[r3,#116]
+  80:../Libraries/XMCLib/src/xmc_gpio.c ****   port->HWSEL |= (uint32_t)hwctrl << ((uint32_t)pin << 1U);
+ 359              	.LM6:
+ 360 0030 7B68     	 ldr r3,[r7,#4]
+ 361 0032 5A6F     	 ldr r2,[r3,#116]
+ 362 0034 BB1C     	 add r3,r7,#2
+ 363 0036 1B78     	 ldrb r3,[r3]
+ 364 0038 F91C     	 add r1,r7,#3
+ 365 003a 0978     	 ldrb r1,[r1]
+ 366 003c 4900     	 lsl r1,r1,#1
+ 367 003e 8B40     	 lsl r3,r3,r1
+ 368 0040 1A43     	 orr r2,r3
+ 369 0042 7B68     	 ldr r3,[r7,#4]
+ 370 0044 5A67     	 str r2,[r3,#116]
+  81:../Libraries/XMCLib/src/xmc_gpio.c **** }
+ 372              	.LM7:
+ 373 0046 BD46     	 mov sp,r7
+ 374 0048 02B0     	 add sp,sp,#8
+ 375              	 
+ 376 004a 80BD     	 pop {r7,pc}
+ 378              	.Lscope2:
+ 380              	 .stabd 78,0,0
+ 381              	 .text
+ 383              	.Letext0:
+ 384              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 xmc_gpio.c
+    {standard input}:220    .text.XMC_GPIO_SetMode:00000000 $t
+    {standard input}:229    .text.XMC_GPIO_SetMode:00000000 XMC_GPIO_SetMode
+    {standard input}:318    .text.XMC_GPIO_SetHardwareControl:00000000 $t
+    {standard input}:327    .text.XMC_GPIO_SetHardwareControl:00000000 XMC_GPIO_SetHardwareControl
+
+NO UNDEFINED SYMBOLS

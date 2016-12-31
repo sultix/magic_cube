@@ -1,0 +1,249 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "PinBase.cpp"
+  16              	 .text
+  17              	.Ltext0:
+ 240              	 .section .text._ZN7PinBaseC2EPVmm,"ax",%progbits
+ 241              	 .align 2
+ 246              	 .global _ZN7PinBaseC2EPVmm
+ 247              	 .code 16
+ 248              	 .thumb_func
+ 250              	_ZN7PinBaseC2EPVmm:
+ 251              	 .stabd 46,0,0
+   1:../hal/PinBase.cpp **** /*
+   2:../hal/PinBase.cpp ****  * PinBase.cpp
+   3:../hal/PinBase.cpp ****  *
+   4:../hal/PinBase.cpp ****  */
+   5:../hal/PinBase.cpp **** 
+   6:../hal/PinBase.cpp **** #include <hal/PinBase.h>
+   7:../hal/PinBase.cpp **** 
+   8:../hal/PinBase.cpp **** PinBase::PinBase(volatile uint32_t* port, uint32_t pin) : port_(port), pin_(pin) {
+ 253              	.LM0:
+ 254              	.LFBB1:
+ 255 0000 80B5     	 push {r7,lr}
+ 256 0002 84B0     	 sub sp,sp,#16
+ 257 0004 00AF     	 add r7,sp,#0
+ 258 0006 F860     	 str r0,[r7,#12]
+ 259 0008 B960     	 str r1,[r7,#8]
+ 260 000a 7A60     	 str r2,[r7,#4]
+ 261              	.LBB2:
+ 263              	.LM1:
+ 264 000c FB68     	 ldr r3,[r7,#12]
+ 265 000e 064A     	 ldr r2,.L4
+ 266 0010 1A60     	 str r2,[r3]
+ 267 0012 FB68     	 ldr r3,[r7,#12]
+ 268 0014 BA68     	 ldr r2,[r7,#8]
+ 269 0016 5A60     	 str r2,[r3,#4]
+ 270 0018 FB68     	 ldr r3,[r7,#12]
+ 271 001a 7A68     	 ldr r2,[r7,#4]
+ 272 001c 9A60     	 str r2,[r3,#8]
+ 273              	.LBE2:
+   9:../hal/PinBase.cpp **** 
+  10:../hal/PinBase.cpp **** }
+ 275              	.LM2:
+ 276 001e FB68     	 ldr r3,[r7,#12]
+ 277 0020 181C     	 mov r0,r3
+ 278 0022 BD46     	 mov sp,r7
+ 279 0024 04B0     	 add sp,sp,#16
+ 280              	 
+ 281 0026 80BD     	 pop {r7,pc}
+ 282              	.L5:
+ 283              	 .align 2
+ 284              	.L4:
+ 285 0028 08000000 	 .word _ZTV7PinBase+8
+ 287              	.Lscope1:
+ 289              	 .stabd 78,0,0
+ 290              	 .global _ZN7PinBaseC1EPVmm
+ 291              	 .thumb_set _ZN7PinBaseC1EPVmm,_ZN7PinBaseC2EPVmm
+ 292              	 .section .text._ZN7PinBaseD2Ev,"ax",%progbits
+ 293              	 .align 2
+ 296              	 .global _ZN7PinBaseD2Ev
+ 297              	 .code 16
+ 298              	 .thumb_func
+ 300              	_ZN7PinBaseD2Ev:
+ 301              	 .stabd 46,0,0
+  11:../hal/PinBase.cpp **** 
+  12:../hal/PinBase.cpp **** PinBase::~PinBase() {
+ 303              	.LM3:
+ 304              	.LFBB2:
+ 305 0000 80B5     	 push {r7,lr}
+ 306 0002 82B0     	 sub sp,sp,#8
+ 307 0004 00AF     	 add r7,sp,#0
+ 308 0006 7860     	 str r0,[r7,#4]
+ 309              	.LBB3:
+ 311              	.LM4:
+ 312 0008 7B68     	 ldr r3,[r7,#4]
+ 313 000a 074A     	 ldr r2,.L10
+ 314 000c 1A60     	 str r2,[r3]
+ 315              	.LBE3:
+  13:../hal/PinBase.cpp **** }
+ 317              	.LM5:
+ 318 000e 0023     	 mov r3,#0
+ 319 0010 002B     	 cmp r3,#0
+ 320 0012 03D0     	 beq .L8
+ 322              	.LM6:
+ 323 0014 7B68     	 ldr r3,[r7,#4]
+ 324 0016 181C     	 mov r0,r3
+ 325 0018 FFF7FEFF 	 bl _ZdlPv
+ 326              	.L8:
+ 328              	.LM7:
+ 329 001c 7B68     	 ldr r3,[r7,#4]
+ 330 001e 181C     	 mov r0,r3
+ 331 0020 BD46     	 mov sp,r7
+ 332 0022 02B0     	 add sp,sp,#8
+ 333              	 
+ 334 0024 80BD     	 pop {r7,pc}
+ 335              	.L11:
+ 336 0026 C046     	 .align 2
+ 337              	.L10:
+ 338 0028 08000000 	 .word _ZTV7PinBase+8
+ 340              	.Lscope2:
+ 342              	 .stabd 78,0,0
+ 343              	 .global _ZN7PinBaseD1Ev
+ 344              	 .thumb_set _ZN7PinBaseD1Ev,_ZN7PinBaseD2Ev
+ 345              	 .section .text._ZN7PinBaseD0Ev,"ax",%progbits
+ 346              	 .align 2
+ 349              	 .global _ZN7PinBaseD0Ev
+ 350              	 .code 16
+ 351              	 .thumb_func
+ 353              	_ZN7PinBaseD0Ev:
+ 354              	 .stabd 46,0,0
+  12:../hal/PinBase.cpp **** }
+ 356              	.LM8:
+ 357              	.LFBB3:
+ 358 0000 80B5     	 push {r7,lr}
+ 359 0002 82B0     	 sub sp,sp,#8
+ 360 0004 00AF     	 add r7,sp,#0
+ 361 0006 7860     	 str r0,[r7,#4]
+ 363              	.LM9:
+ 364 0008 7B68     	 ldr r3,[r7,#4]
+ 365 000a 181C     	 mov r0,r3
+ 366 000c FFF7FEFF 	 bl _ZN7PinBaseD2Ev
+ 367 0010 7B68     	 ldr r3,[r7,#4]
+ 368 0012 181C     	 mov r0,r3
+ 369 0014 FFF7FEFF 	 bl _ZdlPv
+ 370 0018 7B68     	 ldr r3,[r7,#4]
+ 371 001a 181C     	 mov r0,r3
+ 372 001c BD46     	 mov sp,r7
+ 373 001e 02B0     	 add sp,sp,#8
+ 374              	 
+ 375 0020 80BD     	 pop {r7,pc}
+ 377              	.Lscope3:
+ 379              	 .stabd 78,0,0
+ 380 0022 C046     	 .section .text._ZN7PinBase4highEv,"ax",%progbits
+ 381              	 .align 2
+ 384              	 .global _ZN7PinBase4highEv
+ 385              	 .code 16
+ 386              	 .thumb_func
+ 388              	_ZN7PinBase4highEv:
+ 389              	 .stabd 46,0,0
+  14:../hal/PinBase.cpp **** 
+  15:../hal/PinBase.cpp **** void PinBase::high(){
+ 391              	.LM10:
+ 392              	.LFBB4:
+ 393 0000 80B5     	 push {r7,lr}
+ 394 0002 82B0     	 sub sp,sp,#8
+ 395 0004 00AF     	 add r7,sp,#0
+ 396 0006 7860     	 str r0,[r7,#4]
+  16:../hal/PinBase.cpp **** 	SET_BIT(*port_, pin_);
+ 398              	.LM11:
+ 399 0008 7B68     	 ldr r3,[r7,#4]
+ 400 000a 5B68     	 ldr r3,[r3,#4]
+ 401 000c 7A68     	 ldr r2,[r7,#4]
+ 402 000e 5268     	 ldr r2,[r2,#4]
+ 403 0010 1168     	 ldr r1,[r2]
+ 404 0012 7A68     	 ldr r2,[r7,#4]
+ 405 0014 9268     	 ldr r2,[r2,#8]
+ 406 0016 101C     	 mov r0,r2
+ 407 0018 0122     	 mov r2,#1
+ 408 001a 8240     	 lsl r2,r2,r0
+ 409 001c 0A43     	 orr r2,r1
+ 410 001e 1A60     	 str r2,[r3]
+  17:../hal/PinBase.cpp **** }
+ 412              	.LM12:
+ 413 0020 BD46     	 mov sp,r7
+ 414 0022 02B0     	 add sp,sp,#8
+ 415              	 
+ 416 0024 80BD     	 pop {r7,pc}
+ 418              	.Lscope4:
+ 420              	 .stabd 78,0,0
+ 421 0026 C046     	 .section .text._ZN7PinBase3lowEv,"ax",%progbits
+ 422              	 .align 2
+ 425              	 .global _ZN7PinBase3lowEv
+ 426              	 .code 16
+ 427              	 .thumb_func
+ 429              	_ZN7PinBase3lowEv:
+ 430              	 .stabd 46,0,0
+  18:../hal/PinBase.cpp **** 
+  19:../hal/PinBase.cpp **** void PinBase::low(){
+ 432              	.LM13:
+ 433              	.LFBB5:
+ 434 0000 80B5     	 push {r7,lr}
+ 435 0002 82B0     	 sub sp,sp,#8
+ 436 0004 00AF     	 add r7,sp,#0
+ 437 0006 7860     	 str r0,[r7,#4]
+  20:../hal/PinBase.cpp **** 	CLR_BIT(*port_, pin_);
+ 439              	.LM14:
+ 440 0008 7B68     	 ldr r3,[r7,#4]
+ 441 000a 5B68     	 ldr r3,[r3,#4]
+ 442 000c 7A68     	 ldr r2,[r7,#4]
+ 443 000e 5268     	 ldr r2,[r2,#4]
+ 444 0010 1168     	 ldr r1,[r2]
+ 445 0012 7A68     	 ldr r2,[r7,#4]
+ 446 0014 9268     	 ldr r2,[r2,#8]
+ 447 0016 101C     	 mov r0,r2
+ 448 0018 0122     	 mov r2,#1
+ 449 001a 8240     	 lsl r2,r2,r0
+ 450 001c D243     	 mvn r2,r2
+ 451 001e 0A40     	 and r2,r1
+ 452 0020 1A60     	 str r2,[r3]
+  21:../hal/PinBase.cpp **** }
+ 454              	.LM15:
+ 455 0022 BD46     	 mov sp,r7
+ 456 0024 02B0     	 add sp,sp,#8
+ 457              	 
+ 458 0026 80BD     	 pop {r7,pc}
+ 460              	.Lscope5:
+ 462              	 .stabd 78,0,0
+ 463              	 .global _ZTV7PinBase
+ 464              	 .section .rodata._ZTV7PinBase,"a",%progbits
+ 465              	 .align 3
+ 468              	_ZTV7PinBase:
+ 469 0000 00000000 	 .word 0
+ 470 0004 00000000 	 .word 0
+ 471 0008 00000000 	 .word _ZN7PinBaseD1Ev
+ 472 000c 00000000 	 .word _ZN7PinBaseD0Ev
+ 473              	 .text
+ 475              	.Letext0:
+ 476              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 PinBase.cpp
+    {standard input}:241    .text._ZN7PinBaseC2EPVmm:00000000 $t
+    {standard input}:250    .text._ZN7PinBaseC2EPVmm:00000000 _ZN7PinBaseC2EPVmm
+    {standard input}:285    .text._ZN7PinBaseC2EPVmm:00000028 $d
+    {standard input}:468    .rodata._ZTV7PinBase:00000000 _ZTV7PinBase
+    {standard input}:250    .text._ZN7PinBaseC2EPVmm:00000000 _ZN7PinBaseC1EPVmm
+    {standard input}:293    .text._ZN7PinBaseD2Ev:00000000 $t
+    {standard input}:300    .text._ZN7PinBaseD2Ev:00000000 _ZN7PinBaseD2Ev
+    {standard input}:338    .text._ZN7PinBaseD2Ev:00000028 $d
+    {standard input}:300    .text._ZN7PinBaseD2Ev:00000000 _ZN7PinBaseD1Ev
+    {standard input}:346    .text._ZN7PinBaseD0Ev:00000000 $t
+    {standard input}:353    .text._ZN7PinBaseD0Ev:00000000 _ZN7PinBaseD0Ev
+    {standard input}:381    .text._ZN7PinBase4highEv:00000000 $t
+    {standard input}:388    .text._ZN7PinBase4highEv:00000000 _ZN7PinBase4highEv
+    {standard input}:422    .text._ZN7PinBase3lowEv:00000000 $t
+    {standard input}:429    .text._ZN7PinBase3lowEv:00000000 _ZN7PinBase3lowEv
+    {standard input}:465    .rodata._ZTV7PinBase:00000000 $d
+
+UNDEFINED SYMBOLS
+_ZdlPv

@@ -1,0 +1,218 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "State.cpp"
+  16              	 .text
+  17              	.Ltext0:
+  78              	 .section .text._ZN5StateC2Ev,"ax",%progbits
+  79              	 .align 2
+  82              	 .global _ZN5StateC2Ev
+  83              	 .code 16
+  84              	 .thumb_func
+  86              	_ZN5StateC2Ev:
+  87              	 .stabd 46,0,0
+   1:../State.cpp  **** /*
+   2:../State.cpp  ****  * State.cpp
+   3:../State.cpp  ****  *
+   4:../State.cpp  ****  *  Created on: Dec 29, 2016
+   5:../State.cpp  ****  *      Author: alex
+   6:../State.cpp  ****  */
+   7:../State.cpp  **** 
+   8:../State.cpp  **** #include <State.h>
+   9:../State.cpp  **** 
+  10:../State.cpp  **** State::State() {
+  89              	.LM0:
+  90              	.LFBB1:
+  91 0000 80B5     	 push {r7,lr}
+  92 0002 82B0     	 sub sp,sp,#8
+  93 0004 00AF     	 add r7,sp,#0
+  94 0006 7860     	 str r0,[r7,#4]
+  95              	.LBB2:
+  97              	.LM1:
+  98 0008 7B68     	 ldr r3,[r7,#4]
+  99 000a 034A     	 ldr r2,.L4
+ 100 000c 1A60     	 str r2,[r3]
+ 101              	.LBE2:
+  11:../State.cpp  **** 	// TODO Auto-generated constructor stub
+  12:../State.cpp  **** 
+  13:../State.cpp  **** }
+ 103              	.LM2:
+ 104 000e 7B68     	 ldr r3,[r7,#4]
+ 105 0010 181C     	 mov r0,r3
+ 106 0012 BD46     	 mov sp,r7
+ 107 0014 02B0     	 add sp,sp,#8
+ 108              	 
+ 109 0016 80BD     	 pop {r7,pc}
+ 110              	.L5:
+ 111              	 .align 2
+ 112              	.L4:
+ 113 0018 08000000 	 .word _ZTV5State+8
+ 115              	.Lscope1:
+ 117              	 .stabd 78,0,0
+ 118              	 .global _ZN5StateC1Ev
+ 119              	 .thumb_set _ZN5StateC1Ev,_ZN5StateC2Ev
+ 120              	 .section .text._ZN5StateD2Ev,"ax",%progbits
+ 121              	 .align 2
+ 124              	 .global _ZN5StateD2Ev
+ 125              	 .code 16
+ 126              	 .thumb_func
+ 128              	_ZN5StateD2Ev:
+ 129              	 .stabd 46,0,0
+  14:../State.cpp  **** 
+  15:../State.cpp  **** State::~State() {
+ 131              	.LM3:
+ 132              	.LFBB2:
+ 133 0000 80B5     	 push {r7,lr}
+ 134 0002 82B0     	 sub sp,sp,#8
+ 135 0004 00AF     	 add r7,sp,#0
+ 136 0006 7860     	 str r0,[r7,#4]
+ 137              	.LBB3:
+ 139              	.LM4:
+ 140 0008 7B68     	 ldr r3,[r7,#4]
+ 141 000a 074A     	 ldr r2,.L10
+ 142 000c 1A60     	 str r2,[r3]
+ 143              	.LBE3:
+  16:../State.cpp  **** 	// TODO Auto-generated destructor stub
+  17:../State.cpp  **** }
+ 145              	.LM5:
+ 146 000e 0023     	 mov r3,#0
+ 147 0010 002B     	 cmp r3,#0
+ 148 0012 03D0     	 beq .L8
+ 150              	.LM6:
+ 151 0014 7B68     	 ldr r3,[r7,#4]
+ 152 0016 181C     	 mov r0,r3
+ 153 0018 FFF7FEFF 	 bl _ZdlPv
+ 154              	.L8:
+ 156              	.LM7:
+ 157 001c 7B68     	 ldr r3,[r7,#4]
+ 158 001e 181C     	 mov r0,r3
+ 159 0020 BD46     	 mov sp,r7
+ 160 0022 02B0     	 add sp,sp,#8
+ 161              	 
+ 162 0024 80BD     	 pop {r7,pc}
+ 163              	.L11:
+ 164 0026 C046     	 .align 2
+ 165              	.L10:
+ 166 0028 08000000 	 .word _ZTV5State+8
+ 168              	.Lscope2:
+ 170              	 .stabd 78,0,0
+ 171              	 .global _ZN5StateD1Ev
+ 172              	 .thumb_set _ZN5StateD1Ev,_ZN5StateD2Ev
+ 173              	 .section .text._ZN5StateD0Ev,"ax",%progbits
+ 174              	 .align 2
+ 177              	 .global _ZN5StateD0Ev
+ 178              	 .code 16
+ 179              	 .thumb_func
+ 181              	_ZN5StateD0Ev:
+ 182              	 .stabd 46,0,0
+  15:../State.cpp  **** 	// TODO Auto-generated destructor stub
+ 184              	.LM8:
+ 185              	.LFBB3:
+ 186 0000 80B5     	 push {r7,lr}
+ 187 0002 82B0     	 sub sp,sp,#8
+ 188 0004 00AF     	 add r7,sp,#0
+ 189 0006 7860     	 str r0,[r7,#4]
+ 191              	.LM9:
+ 192 0008 7B68     	 ldr r3,[r7,#4]
+ 193 000a 181C     	 mov r0,r3
+ 194 000c FFF7FEFF 	 bl _ZN5StateD2Ev
+ 195 0010 7B68     	 ldr r3,[r7,#4]
+ 196 0012 181C     	 mov r0,r3
+ 197 0014 FFF7FEFF 	 bl _ZdlPv
+ 198 0018 7B68     	 ldr r3,[r7,#4]
+ 199 001a 181C     	 mov r0,r3
+ 200 001c BD46     	 mov sp,r7
+ 201 001e 02B0     	 add sp,sp,#8
+ 202              	 
+ 203 0020 80BD     	 pop {r7,pc}
+ 205              	.Lscope3:
+ 207              	 .stabd 78,0,0
+ 208 0022 C046     	 .section .text._ZN5State7onEntryEv,"ax",%progbits
+ 209              	 .align 2
+ 212              	 .global _ZN5State7onEntryEv
+ 213              	 .code 16
+ 214              	 .thumb_func
+ 216              	_ZN5State7onEntryEv:
+ 217              	 .stabd 46,0,0
+  18:../State.cpp  **** 
+  19:../State.cpp  **** void State::onEntry(){
+ 219              	.LM10:
+ 220              	.LFBB4:
+ 221 0000 80B5     	 push {r7,lr}
+ 222 0002 82B0     	 sub sp,sp,#8
+ 223 0004 00AF     	 add r7,sp,#0
+ 224 0006 7860     	 str r0,[r7,#4]
+  20:../State.cpp  **** 
+  21:../State.cpp  **** }
+ 226              	.LM11:
+ 227 0008 BD46     	 mov sp,r7
+ 228 000a 02B0     	 add sp,sp,#8
+ 229              	 
+ 230 000c 80BD     	 pop {r7,pc}
+ 232              	.Lscope4:
+ 234              	 .stabd 78,0,0
+ 235 000e C046     	 .section .text._ZN5State6onExitEv,"ax",%progbits
+ 236              	 .align 2
+ 239              	 .global _ZN5State6onExitEv
+ 240              	 .code 16
+ 241              	 .thumb_func
+ 243              	_ZN5State6onExitEv:
+ 244              	 .stabd 46,0,0
+  22:../State.cpp  **** 
+  23:../State.cpp  **** void State::onExit(){
+ 246              	.LM12:
+ 247              	.LFBB5:
+ 248 0000 80B5     	 push {r7,lr}
+ 249 0002 82B0     	 sub sp,sp,#8
+ 250 0004 00AF     	 add r7,sp,#0
+ 251 0006 7860     	 str r0,[r7,#4]
+  24:../State.cpp  **** 
+  25:../State.cpp  **** }
+ 253              	.LM13:
+ 254 0008 BD46     	 mov sp,r7
+ 255 000a 02B0     	 add sp,sp,#8
+ 256              	 
+ 257 000c 80BD     	 pop {r7,pc}
+ 259              	.Lscope5:
+ 261              	 .stabd 78,0,0
+ 262              	 .global _ZTV5State
+ 263 000e C046     	 .section .rodata._ZTV5State,"a",%progbits
+ 264              	 .align 3
+ 267              	_ZTV5State:
+ 268 0000 00000000 	 .word 0
+ 269 0004 00000000 	 .word 0
+ 270 0008 00000000 	 .word _ZN5StateD1Ev
+ 271 000c 00000000 	 .word _ZN5StateD0Ev
+ 272              	 .text
+ 274              	.Letext0:
+ 275              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 State.cpp
+    {standard input}:79     .text._ZN5StateC2Ev:00000000 $t
+    {standard input}:86     .text._ZN5StateC2Ev:00000000 _ZN5StateC2Ev
+    {standard input}:113    .text._ZN5StateC2Ev:00000018 $d
+    {standard input}:267    .rodata._ZTV5State:00000000 _ZTV5State
+    {standard input}:86     .text._ZN5StateC2Ev:00000000 _ZN5StateC1Ev
+    {standard input}:121    .text._ZN5StateD2Ev:00000000 $t
+    {standard input}:128    .text._ZN5StateD2Ev:00000000 _ZN5StateD2Ev
+    {standard input}:166    .text._ZN5StateD2Ev:00000028 $d
+    {standard input}:128    .text._ZN5StateD2Ev:00000000 _ZN5StateD1Ev
+    {standard input}:174    .text._ZN5StateD0Ev:00000000 $t
+    {standard input}:181    .text._ZN5StateD0Ev:00000000 _ZN5StateD0Ev
+    {standard input}:209    .text._ZN5State7onEntryEv:00000000 $t
+    {standard input}:216    .text._ZN5State7onEntryEv:00000000 _ZN5State7onEntryEv
+    {standard input}:236    .text._ZN5State6onExitEv:00000000 $t
+    {standard input}:243    .text._ZN5State6onExitEv:00000000 _ZN5State6onExitEv
+    {standard input}:264    .rodata._ZTV5State:00000000 $d
+
+UNDEFINED SYMBOLS
+_ZdlPv

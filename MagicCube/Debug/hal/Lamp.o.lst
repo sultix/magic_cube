@@ -1,0 +1,245 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "Lamp.cpp"
+  16              	 .text
+  17              	.Ltext0:
+ 240              	 .section .text._ZN4LampC2Emi,"ax",%progbits
+ 241              	 .align 2
+ 246              	 .global _ZN4LampC2Emi
+ 247              	 .code 16
+ 248              	 .thumb_func
+ 250              	_ZN4LampC2Emi:
+ 251              	 .stabd 46,0,0
+   1:../hal/Lamp.cpp **** /*
+   2:../hal/Lamp.cpp ****  * Lamp.cpp
+   3:../hal/Lamp.cpp ****  *
+   4:../hal/Lamp.cpp ****  */
+   5:../hal/Lamp.cpp **** 
+   6:../hal/Lamp.cpp **** #include <hal/Lamp.h>
+   7:../hal/Lamp.cpp **** 
+   8:../hal/Lamp.cpp **** Lamp::Lamp(uint32_t port, int pin) : port_(port), pin_(pin){
+ 253              	.LM0:
+ 254              	.LFBB1:
+ 255 0000 80B5     	 push {r7,lr}
+ 256 0002 84B0     	 sub sp,sp,#16
+ 257 0004 00AF     	 add r7,sp,#0
+ 258 0006 F860     	 str r0,[r7,#12]
+ 259 0008 B960     	 str r1,[r7,#8]
+ 260 000a 7A60     	 str r2,[r7,#4]
+ 261              	.LBB2:
+ 263              	.LM1:
+ 264 000c FB68     	 ldr r3,[r7,#12]
+ 265 000e 064A     	 ldr r2,.L4
+ 266 0010 1A60     	 str r2,[r3]
+ 267 0012 FB68     	 ldr r3,[r7,#12]
+ 268 0014 BA68     	 ldr r2,[r7,#8]
+ 269 0016 5A60     	 str r2,[r3,#4]
+ 270 0018 FB68     	 ldr r3,[r7,#12]
+ 271 001a 7A68     	 ldr r2,[r7,#4]
+ 272 001c 9A60     	 str r2,[r3,#8]
+ 273              	.LBE2:
+   9:../hal/Lamp.cpp **** 
+  10:../hal/Lamp.cpp **** }
+ 275              	.LM2:
+ 276 001e FB68     	 ldr r3,[r7,#12]
+ 277 0020 181C     	 mov r0,r3
+ 278 0022 BD46     	 mov sp,r7
+ 279 0024 04B0     	 add sp,sp,#16
+ 280              	 
+ 281 0026 80BD     	 pop {r7,pc}
+ 282              	.L5:
+ 283              	 .align 2
+ 284              	.L4:
+ 285 0028 08000000 	 .word _ZTV4Lamp+8
+ 287              	.Lscope1:
+ 289              	 .stabd 78,0,0
+ 290              	 .global _ZN4LampC1Emi
+ 291              	 .thumb_set _ZN4LampC1Emi,_ZN4LampC2Emi
+ 292              	 .section .text._ZN4LampD2Ev,"ax",%progbits
+ 293              	 .align 2
+ 296              	 .global _ZN4LampD2Ev
+ 297              	 .code 16
+ 298              	 .thumb_func
+ 300              	_ZN4LampD2Ev:
+ 301              	 .stabd 46,0,0
+  11:../hal/Lamp.cpp **** 
+  12:../hal/Lamp.cpp **** Lamp::~Lamp() {
+ 303              	.LM3:
+ 304              	.LFBB2:
+ 305 0000 80B5     	 push {r7,lr}
+ 306 0002 82B0     	 sub sp,sp,#8
+ 307 0004 00AF     	 add r7,sp,#0
+ 308 0006 7860     	 str r0,[r7,#4]
+ 309              	.LBB3:
+ 311              	.LM4:
+ 312 0008 7B68     	 ldr r3,[r7,#4]
+ 313 000a 074A     	 ldr r2,.L10
+ 314 000c 1A60     	 str r2,[r3]
+ 315              	.LBE3:
+  13:../hal/Lamp.cpp **** }
+ 317              	.LM5:
+ 318 000e 0023     	 mov r3,#0
+ 319 0010 002B     	 cmp r3,#0
+ 320 0012 03D0     	 beq .L8
+ 322              	.LM6:
+ 323 0014 7B68     	 ldr r3,[r7,#4]
+ 324 0016 181C     	 mov r0,r3
+ 325 0018 FFF7FEFF 	 bl _ZdlPv
+ 326              	.L8:
+ 328              	.LM7:
+ 329 001c 7B68     	 ldr r3,[r7,#4]
+ 330 001e 181C     	 mov r0,r3
+ 331 0020 BD46     	 mov sp,r7
+ 332 0022 02B0     	 add sp,sp,#8
+ 333              	 
+ 334 0024 80BD     	 pop {r7,pc}
+ 335              	.L11:
+ 336 0026 C046     	 .align 2
+ 337              	.L10:
+ 338 0028 08000000 	 .word _ZTV4Lamp+8
+ 340              	.Lscope2:
+ 342              	 .stabd 78,0,0
+ 343              	 .global _ZN4LampD1Ev
+ 344              	 .thumb_set _ZN4LampD1Ev,_ZN4LampD2Ev
+ 345              	 .section .text._ZN4LampD0Ev,"ax",%progbits
+ 346              	 .align 2
+ 349              	 .global _ZN4LampD0Ev
+ 350              	 .code 16
+ 351              	 .thumb_func
+ 353              	_ZN4LampD0Ev:
+ 354              	 .stabd 46,0,0
+  12:../hal/Lamp.cpp **** }
+ 356              	.LM8:
+ 357              	.LFBB3:
+ 358 0000 80B5     	 push {r7,lr}
+ 359 0002 82B0     	 sub sp,sp,#8
+ 360 0004 00AF     	 add r7,sp,#0
+ 361 0006 7860     	 str r0,[r7,#4]
+ 363              	.LM9:
+ 364 0008 7B68     	 ldr r3,[r7,#4]
+ 365 000a 181C     	 mov r0,r3
+ 366 000c FFF7FEFF 	 bl _ZN4LampD2Ev
+ 367 0010 7B68     	 ldr r3,[r7,#4]
+ 368 0012 181C     	 mov r0,r3
+ 369 0014 FFF7FEFF 	 bl _ZdlPv
+ 370 0018 7B68     	 ldr r3,[r7,#4]
+ 371 001a 181C     	 mov r0,r3
+ 372 001c BD46     	 mov sp,r7
+ 373 001e 02B0     	 add sp,sp,#8
+ 374              	 
+ 375 0020 80BD     	 pop {r7,pc}
+ 377              	.Lscope3:
+ 379              	 .stabd 78,0,0
+ 380 0022 C046     	 .section .text._ZN4Lamp2onEv,"ax",%progbits
+ 381              	 .align 2
+ 384              	 .global _ZN4Lamp2onEv
+ 385              	 .code 16
+ 386              	 .thumb_func
+ 388              	_ZN4Lamp2onEv:
+ 389              	 .stabd 46,0,0
+  14:../hal/Lamp.cpp **** 
+  15:../hal/Lamp.cpp **** void Lamp::on(){
+ 391              	.LM10:
+ 392              	.LFBB4:
+ 393 0000 80B5     	 push {r7,lr}
+ 394 0002 82B0     	 sub sp,sp,#8
+ 395 0004 00AF     	 add r7,sp,#0
+ 396 0006 7860     	 str r0,[r7,#4]
+  16:../hal/Lamp.cpp **** 	SET_BIT(port_, pin_);
+ 398              	.LM11:
+ 399 0008 7B68     	 ldr r3,[r7,#4]
+ 400 000a 5A68     	 ldr r2,[r3,#4]
+ 401 000c 7B68     	 ldr r3,[r7,#4]
+ 402 000e 9B68     	 ldr r3,[r3,#8]
+ 403 0010 0121     	 mov r1,#1
+ 404 0012 9940     	 lsl r1,r1,r3
+ 405 0014 0B1C     	 mov r3,r1
+ 406 0016 1A43     	 orr r2,r3
+ 407 0018 7B68     	 ldr r3,[r7,#4]
+ 408 001a 5A60     	 str r2,[r3,#4]
+  17:../hal/Lamp.cpp **** }
+ 410              	.LM12:
+ 411 001c BD46     	 mov sp,r7
+ 412 001e 02B0     	 add sp,sp,#8
+ 413              	 
+ 414 0020 80BD     	 pop {r7,pc}
+ 416              	.Lscope4:
+ 418              	 .stabd 78,0,0
+ 419 0022 C046     	 .section .text._ZN4Lamp3offEv,"ax",%progbits
+ 420              	 .align 2
+ 423              	 .global _ZN4Lamp3offEv
+ 424              	 .code 16
+ 425              	 .thumb_func
+ 427              	_ZN4Lamp3offEv:
+ 428              	 .stabd 46,0,0
+  18:../hal/Lamp.cpp **** 
+  19:../hal/Lamp.cpp **** void Lamp::off(){
+ 430              	.LM13:
+ 431              	.LFBB5:
+ 432 0000 80B5     	 push {r7,lr}
+ 433 0002 82B0     	 sub sp,sp,#8
+ 434 0004 00AF     	 add r7,sp,#0
+ 435 0006 7860     	 str r0,[r7,#4]
+  20:../hal/Lamp.cpp **** 	CLR_BIT(port_, pin_);
+ 437              	.LM14:
+ 438 0008 7B68     	 ldr r3,[r7,#4]
+ 439 000a 5A68     	 ldr r2,[r3,#4]
+ 440 000c 7B68     	 ldr r3,[r7,#4]
+ 441 000e 9B68     	 ldr r3,[r3,#8]
+ 442 0010 0121     	 mov r1,#1
+ 443 0012 9940     	 lsl r1,r1,r3
+ 444 0014 0B1C     	 mov r3,r1
+ 445 0016 DB43     	 mvn r3,r3
+ 446 0018 1A40     	 and r2,r3
+ 447 001a 7B68     	 ldr r3,[r7,#4]
+ 448 001c 5A60     	 str r2,[r3,#4]
+  21:../hal/Lamp.cpp **** }
+ 450              	.LM15:
+ 451 001e BD46     	 mov sp,r7
+ 452 0020 02B0     	 add sp,sp,#8
+ 453              	 
+ 454 0022 80BD     	 pop {r7,pc}
+ 456              	.Lscope5:
+ 458              	 .stabd 78,0,0
+ 459              	 .global _ZTV4Lamp
+ 460              	 .section .rodata._ZTV4Lamp,"a",%progbits
+ 461              	 .align 3
+ 464              	_ZTV4Lamp:
+ 465 0000 00000000 	 .word 0
+ 466 0004 00000000 	 .word 0
+ 467 0008 00000000 	 .word _ZN4LampD1Ev
+ 468 000c 00000000 	 .word _ZN4LampD0Ev
+ 469              	 .text
+ 471              	.Letext0:
+ 472              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 Lamp.cpp
+    {standard input}:241    .text._ZN4LampC2Emi:00000000 $t
+    {standard input}:250    .text._ZN4LampC2Emi:00000000 _ZN4LampC2Emi
+    {standard input}:285    .text._ZN4LampC2Emi:00000028 $d
+    {standard input}:464    .rodata._ZTV4Lamp:00000000 _ZTV4Lamp
+    {standard input}:250    .text._ZN4LampC2Emi:00000000 _ZN4LampC1Emi
+    {standard input}:293    .text._ZN4LampD2Ev:00000000 $t
+    {standard input}:300    .text._ZN4LampD2Ev:00000000 _ZN4LampD2Ev
+    {standard input}:338    .text._ZN4LampD2Ev:00000028 $d
+    {standard input}:300    .text._ZN4LampD2Ev:00000000 _ZN4LampD1Ev
+    {standard input}:346    .text._ZN4LampD0Ev:00000000 $t
+    {standard input}:353    .text._ZN4LampD0Ev:00000000 _ZN4LampD0Ev
+    {standard input}:381    .text._ZN4Lamp2onEv:00000000 $t
+    {standard input}:388    .text._ZN4Lamp2onEv:00000000 _ZN4Lamp2onEv
+    {standard input}:420    .text._ZN4Lamp3offEv:00000000 $t
+    {standard input}:427    .text._ZN4Lamp3offEv:00000000 _ZN4Lamp3offEv
+    {standard input}:461    .rodata._ZTV4Lamp:00000000 $d
+
+UNDEFINED SYMBOLS
+_ZdlPv

@@ -1,0 +1,242 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "Lampe.cpp"
+  14              	 .text
+  15              	.Ltext0:
+  16              	 .cfi_sections .debug_frame
+  17              	 .section .text._ZN5LampeC2Ev,"ax",%progbits
+  18              	 .align 2
+  19              	 .global _ZN5LampeC2Ev
+  20              	 .code 16
+  21              	 .thumb_func
+  23              	_ZN5LampeC2Ev:
+  24              	.LFB50:
+  25              	 .file 1 "../Lampe.cpp"
+   1:../Lampe.cpp  **** /*
+   2:../Lampe.cpp  ****  * Lampe.cpp
+   3:../Lampe.cpp  ****  *
+   4:../Lampe.cpp  ****  *  Created on: Dec 29, 2016
+   5:../Lampe.cpp  ****  *      Author: alex
+   6:../Lampe.cpp  ****  */
+   7:../Lampe.cpp  **** 
+   8:../Lampe.cpp  **** #include "Lampe.h"
+   9:../Lampe.cpp  **** 
+  10:../Lampe.cpp  **** Lampe::Lampe() {
+  26              	 .loc 1 10 0
+  27              	 .cfi_startproc
+  28 0000 80B5     	 push {r7,lr}
+  29              	.LCFI0:
+  30              	 .cfi_def_cfa_offset 8
+  31              	 .cfi_offset 7,-8
+  32              	 .cfi_offset 14,-4
+  33 0002 82B0     	 sub sp,sp,#8
+  34              	.LCFI1:
+  35              	 .cfi_def_cfa_offset 16
+  36 0004 00AF     	 add r7,sp,#0
+  37              	.LCFI2:
+  38              	 .cfi_def_cfa_register 7
+  39 0006 7860     	 str r0,[r7,#4]
+  40              	.LBB2:
+  41              	 .loc 1 10 0
+  42 0008 7B68     	 ldr r3,[r7,#4]
+  43 000a 034A     	 ldr r2,.L4
+  44 000c 1A60     	 str r2,[r3]
+  45              	.LBE2:
+  11:../Lampe.cpp  **** 	// TODO Auto-generated constructor stub
+  12:../Lampe.cpp  **** 
+  13:../Lampe.cpp  **** }
+  46              	 .loc 1 13 0
+  47 000e 7B68     	 ldr r3,[r7,#4]
+  48 0010 181C     	 mov r0,r3
+  49 0012 BD46     	 mov sp,r7
+  50 0014 02B0     	 add sp,sp,#8
+  51              	 
+  52 0016 80BD     	 pop {r7,pc}
+  53              	.L5:
+  54              	 .align 2
+  55              	.L4:
+  56 0018 08000000 	 .word _ZTV5Lampe+8
+  57              	 .cfi_endproc
+  58              	.LFE50:
+  60              	 .global _ZN5LampeC1Ev
+  61              	 .thumb_set _ZN5LampeC1Ev,_ZN5LampeC2Ev
+  62              	 .section .text._ZN5LampeD2Ev,"ax",%progbits
+  63              	 .align 2
+  64              	 .global _ZN5LampeD2Ev
+  65              	 .code 16
+  66              	 .thumb_func
+  68              	_ZN5LampeD2Ev:
+  69              	.LFB53:
+  14:../Lampe.cpp  **** 
+  15:../Lampe.cpp  **** Lampe::~Lampe() {
+  70              	 .loc 1 15 0
+  71              	 .cfi_startproc
+  72 0000 80B5     	 push {r7,lr}
+  73              	.LCFI3:
+  74              	 .cfi_def_cfa_offset 8
+  75              	 .cfi_offset 7,-8
+  76              	 .cfi_offset 14,-4
+  77 0002 82B0     	 sub sp,sp,#8
+  78              	.LCFI4:
+  79              	 .cfi_def_cfa_offset 16
+  80 0004 00AF     	 add r7,sp,#0
+  81              	.LCFI5:
+  82              	 .cfi_def_cfa_register 7
+  83 0006 7860     	 str r0,[r7,#4]
+  84              	.LBB3:
+  85              	 .loc 1 15 0
+  86 0008 7B68     	 ldr r3,[r7,#4]
+  87 000a 074A     	 ldr r2,.L10
+  88 000c 1A60     	 str r2,[r3]
+  89              	.LBE3:
+  16:../Lampe.cpp  **** 	// TODO Auto-generated destructor stub
+  17:../Lampe.cpp  **** }
+  90              	 .loc 1 17 0
+  91 000e 0023     	 mov r3,#0
+  92 0010 002B     	 cmp r3,#0
+  93 0012 03D0     	 beq .L8
+  94              	 .loc 1 17 0 is_stmt 0 discriminator 2
+  95 0014 7B68     	 ldr r3,[r7,#4]
+  96 0016 181C     	 mov r0,r3
+  97 0018 FFF7FEFF 	 bl _ZdlPv
+  98              	.L8:
+  99              	 .loc 1 17 0 discriminator 4
+ 100 001c 7B68     	 ldr r3,[r7,#4]
+ 101 001e 181C     	 mov r0,r3
+ 102 0020 BD46     	 mov sp,r7
+ 103 0022 02B0     	 add sp,sp,#8
+ 104              	 
+ 105 0024 80BD     	 pop {r7,pc}
+ 106              	.L11:
+ 107 0026 C046     	 .align 2
+ 108              	.L10:
+ 109 0028 08000000 	 .word _ZTV5Lampe+8
+ 110              	 .cfi_endproc
+ 111              	.LFE53:
+ 113              	 .global _ZN5LampeD1Ev
+ 114              	 .thumb_set _ZN5LampeD1Ev,_ZN5LampeD2Ev
+ 115              	 .section .text._ZN5LampeD0Ev,"ax",%progbits
+ 116              	 .align 2
+ 117              	 .global _ZN5LampeD0Ev
+ 118              	 .code 16
+ 119              	 .thumb_func
+ 121              	_ZN5LampeD0Ev:
+ 122              	.LFB55:
+  15:../Lampe.cpp  **** 	// TODO Auto-generated destructor stub
+ 123              	 .loc 1 15 0 is_stmt 1
+ 124              	 .cfi_startproc
+ 125 0000 80B5     	 push {r7,lr}
+ 126              	.LCFI6:
+ 127              	 .cfi_def_cfa_offset 8
+ 128              	 .cfi_offset 7,-8
+ 129              	 .cfi_offset 14,-4
+ 130 0002 82B0     	 sub sp,sp,#8
+ 131              	.LCFI7:
+ 132              	 .cfi_def_cfa_offset 16
+ 133 0004 00AF     	 add r7,sp,#0
+ 134              	.LCFI8:
+ 135              	 .cfi_def_cfa_register 7
+ 136 0006 7860     	 str r0,[r7,#4]
+ 137              	 .loc 1 17 0
+ 138 0008 7B68     	 ldr r3,[r7,#4]
+ 139 000a 181C     	 mov r0,r3
+ 140 000c FFF7FEFF 	 bl _ZN5LampeD2Ev
+ 141 0010 7B68     	 ldr r3,[r7,#4]
+ 142 0012 181C     	 mov r0,r3
+ 143 0014 FFF7FEFF 	 bl _ZdlPv
+ 144 0018 7B68     	 ldr r3,[r7,#4]
+ 145 001a 181C     	 mov r0,r3
+ 146 001c BD46     	 mov sp,r7
+ 147 001e 02B0     	 add sp,sp,#8
+ 148              	 
+ 149 0020 80BD     	 pop {r7,pc}
+ 150              	 .cfi_endproc
+ 151              	.LFE55:
+ 153 0022 C046     	 .section .text._ZN5Lampe5startEv,"ax",%progbits
+ 154              	 .align 2
+ 155              	 .global _ZN5Lampe5startEv
+ 156              	 .code 16
+ 157              	 .thumb_func
+ 159              	_ZN5Lampe5startEv:
+ 160              	.LFB56:
+  18:../Lampe.cpp  **** 
+  19:../Lampe.cpp  **** void Lampe::start(){
+ 161              	 .loc 1 19 0
+ 162              	 .cfi_startproc
+ 163 0000 80B5     	 push {r7,lr}
+ 164              	.LCFI9:
+ 165              	 .cfi_def_cfa_offset 8
+ 166              	 .cfi_offset 7,-8
+ 167              	 .cfi_offset 14,-4
+ 168 0002 82B0     	 sub sp,sp,#8
+ 169              	.LCFI10:
+ 170              	 .cfi_def_cfa_offset 16
+ 171 0004 00AF     	 add r7,sp,#0
+ 172              	.LCFI11:
+ 173              	 .cfi_def_cfa_register 7
+ 174 0006 7860     	 str r0,[r7,#4]
+  20:../Lampe.cpp  **** 	SET_BIT(PORT0->OUT, 0);
+ 175              	 .loc 1 20 0
+ 176 0008 044B     	 ldr r3,.L16
+ 177 000a 044A     	 ldr r2,.L16
+ 178 000c 1268     	 ldr r2,[r2]
+ 179 000e 0121     	 mov r1,#1
+ 180 0010 0A43     	 orr r2,r1
+ 181 0012 1A60     	 str r2,[r3]
+  21:../Lampe.cpp  **** }
+ 182              	 .loc 1 21 0
+ 183 0014 BD46     	 mov sp,r7
+ 184 0016 02B0     	 add sp,sp,#8
+ 185              	 
+ 186 0018 80BD     	 pop {r7,pc}
+ 187              	.L17:
+ 188 001a C046     	 .align 2
+ 189              	.L16:
+ 190 001c 00000440 	 .word 1074003968
+ 191              	 .cfi_endproc
+ 192              	.LFE56:
+ 194              	 .global _ZTV5Lampe
+ 195              	 .section .rodata._ZTV5Lampe,"a",%progbits
+ 196              	 .align 3
+ 199              	_ZTV5Lampe:
+ 200 0000 00000000 	 .word 0
+ 201 0004 00000000 	 .word 0
+ 202 0008 00000000 	 .word _ZN5LampeD1Ev
+ 203 000c 00000000 	 .word _ZN5LampeD0Ev
+ 204              	 .text
+ 205              	.Letext0:
+ 206              	 .file 2 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 207              	 .file 3 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 208              	 .file 4 "C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/MagicCube/Libraries/CMSIS/Infineon/XMC1100_series/Include/XMC1100.h"
+ 209              	 .file 5 "../Lampe.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 Lampe.cpp
+    {standard input}:18     .text._ZN5LampeC2Ev:00000000 $t
+    {standard input}:23     .text._ZN5LampeC2Ev:00000000 _ZN5LampeC2Ev
+    {standard input}:56     .text._ZN5LampeC2Ev:00000018 $d
+    {standard input}:199    .rodata._ZTV5Lampe:00000000 _ZTV5Lampe
+    {standard input}:23     .text._ZN5LampeC2Ev:00000000 _ZN5LampeC1Ev
+    {standard input}:63     .text._ZN5LampeD2Ev:00000000 $t
+    {standard input}:68     .text._ZN5LampeD2Ev:00000000 _ZN5LampeD2Ev
+    {standard input}:109    .text._ZN5LampeD2Ev:00000028 $d
+    {standard input}:68     .text._ZN5LampeD2Ev:00000000 _ZN5LampeD1Ev
+    {standard input}:116    .text._ZN5LampeD0Ev:00000000 $t
+    {standard input}:121    .text._ZN5LampeD0Ev:00000000 _ZN5LampeD0Ev
+    {standard input}:154    .text._ZN5Lampe5startEv:00000000 $t
+    {standard input}:159    .text._ZN5Lampe5startEv:00000000 _ZN5Lampe5startEv
+    {standard input}:190    .text._ZN5Lampe5startEv:0000001c $d
+    {standard input}:196    .rodata._ZTV5Lampe:00000000 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+_ZdlPv

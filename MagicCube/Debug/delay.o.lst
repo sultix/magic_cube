@@ -1,0 +1,80 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "delay.c"
+  16              	 .text
+  17              	.Ltext0:
+  66              	 .section .text.delay_1ms,"ax",%progbits
+  67              	 .align 2
+  69              	 .global delay_1ms
+  70              	 .code 16
+  71              	 .thumb_func
+  73              	delay_1ms:
+  74              	 .stabd 46,0,0
+   1:../delay.c    **** /*
+   2:../delay.c    ****  * delay.c
+   3:../delay.c    ****  *
+   4:../delay.c    ****  *  Created on: Dec 30, 2016
+   5:../delay.c    ****  *      Author: alex
+   6:../delay.c    ****  */
+   7:../delay.c    **** 
+   8:../delay.c    **** #include "delay.h"
+   9:../delay.c    **** 
+  10:../delay.c    **** #define DELAY_MS_LENGTH 32000
+  11:../delay.c    **** 
+  12:../delay.c    **** void delay_1ms(void){
+  76              	.LM0:
+  77              	.LFBB1:
+  78 0000 80B5     	 push {r7,lr}
+  79 0002 82B0     	 sub sp,sp,#8
+  80 0004 00AF     	 add r7,sp,#0
+  81              	.LBB2:
+  13:../delay.c    **** 	for(int i= 0; i < DELAY_MS_LENGTH; i++){
+  83              	.LM1:
+  84 0006 0023     	 mov r3,#0
+  85 0008 7B60     	 str r3,[r7,#4]
+  86 000a 02E0     	 b .L2
+  87              	.L3:
+  89              	.LM2:
+  90 000c 7B68     	 ldr r3,[r7,#4]
+  91 000e 0133     	 add r3,r3,#1
+  92 0010 7B60     	 str r3,[r7,#4]
+  93              	.L2:
+  95              	.LM3:
+  96 0012 7B68     	 ldr r3,[r7,#4]
+  97 0014 024A     	 ldr r2,.L4
+  98 0016 9342     	 cmp r3,r2
+  99 0018 F8DD     	 ble .L3
+ 100              	.LBE2:
+  14:../delay.c    **** 	}
+  15:../delay.c    **** }
+ 102              	.LM4:
+ 103 001a BD46     	 mov sp,r7
+ 104 001c 02B0     	 add sp,sp,#8
+ 105              	 
+ 106 001e 80BD     	 pop {r7,pc}
+ 107              	.L5:
+ 108              	 .align 2
+ 109              	.L4:
+ 110 0020 FF7C0000 	 .word 31999
+ 115              	.Lscope1:
+ 117              	 .stabd 78,0,0
+ 118              	 .text
+ 120              	.Letext0:
+ 121              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 delay.c
+    {standard input}:67     .text.delay_1ms:00000000 $t
+    {standard input}:73     .text.delay_1ms:00000000 delay_1ms
+    {standard input}:110    .text.delay_1ms:00000020 $d
+
+NO UNDEFINED SYMBOLS

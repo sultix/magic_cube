@@ -1,0 +1,118 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "DAVE.c"
+  16              	 .text
+  17              	.Ltext0:
+ 207              	 .section .text.DAVE_Init,"ax",%progbits
+ 208              	 .align 2
+ 210              	 .global DAVE_Init
+ 211              	 .code 16
+ 212              	 .thumb_func
+ 214              	DAVE_Init:
+ 215              	 .stabd 46,0,0
+   1:../Dave/Generated/DAVE.c **** 
+   2:../Dave/Generated/DAVE.c **** /**
+   3:../Dave/Generated/DAVE.c ****  * @cond
+   4:../Dave/Generated/DAVE.c ****  **************************************************************************************************
+   5:../Dave/Generated/DAVE.c ****  *
+   6:../Dave/Generated/DAVE.c ****  * Copyright (c) 2015, Infineon Technologies AG
+   7:../Dave/Generated/DAVE.c ****  * All rights reserved.
+   8:../Dave/Generated/DAVE.c ****  *
+   9:../Dave/Generated/DAVE.c ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  10:../Dave/Generated/DAVE.c ****  * following conditions are met:
+  11:../Dave/Generated/DAVE.c ****  *
+  12:../Dave/Generated/DAVE.c ****  *   Redistributions of source code must retain the above copyright notice, this list of conditions
+  13:../Dave/Generated/DAVE.c ****  *   disclaimer.
+  14:../Dave/Generated/DAVE.c ****  *
+  15:../Dave/Generated/DAVE.c ****  *   Redistributions in binary form must reproduce the above copyright notice, this list of conditi
+  16:../Dave/Generated/DAVE.c ****  *   following disclaimer in the documentation and/or other materials provided with the distributio
+  17:../Dave/Generated/DAVE.c ****  *
+  18:../Dave/Generated/DAVE.c ****  *   Neither the name of the copyright holders nor the names of its contributors may be used to end
+  19:../Dave/Generated/DAVE.c ****  *   products derived from this software without specific prior written permission.
+  20:../Dave/Generated/DAVE.c ****  *
+  21:../Dave/Generated/DAVE.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  22:../Dave/Generated/DAVE.c ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  23:../Dave/Generated/DAVE.c ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  24:../Dave/Generated/DAVE.c ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  25:../Dave/Generated/DAVE.c ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  26:../Dave/Generated/DAVE.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  27:../Dave/Generated/DAVE.c ****  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  28:../Dave/Generated/DAVE.c ****  *
+  29:../Dave/Generated/DAVE.c ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  30:../Dave/Generated/DAVE.c ****  * with Infineon Technologies AG (dave@infineon.com).
+  31:../Dave/Generated/DAVE.c ****  **************************************************************************************************
+  32:../Dave/Generated/DAVE.c ****  *
+  33:../Dave/Generated/DAVE.c ****  * Change History
+  34:../Dave/Generated/DAVE.c ****  * --------------
+  35:../Dave/Generated/DAVE.c ****  *
+  36:../Dave/Generated/DAVE.c ****  * 2014-06-16:
+  37:../Dave/Generated/DAVE.c ****  *     - Initial version<br>
+  38:../Dave/Generated/DAVE.c ****  * 2015-08-28:
+  39:../Dave/Generated/DAVE.c ****  *     - Added CLOCK_XMC1_Init conditionally
+  40:../Dave/Generated/DAVE.c ****  *
+  41:../Dave/Generated/DAVE.c ****  * @endcond
+  42:../Dave/Generated/DAVE.c ****  *
+  43:../Dave/Generated/DAVE.c ****  */
+  44:../Dave/Generated/DAVE.c **** 
+  45:../Dave/Generated/DAVE.c **** /**************************************************************************************************
+  46:../Dave/Generated/DAVE.c ****  * HEADER FILES
+  47:../Dave/Generated/DAVE.c ****  **************************************************************************************************
+  48:../Dave/Generated/DAVE.c **** #include "DAVE.h"
+  49:../Dave/Generated/DAVE.c **** 
+  50:../Dave/Generated/DAVE.c **** /**************************************************************************************************
+  51:../Dave/Generated/DAVE.c ****  * API IMPLEMENTATION
+  52:../Dave/Generated/DAVE.c ****  **************************************************************************************************
+  53:../Dave/Generated/DAVE.c **** 
+  54:../Dave/Generated/DAVE.c **** /*******************************************************************************
+  55:../Dave/Generated/DAVE.c ****  * @brief This function initializes the APPs Init Functions.
+  56:../Dave/Generated/DAVE.c ****  *
+  57:../Dave/Generated/DAVE.c ****  * @param[in]  None
+  58:../Dave/Generated/DAVE.c ****  *
+  59:../Dave/Generated/DAVE.c ****  * @return  DAVE_STATUS_t <BR>
+  60:../Dave/Generated/DAVE.c ****  ******************************************************************************/
+  61:../Dave/Generated/DAVE.c **** DAVE_STATUS_t DAVE_Init(void)
+  62:../Dave/Generated/DAVE.c **** {
+ 217              	.LM0:
+ 218              	.LFBB1:
+ 219 0000 80B5     	 push {r7,lr}
+ 220 0002 82B0     	 sub sp,sp,#8
+ 221 0004 00AF     	 add r7,sp,#0
+  63:../Dave/Generated/DAVE.c ****   DAVE_STATUS_t init_status;
+  64:../Dave/Generated/DAVE.c ****   
+  65:../Dave/Generated/DAVE.c ****   init_status = DAVE_STATUS_SUCCESS; 
+ 223              	.LM1:
+ 224 0006 FB1D     	 add r3,r7,#7
+ 225 0008 0022     	 mov r2,#0
+ 226 000a 1A70     	 strb r2,[r3]
+  66:../Dave/Generated/DAVE.c ****   return init_status;
+ 228              	.LM2:
+ 229 000c FB1D     	 add r3,r7,#7
+ 230 000e 1B78     	 ldrb r3,[r3]
+  67:../Dave/Generated/DAVE.c **** } /**  End of function DAVE_Init */
+ 232              	.LM3:
+ 233 0010 181C     	 mov r0,r3
+ 234 0012 BD46     	 mov sp,r7
+ 235 0014 02B0     	 add sp,sp,#8
+ 236              	 
+ 237 0016 80BD     	 pop {r7,pc}
+ 242              	.Lscope1:
+ 244              	 .stabd 78,0,0
+ 245              	 .text
+ 247              	.Letext0:
+ 248              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 DAVE.c
+    {standard input}:208    .text.DAVE_Init:00000000 $t
+    {standard input}:214    .text.DAVE_Init:00000000 DAVE_Init
+
+NO UNDEFINED SYMBOLS

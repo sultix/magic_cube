@@ -1,0 +1,1771 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "LampArray.cpp"
+  16              	 .text
+  17              	.Ltext0:
+ 221              	 .section .text._ZN9LampArrayC2Ev,"ax",%progbits
+ 222              	 .align 2
+ 225              	 .global _ZN9LampArrayC2Ev
+ 226              	 .code 16
+ 227              	 .thumb_func
+ 229              	_ZN9LampArrayC2Ev:
+ 230              	 .stabd 46,0,0
+   1:../cube/LampArray.cpp **** /*
+   2:../cube/LampArray.cpp ****  * LampArray.cpp
+   3:../cube/LampArray.cpp ****  *
+   4:../cube/LampArray.cpp ****  *  Created on: Dec 30, 2016
+   5:../cube/LampArray.cpp ****  *      Author: alex
+   6:../cube/LampArray.cpp ****  */
+   7:../cube/LampArray.cpp **** 
+   8:../cube/LampArray.cpp **** #include <cube/LampArray.h>
+   9:../cube/LampArray.cpp **** 
+  10:../cube/LampArray.cpp **** LampArray::LampArray() {
+ 232              	.LM0:
+ 233              	.LFBB1:
+ 234 0000 80B5     	 push {r7,lr}
+ 235 0002 82B0     	 sub sp,sp,#8
+ 236 0004 00AF     	 add r7,sp,#0
+ 237 0006 7860     	 str r0,[r7,#4]
+ 238              	.LBB2:
+ 240              	.LM1:
+ 241 0008 7B68     	 ldr r3,[r7,#4]
+ 242 000a 064A     	 ldr r2,.L4
+ 243 000c 1A60     	 str r2,[r3]
+ 244 000e 7B68     	 ldr r3,[r7,#4]
+ 245 0010 0433     	 add r3,r3,#4
+ 246 0012 181C     	 mov r0,r3
+ 247 0014 FFF7FEFF 	 bl _ZNSt6vectorIP4LampSaIS1_EEC1Ev
+ 248              	.LBE2:
+  11:../cube/LampArray.cpp **** 	// TODO Auto-generated constructor stub
+  12:../cube/LampArray.cpp **** 
+  13:../cube/LampArray.cpp **** }
+ 250              	.LM2:
+ 251 0018 7B68     	 ldr r3,[r7,#4]
+ 252 001a 181C     	 mov r0,r3
+ 253 001c BD46     	 mov sp,r7
+ 254 001e 02B0     	 add sp,sp,#8
+ 255              	 
+ 256 0020 80BD     	 pop {r7,pc}
+ 257              	.L5:
+ 258 0022 C046     	 .align 2
+ 259              	.L4:
+ 260 0024 08000000 	 .word _ZTV9LampArray+8
+ 262              	.Lscope1:
+ 264              	 .stabd 78,0,0
+ 265              	 .global _ZN9LampArrayC1Ev
+ 266              	 .thumb_set _ZN9LampArrayC1Ev,_ZN9LampArrayC2Ev
+ 267              	 .section .text._ZN9LampArrayD2Ev,"ax",%progbits
+ 268              	 .align 2
+ 271              	 .global _ZN9LampArrayD2Ev
+ 272              	 .code 16
+ 273              	 .thumb_func
+ 275              	_ZN9LampArrayD2Ev:
+ 276              	 .stabd 46,0,0
+  14:../cube/LampArray.cpp **** 
+  15:../cube/LampArray.cpp **** LampArray::~LampArray() {
+ 278              	.LM3:
+ 279              	.LFBB2:
+ 280 0000 80B5     	 push {r7,lr}
+ 281 0002 82B0     	 sub sp,sp,#8
+ 282 0004 00AF     	 add r7,sp,#0
+ 283 0006 7860     	 str r0,[r7,#4]
+ 284              	.LBB3:
+ 286              	.LM4:
+ 287 0008 7B68     	 ldr r3,[r7,#4]
+ 288 000a 094A     	 ldr r2,.L10
+ 289 000c 1A60     	 str r2,[r3]
+ 290 000e 7B68     	 ldr r3,[r7,#4]
+ 291 0010 0433     	 add r3,r3,#4
+ 292 0012 181C     	 mov r0,r3
+ 293 0014 FFF7FEFF 	 bl _ZNSt6vectorIP4LampSaIS1_EED1Ev
+ 294              	.LBE3:
+  16:../cube/LampArray.cpp **** 	// TODO Auto-generated destructor stub
+  17:../cube/LampArray.cpp **** }
+ 296              	.LM5:
+ 297 0018 0023     	 mov r3,#0
+ 298 001a 002B     	 cmp r3,#0
+ 299 001c 03D0     	 beq .L8
+ 301              	.LM6:
+ 302 001e 7B68     	 ldr r3,[r7,#4]
+ 303 0020 181C     	 mov r0,r3
+ 304 0022 FFF7FEFF 	 bl _ZdlPv
+ 305              	.L8:
+ 307              	.LM7:
+ 308 0026 7B68     	 ldr r3,[r7,#4]
+ 309 0028 181C     	 mov r0,r3
+ 310 002a BD46     	 mov sp,r7
+ 311 002c 02B0     	 add sp,sp,#8
+ 312              	 
+ 313 002e 80BD     	 pop {r7,pc}
+ 314              	.L11:
+ 315              	 .align 2
+ 316              	.L10:
+ 317 0030 08000000 	 .word _ZTV9LampArray+8
+ 319              	.Lscope2:
+ 321              	 .stabd 78,0,0
+ 322              	 .global _ZN9LampArrayD1Ev
+ 323              	 .thumb_set _ZN9LampArrayD1Ev,_ZN9LampArrayD2Ev
+ 324              	 .section .text._ZN9LampArrayD0Ev,"ax",%progbits
+ 325              	 .align 2
+ 328              	 .global _ZN9LampArrayD0Ev
+ 329              	 .code 16
+ 330              	 .thumb_func
+ 332              	_ZN9LampArrayD0Ev:
+ 333              	 .stabd 46,0,0
+  15:../cube/LampArray.cpp **** 	// TODO Auto-generated destructor stub
+ 335              	.LM8:
+ 336              	.LFBB3:
+ 337 0000 80B5     	 push {r7,lr}
+ 338 0002 82B0     	 sub sp,sp,#8
+ 339 0004 00AF     	 add r7,sp,#0
+ 340 0006 7860     	 str r0,[r7,#4]
+ 342              	.LM9:
+ 343 0008 7B68     	 ldr r3,[r7,#4]
+ 344 000a 181C     	 mov r0,r3
+ 345 000c FFF7FEFF 	 bl _ZN9LampArrayD2Ev
+ 346 0010 7B68     	 ldr r3,[r7,#4]
+ 347 0012 181C     	 mov r0,r3
+ 348 0014 FFF7FEFF 	 bl _ZdlPv
+ 349 0018 7B68     	 ldr r3,[r7,#4]
+ 350 001a 181C     	 mov r0,r3
+ 351 001c BD46     	 mov sp,r7
+ 352 001e 02B0     	 add sp,sp,#8
+ 353              	 
+ 354 0020 80BD     	 pop {r7,pc}
+ 356              	.Lscope3:
+ 358              	 .stabd 78,0,0
+ 359 0022 C046     	 .section .text._ZNSt6vectorIP4LampSaIS1_EEC2Ev,"axG",%progbits,_ZNSt6vectorIP4LampSaIS1_EEC5Ev,comdat
+ 360              	 .align 2
+ 363              	 .weak _ZNSt6vectorIP4LampSaIS1_EEC2Ev
+ 364              	 .code 16
+ 365              	 .thumb_func
+ 367              	_ZNSt6vectorIP4LampSaIS1_EEC2Ev:
+ 368              	 .stabd 46,0,0
+ 370              	.Ltext1:
+   1:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // Vector implementation -*- C++ -*-
+   2:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+   3:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // Copyright (C) 2001-2014 Free Software Foundation, Inc.
+   4:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** //
+   5:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // software; you can redistribute it and/or modify it under the
+   7:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // terms of the GNU General Public License as published by the
+   8:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // any later version.
+  10:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  11:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // This library is distributed in the hope that it will be useful,
+  12:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // GNU General Public License for more details.
+  15:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  16:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // 3.1, as published by the Free Software Foundation.
+  19:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  20:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // You should have received a copy of the GNU General Public License and
+  21:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** // <http://www.gnu.org/licenses/>.
+  24:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  25:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** /*
+  26:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *
+  27:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * Copyright (c) 1994
+  28:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * Hewlett-Packard Company
+  29:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *
+  30:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * Permission to use, copy, modify, distribute and sell this software
+  31:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * and its documentation for any purpose is hereby granted without fee,
+  32:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * provided that the above copyright notice appear in all copies and
+  33:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * that both that copyright notice and this permission notice appear
+  34:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * in supporting documentation.  Hewlett-Packard Company makes no
+  35:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * representations about the suitability of this software for any
+  36:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * purpose.  It is provided "as is" without express or implied warranty.
+  37:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *
+  38:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *
+  39:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * Copyright (c) 1996
+  40:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * Silicon Graphics Computer Systems, Inc.
+  41:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *
+  42:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * Permission to use, copy, modify, distribute and sell this software
+  43:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * and its documentation for any purpose is hereby granted without fee,
+  44:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * provided that the above copyright notice appear in all copies and
+  45:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * that both that copyright notice and this permission notice appear
+  46:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * in supporting documentation.  Silicon Graphics makes no
+  47:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * representations about the suitability of this  software for any
+  48:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  * purpose.  It is provided "as is" without express or implied warranty.
+  49:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  */
+  50:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  51:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** /** @file bits/stl_vector.h
+  52:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *  This is an internal header file, included by other library headers.
+  53:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  *  Do not attempt to use it directly. @headername{vector}
+  54:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****  */
+  55:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  56:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #ifndef _STL_VECTOR_H
+  57:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #define _STL_VECTOR_H 1
+  58:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  59:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #include <bits/stl_iterator_base_funcs.h>
+  60:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #include <bits/functexcept.h>
+  61:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #include <bits/concept_check.h>
+  62:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+  63:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #include <initializer_list>
+  64:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+  65:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  66:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** namespace std _GLIBCXX_VISIBILITY(default)
+  67:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** {
+  68:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** _GLIBCXX_BEGIN_NAMESPACE_CONTAINER
+  69:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  70:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****   /// See bits/stl_deque.h's _Deque_base for an explanation.
+  71:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****   template<typename _Tp, typename _Alloc>
+  72:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     struct _Vector_base
+  73:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     {
+  74:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename __gnu_cxx::__alloc_traits<_Alloc>::template
+  75:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****         rebind<_Tp>::other _Tp_alloc_type;
+  76:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename __gnu_cxx::__alloc_traits<_Tp_alloc_type>::pointer
+  77:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        	pointer;
+  78:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       struct _Vector_impl 
+  80:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : public _Tp_alloc_type
+  81:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+  82:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	pointer _M_start;
+  83:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	pointer _M_finish;
+  84:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	pointer _M_end_of_storage;
+  85:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  86:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	_Vector_impl()
+  87:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	: _Tp_alloc_type(), _M_start(0), _M_finish(0), _M_end_of_storage(0)
+  88:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	{ }
+  89:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  90:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
+  91:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	: _Tp_alloc_type(__a), _M_start(0), _M_finish(0), _M_end_of_storage(0)
+  92:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	{ }
+  93:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+  94:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+  95:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	_Vector_impl(_Tp_alloc_type&& __a) noexcept
+  96:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	: _Tp_alloc_type(std::move(__a)),
+  97:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  _M_start(0), _M_finish(0), _M_end_of_storage(0)
+  98:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	{ }
+  99:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+ 100:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 101:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	void _M_swap_data(_Vector_impl& __x) _GLIBCXX_NOEXCEPT
+ 102:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	{
+ 103:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  std::swap(_M_start, __x._M_start);
+ 104:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  std::swap(_M_finish, __x._M_finish);
+ 105:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  std::swap(_M_end_of_storage, __x._M_end_of_storage);
+ 106:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	}
+ 107:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       };
+ 108:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       
+ 109:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     public:
+ 110:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef _Alloc allocator_type;
+ 111:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 112:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Tp_alloc_type&
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+ 114:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { return *static_cast<_Tp_alloc_type*>(&this->_M_impl); }
+ 115:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 116:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       const _Tp_alloc_type&
+ 117:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+ 118:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { return *static_cast<const _Tp_alloc_type*>(&this->_M_impl); }
+ 119:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 120:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       allocator_type
+ 121:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       get_allocator() const _GLIBCXX_NOEXCEPT
+ 122:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { return allocator_type(_M_get_Tp_allocator()); }
+ 123:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 124:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base()
+ 125:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl() { }
+ 126:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 127:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+ 128:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl(__a) { }
+ 129:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 130:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base(size_t __n)
+ 131:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl()
+ 132:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_create_storage(__n); }
+ 133:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 134:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base(size_t __n, const allocator_type& __a)
+ 135:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl(__a)
+ 136:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_create_storage(__n); }
+ 137:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 138:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+ 139:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base(_Tp_alloc_type&& __a) noexcept
+ 140:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl(std::move(__a)) { }
+ 141:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 142:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base(_Vector_base&& __x) noexcept
+ 143:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl(std::move(__x._M_get_Tp_allocator()))
+ 144:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { this->_M_impl._M_swap_data(__x._M_impl); }
+ 145:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 146:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_base(_Vector_base&& __x, const allocator_type& __a)
+ 147:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl(__a)
+ 148:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 149:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	if (__x.get_allocator() == __a)
+ 150:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  this->_M_impl._M_swap_data(__x._M_impl);
+ 151:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	else
+ 152:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  {
+ 153:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	    size_t __n = __x._M_impl._M_finish - __x._M_impl._M_start;
+ 154:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	    _M_create_storage(__n);
+ 155:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  }
+ 156:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 157:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+ 158:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 159:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       ~_Vector_base() _GLIBCXX_NOEXCEPT
+ 160:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_deallocate(this->_M_impl._M_start, this->_M_impl._M_end_of_storage
+ 161:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 		      - this->_M_impl._M_start); }
+ 162:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 163:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     public:
+ 164:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _Vector_impl _M_impl;
+ 165:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 166:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       pointer
+ 167:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _M_allocate(size_t __n)
+ 168:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 169:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+ 170:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : 0;
+ 171:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 172:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 173:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       void
+ 174:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _M_deallocate(pointer __p, size_t __n)
+ 175:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 176:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+ 177:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	if (__p)
+ 178:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  _Tr::deallocate(_M_impl, __p, __n);
+ 179:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 180:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 181:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     private:
+ 182:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       void
+ 183:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       _M_create_storage(size_t __n)
+ 184:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 185:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	this->_M_impl._M_start = this->_M_allocate(__n);
+ 186:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	this->_M_impl._M_finish = this->_M_impl._M_start;
+ 187:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+ 188:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 189:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     };
+ 190:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 191:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 192:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****   /**
+ 193:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  @brief A standard container which offers fixed time access to
+ 194:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  individual elements in any order.
+ 195:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *
+ 196:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  @ingroup sequences
+ 197:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *
+ 198:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  @tparam _Tp  Type of element.
+ 199:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  @tparam _Alloc  Allocator type, defaults to allocator<_Tp>.
+ 200:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *
+ 201:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  Meets the requirements of a <a href="tables.html#65">container</a>, a
+ 202:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  <a href="tables.html#66">reversible container</a>, and a
+ 203:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  <a href="tables.html#67">sequence</a>, including the
+ 204:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  <a href="tables.html#68">optional sequence requirements</a> with the
+ 205:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  %exception of @c push_front and @c pop_front.
+ 206:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *
+ 207:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  In some terminology a %vector can be described as a dynamic
+ 208:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  C-style array, it offers fast and efficient access to individual
+ 209:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  elements in any order and saves the user from worrying about
+ 210:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  memory and size allocation.  Subscripting ( @c [] ) access is
+ 211:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****    *  also provided as with C-style arrays.
+ 212:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****   */
+ 213:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****   template<typename _Tp, typename _Alloc = std::allocator<_Tp> >
+ 214:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     class vector : protected _Vector_base<_Tp, _Alloc>
+ 215:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     {
+ 216:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       // Concept requirements.
+ 217:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename _Alloc::value_type                _Alloc_value_type;
+ 218:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       __glibcxx_class_requires(_Tp, _SGIAssignableConcept)
+ 219:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       __glibcxx_class_requires2(_Tp, _Alloc_value_type, _SameTypeConcept)
+ 220:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       
+ 221:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef _Vector_base<_Tp, _Alloc>			 _Base;
+ 222:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename _Base::_Tp_alloc_type		 _Tp_alloc_type;
+ 223:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type>  _Alloc_traits;
+ 224:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 225:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     public:
+ 226:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef _Tp					 value_type;
+ 227:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename _Base::pointer                    pointer;
+ 228:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename _Alloc_traits::const_pointer      const_pointer;
+ 229:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename _Alloc_traits::reference          reference;
+ 230:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef typename _Alloc_traits::const_reference    const_reference;
+ 231:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef __gnu_cxx::__normal_iterator<pointer, vector> iterator;
+ 232:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef __gnu_cxx::__normal_iterator<const_pointer, vector>
+ 233:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       const_iterator;
+ 234:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef std::reverse_iterator<const_iterator>  const_reverse_iterator;
+ 235:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef std::reverse_iterator<iterator>		 reverse_iterator;
+ 236:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef size_t					 size_type;
+ 237:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef ptrdiff_t					 difference_type;
+ 238:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       typedef _Alloc                        		 allocator_type;
+ 239:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 240:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     protected:
+ 241:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       using _Base::_M_allocate;
+ 242:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       using _Base::_M_deallocate;
+ 243:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       using _Base::_M_impl;
+ 244:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       using _Base::_M_get_Tp_allocator;
+ 245:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 246:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****     public:
+ 247:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       // [23.2.4.1] construct/copy/destroy
+ 248:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       // (assign() and get_allocator() are also listed in this section)
+ 249:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 250:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 251:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Creates a %vector with no elements.
+ 252:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 253:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector()
+ 372              	.LM10:
+ 373              	.LFBB4:
+ 374 0000 80B5     	 push {r7,lr}
+ 375 0002 82B0     	 sub sp,sp,#8
+ 376 0004 00AF     	 add r7,sp,#0
+ 377 0006 7860     	 str r0,[r7,#4]
+ 378              	.LBB4:
+ 254:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+ 255:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       noexcept(is_nothrow_default_constructible<_Alloc>::value)
+ 256:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+ 257:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base() { }
+ 380              	.LM11:
+ 381 0008 7B68     	 ldr r3,[r7,#4]
+ 382 000a 181C     	 mov r0,r3
+ 383 000c FFF7FEFF 	 bl _ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev
+ 384              	.LBE4:
+ 385 0010 7B68     	 ldr r3,[r7,#4]
+ 386 0012 181C     	 mov r0,r3
+ 387 0014 BD46     	 mov sp,r7
+ 388 0016 02B0     	 add sp,sp,#8
+ 389              	 
+ 390 0018 80BD     	 pop {r7,pc}
+ 392              	.Lscope4:
+ 394              	 .stabd 78,0,0
+ 395              	 .weak _ZNSt6vectorIP4LampSaIS1_EEC1Ev
+ 396              	 .thumb_set _ZNSt6vectorIP4LampSaIS1_EEC1Ev,_ZNSt6vectorIP4LampSaIS1_EEC2Ev
+ 397 001a C046     	 .section .text._ZNSt6vectorIP4LampSaIS1_EED2Ev,"axG",%progbits,_ZNSt6vectorIP4LampSaIS1_EED5Ev,comdat
+ 398              	 .align 2
+ 401              	 .weak _ZNSt6vectorIP4LampSaIS1_EED2Ev
+ 402              	 .code 16
+ 403              	 .thumb_func
+ 405              	_ZNSt6vectorIP4LampSaIS1_EED2Ev:
+ 406              	 .stabd 46,0,0
+ 258:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 259:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 260:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Creates a %vector with no elements.
+ 261:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __a  An allocator object.
+ 262:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 263:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       explicit
+ 264:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+ 265:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__a) { }
+ 266:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 267:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+ 268:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 269:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Creates a %vector with default constructed elements.
+ 270:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __n  The number of elements to initially create.
+ 271:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __a  An allocator.
+ 272:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 273:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  This constructor fills the %vector with @a __n default
+ 274:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  constructed elements.
+ 275:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 276:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       explicit
+ 277:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(size_type __n, const allocator_type& __a = allocator_type())
+ 278:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__n, __a)
+ 279:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_default_initialize(__n); }
+ 280:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 281:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 282:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Creates a %vector with copies of an exemplar element.
+ 283:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __n  The number of elements to initially create.
+ 284:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __value  An element to copy.
+ 285:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __a  An allocator.
+ 286:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 287:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  This constructor fills the %vector with @a __n copies of @a __value.
+ 288:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 289:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(size_type __n, const value_type& __value,
+ 290:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	     const allocator_type& __a = allocator_type())
+ 291:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__n, __a)
+ 292:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_fill_initialize(__n, __value); }
+ 293:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #else
+ 294:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 295:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Creates a %vector with copies of an exemplar element.
+ 296:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __n  The number of elements to initially create.
+ 297:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __value  An element to copy.
+ 298:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __a  An allocator.
+ 299:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 300:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  This constructor fills the %vector with @a __n copies of @a __value.
+ 301:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 302:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       explicit
+ 303:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(size_type __n, const value_type& __value = value_type(),
+ 304:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	     const allocator_type& __a = allocator_type())
+ 305:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__n, __a)
+ 306:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_fill_initialize(__n, __value); }
+ 307:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+ 308:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 309:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 310:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  %Vector copy constructor.
+ 311:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __x  A %vector of identical element and allocator types.
+ 312:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 313:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  The newly-created %vector uses a copy of the allocation
+ 314:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  object used by @a __x.  All the elements of @a __x are copied,
+ 315:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  but any extra memory in
+ 316:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @a __x (for fast expansion) will not be copied.
+ 317:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 318:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(const vector& __x)
+ 319:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__x.size(),
+ 320:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****         _Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+ 321:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { this->_M_impl._M_finish =
+ 322:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+ 323:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 				      this->_M_impl._M_start,
+ 324:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 				      _M_get_Tp_allocator());
+ 325:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 326:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 327:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+ 328:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 329:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  %Vector move constructor.
+ 330:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __x  A %vector of identical element and allocator types.
+ 331:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 332:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  The newly-created %vector contains the exact contents of @a __x.
+ 333:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  The contents of @a __x are a valid, but unspecified %vector.
+ 334:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 335:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(vector&& __x) noexcept
+ 336:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(std::move(__x)) { }
+ 337:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 338:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /// Copy constructor with alternative allocator
+ 339:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(const vector& __x, const allocator_type& __a)
+ 340:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__x.size(), __a)
+ 341:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { this->_M_impl._M_finish =
+ 342:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+ 343:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 				      this->_M_impl._M_start,
+ 344:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 				      _M_get_Tp_allocator());
+ 345:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 346:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 347:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /// Move constructor with alternative allocator
+ 348:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(vector&& __rv, const allocator_type& __m)
+ 349:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       noexcept(_Alloc_traits::_S_always_equal())
+ 350:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(std::move(__rv), __m)
+ 351:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 352:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	if (__rv.get_allocator() != __m)
+ 353:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  {
+ 354:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	    this->_M_impl._M_finish =
+ 355:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	      std::__uninitialized_move_a(__rv.begin(), __rv.end(),
+ 356:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 					  this->_M_impl._M_start,
+ 357:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 					  _M_get_Tp_allocator());
+ 358:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	    __rv.clear();
+ 359:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  }
+ 360:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 361:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 362:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 363:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Builds a %vector from an initializer list.
+ 364:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __l  An initializer_list.
+ 365:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __a  An allocator.
+ 366:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 367:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  Create a %vector consisting of copies of the elements in the
+ 368:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  initializer_list @a __l.
+ 369:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 370:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  This will call the element type's copy constructor N times
+ 371:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  (where N is @a __l.size()) and do no memory reallocation.
+ 372:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 373:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       vector(initializer_list<value_type> __l,
+ 374:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	     const allocator_type& __a = allocator_type())
+ 375:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _Base(__a)
+ 376:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 377:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	_M_range_initialize(__l.begin(), __l.end(),
+ 378:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 			    random_access_iterator_tag());
+ 379:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 380:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+ 381:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 382:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 383:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @brief  Builds a %vector from a range.
+ 384:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __first  An input iterator.
+ 385:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __last  An input iterator.
+ 386:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  @param  __a  An allocator.
+ 387:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 388:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  Create a %vector consisting of copies of the elements from
+ 389:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  [first,last).
+ 390:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *
+ 391:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  If the iterators are forward, bidirectional, or
+ 392:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  random-access, then this will call the elements' copy
+ 393:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  constructor N times (where N is distance(first,last)) and do
+ 394:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  no memory reallocation.  But if only input iterators are
+ 395:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  used, then this will do at most 2N calls to the copy
+ 396:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  constructor, and logN memory reallocations.
+ 397:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 398:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #if __cplusplus >= 201103L
+ 399:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       template<typename _InputIterator,
+ 400:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	       typename = std::_RequireInputIter<_InputIterator>>
+ 401:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****         vector(_InputIterator __first, _InputIterator __last,
+ 402:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	       const allocator_type& __a = allocator_type())
+ 403:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	: _Base(__a)
+ 404:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****         { _M_initialize_dispatch(__first, __last, __false_type()); }
+ 405:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #else
+ 406:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       template<typename _InputIterator>
+ 407:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****         vector(_InputIterator __first, _InputIterator __last,
+ 408:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	       const allocator_type& __a = allocator_type())
+ 409:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	: _Base(__a)
+ 410:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****         {
+ 411:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  // Check whether it's an integral type.  If so, it's not an iterator.
+ 412:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  typedef typename std::__is_integer<_InputIterator>::__type _Integral;
+ 413:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  _M_initialize_dispatch(__first, __last, _Integral());
+ 414:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	}
+ 415:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** #endif
+ 416:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 417:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       /**
+ 418:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  The dtor only erases the elements, and note that if the
+ 419:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  elements themselves are pointers, the pointed-to memory is
+ 420:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  not touched in any way.  Managing the pointer is the user's
+ 421:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        *  responsibility.
+ 422:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****        */
+ 423:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       ~vector() _GLIBCXX_NOEXCEPT
+ 408              	.LM12:
+ 409              	.LFBB5:
+ 410 0000 B0B5     	 push {r4,r5,r7,lr}
+ 411 0002 82B0     	 sub sp,sp,#8
+ 412 0004 00AF     	 add r7,sp,#0
+ 413 0006 7860     	 str r0,[r7,#4]
+ 414              	.LBB5:
+ 424:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+ 425:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 		      _M_get_Tp_allocator()); }
+ 416              	.LM13:
+ 417 0008 7B68     	 ldr r3,[r7,#4]
+ 418 000a 1D68     	 ldr r5,[r3]
+ 419 000c 7B68     	 ldr r3,[r7,#4]
+ 420 000e 5C68     	 ldr r4,[r3,#4]
+ 421 0010 7B68     	 ldr r3,[r7,#4]
+ 422 0012 181C     	 mov r0,r3
+ 423 0014 FFF7FEFF 	 bl _ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv
+ 424 0018 031C     	 mov r3,r0
+ 424:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+ 426              	.LM14:
+ 427 001a 281C     	 mov r0,r5
+ 428 001c 211C     	 mov r1,r4
+ 429 001e 1A1C     	 mov r2,r3
+ 430 0020 FFF7FEFF 	 bl _ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E
+ 432              	.LM15:
+ 433 0024 7B68     	 ldr r3,[r7,#4]
+ 434 0026 181C     	 mov r0,r3
+ 435 0028 FFF7FEFF 	 bl _ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev
+ 436              	.LBE5:
+ 437 002c 7B68     	 ldr r3,[r7,#4]
+ 438 002e 181C     	 mov r0,r3
+ 439 0030 BD46     	 mov sp,r7
+ 440 0032 02B0     	 add sp,sp,#8
+ 441              	 
+ 442 0034 B0BD     	 pop {r4,r5,r7,pc}
+ 444              	.Lscope5:
+ 446              	 .stabd 78,0,0
+ 447              	 .weak _ZNSt6vectorIP4LampSaIS1_EED1Ev
+ 448              	 .thumb_set _ZNSt6vectorIP4LampSaIS1_EED1Ev,_ZNSt6vectorIP4LampSaIS1_EED2Ev
+ 449 0036 C046     	 .section .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev,"axG",%progbits,_ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD5Ev,comdat
+ 450              	 .align 2
+ 453              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev
+ 454              	 .code 16
+ 455              	 .thumb_func
+ 457              	_ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev:
+ 458              	 .stabd 46,0,0
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : public _Tp_alloc_type
+ 460              	.LM16:
+ 461              	.LFBB6:
+ 462 0000 80B5     	 push {r7,lr}
+ 463 0002 82B0     	 sub sp,sp,#8
+ 464 0004 00AF     	 add r7,sp,#0
+ 465 0006 7860     	 str r0,[r7,#4]
+ 466              	.LBB6:
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : public _Tp_alloc_type
+ 468              	.LM17:
+ 469 0008 7B68     	 ldr r3,[r7,#4]
+ 470 000a 181C     	 mov r0,r3
+ 471 000c FFF7FEFF 	 bl _ZNSaIP4LampED2Ev
+ 472              	.LBE6:
+ 473 0010 7B68     	 ldr r3,[r7,#4]
+ 474 0012 181C     	 mov r0,r3
+ 475 0014 BD46     	 mov sp,r7
+ 476 0016 02B0     	 add sp,sp,#8
+ 477              	 
+ 478 0018 80BD     	 pop {r7,pc}
+ 480              	.Lscope6:
+ 482              	 .stabd 78,0,0
+ 483              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD1Ev
+ 484              	 .thumb_set _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD1Ev,_ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev
+ 485 001a C046     	 .section .text._ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev,"axG",%progbits,_ZNSt12_Vector_baseIP4LampSaIS1_EEC5Ev,comdat
+ 486              	 .align 2
+ 489              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev
+ 490              	 .code 16
+ 491              	 .thumb_func
+ 493              	_ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev:
+ 494              	 .stabd 46,0,0
+ 124:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       : _M_impl() { }
+ 496              	.LM18:
+ 497              	.LFBB7:
+ 498 0000 80B5     	 push {r7,lr}
+ 499 0002 82B0     	 sub sp,sp,#8
+ 500 0004 00AF     	 add r7,sp,#0
+ 501 0006 7860     	 str r0,[r7,#4]
+ 502              	.LBB7:
+ 125:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 504              	.LM19:
+ 505 0008 7B68     	 ldr r3,[r7,#4]
+ 506 000a 181C     	 mov r0,r3
+ 507 000c FFF7FEFF 	 bl _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC1Ev
+ 508              	.LBE7:
+ 509 0010 7B68     	 ldr r3,[r7,#4]
+ 510 0012 181C     	 mov r0,r3
+ 511 0014 BD46     	 mov sp,r7
+ 512 0016 02B0     	 add sp,sp,#8
+ 513              	 
+ 514 0018 80BD     	 pop {r7,pc}
+ 516              	.Lscope7:
+ 518              	 .stabd 78,0,0
+ 519              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EEC1Ev
+ 520              	 .thumb_set _ZNSt12_Vector_baseIP4LampSaIS1_EEC1Ev,_ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev
+ 521 001a C046     	 .section .text._ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev,"axG",%progbits,_ZNSt12_Vector_baseIP4LampSaIS1_EED5Ev,comdat
+ 522              	 .align 2
+ 525              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev
+ 526              	 .code 16
+ 527              	 .thumb_func
+ 529              	_ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev:
+ 530              	 .stabd 46,0,0
+ 159:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { _M_deallocate(this->_M_impl._M_start, this->_M_impl._M_end_of_storage
+ 532              	.LM20:
+ 533              	.LFBB8:
+ 534 0000 90B5     	 push {r4,r7,lr}
+ 535 0002 83B0     	 sub sp,sp,#12
+ 536 0004 00AF     	 add r7,sp,#0
+ 537 0006 7860     	 str r0,[r7,#4]
+ 538              	.LBB8:
+ 161:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 540              	.LM21:
+ 541 0008 7B68     	 ldr r3,[r7,#4]
+ 542 000a 1A68     	 ldr r2,[r3]
+ 543 000c 7B68     	 ldr r3,[r7,#4]
+ 544 000e 9B68     	 ldr r3,[r3,#8]
+ 545 0010 191C     	 mov r1,r3
+ 546 0012 7B68     	 ldr r3,[r7,#4]
+ 547 0014 1B68     	 ldr r3,[r3]
+ 548 0016 CB1A     	 sub r3,r1,r3
+ 549 0018 9B10     	 asr r3,r3,#2
+ 550 001a 1C1C     	 mov r4,r3
+ 160:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 		      - this->_M_impl._M_start); }
+ 552              	.LM22:
+ 553 001c 7B68     	 ldr r3,[r7,#4]
+ 554 001e 181C     	 mov r0,r3
+ 555 0020 111C     	 mov r1,r2
+ 556 0022 221C     	 mov r2,r4
+ 557 0024 FFF7FEFF 	 bl _ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j
+ 161:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 559              	.LM23:
+ 560 0028 7B68     	 ldr r3,[r7,#4]
+ 561 002a 181C     	 mov r0,r3
+ 562 002c FFF7FEFF 	 bl _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD1Ev
+ 563              	.LBE8:
+ 564 0030 7B68     	 ldr r3,[r7,#4]
+ 565 0032 181C     	 mov r0,r3
+ 566 0034 BD46     	 mov sp,r7
+ 567 0036 03B0     	 add sp,sp,#12
+ 568              	 
+ 569 0038 90BD     	 pop {r4,r7,pc}
+ 571              	.Lscope8:
+ 573              	 .stabd 78,0,0
+ 574              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EED1Ev
+ 575              	 .thumb_set _ZNSt12_Vector_baseIP4LampSaIS1_EED1Ev,_ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev
+ 576 003a C046     	 .section .text._ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv,"axG",%progbits,_ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv,comdat
+ 577              	 .align 2
+ 580              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv
+ 581              	 .code 16
+ 582              	 .thumb_func
+ 584              	_ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv:
+ 585              	 .stabd 46,0,0
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       { return *static_cast<_Tp_alloc_type*>(&this->_M_impl); }
+ 587              	.LM24:
+ 588              	.LFBB9:
+ 589 0000 80B5     	 push {r7,lr}
+ 590 0002 82B0     	 sub sp,sp,#8
+ 591 0004 00AF     	 add r7,sp,#0
+ 592 0006 7860     	 str r0,[r7,#4]
+ 114:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 594              	.LM25:
+ 595 0008 7B68     	 ldr r3,[r7,#4]
+ 596 000a 181C     	 mov r0,r3
+ 597 000c BD46     	 mov sp,r7
+ 598 000e 02B0     	 add sp,sp,#8
+ 599              	 
+ 600 0010 80BD     	 pop {r7,pc}
+ 602              	.Lscope9:
+ 604              	 .stabd 78,0,0
+ 605 0012 C046     	 .section .text._ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E,"axG",%progbits,_ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E,comdat
+ 606              	 .align 2
+ 610              	 .weak _ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E
+ 611              	 .code 16
+ 612              	 .thumb_func
+ 614              	_ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E:
+ 615              	 .stabd 46,0,0
+ 617              	.Ltext2:
+   1:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // nonstandard construct and destroy functions -*- C++ -*-
+   2:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+   3:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // Copyright (C) 2001-2014 Free Software Foundation, Inc.
+   4:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** //
+   5:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // software; you can redistribute it and/or modify it under the
+   7:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // terms of the GNU General Public License as published by the
+   8:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // any later version.
+  10:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  11:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // This library is distributed in the hope that it will be useful,
+  12:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // GNU General Public License for more details.
+  15:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  16:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // 3.1, as published by the Free Software Foundation.
+  19:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  20:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // You should have received a copy of the GNU General Public License and
+  21:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** // <http://www.gnu.org/licenses/>.
+  24:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  25:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** /*
+  26:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *
+  27:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * Copyright (c) 1994
+  28:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * Hewlett-Packard Company
+  29:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *
+  30:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * Permission to use, copy, modify, distribute and sell this software
+  31:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * and its documentation for any purpose is hereby granted without fee,
+  32:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * provided that the above copyright notice appear in all copies and
+  33:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * that both that copyright notice and this permission notice appear
+  34:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * in supporting documentation.  Hewlett-Packard Company makes no
+  35:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * representations about the suitability of this software for any
+  36:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * purpose.  It is provided "as is" without express or implied warranty.
+  37:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *
+  38:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *
+  39:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * Copyright (c) 1996,1997
+  40:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * Silicon Graphics Computer Systems, Inc.
+  41:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *
+  42:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * Permission to use, copy, modify, distribute and sell this software
+  43:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * and its documentation for any purpose is hereby granted without fee,
+  44:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * provided that the above copyright notice appear in all copies and
+  45:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * that both that copyright notice and this permission notice appear
+  46:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * in supporting documentation.  Silicon Graphics makes no
+  47:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * representations about the suitability of this software for any
+  48:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  * purpose.  It is provided "as is" without express or implied warranty.
+  49:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  */
+  50:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  51:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** /** @file bits/stl_construct.h
+  52:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *  This is an internal header file, included by other library headers.
+  53:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  *  Do not attempt to use it directly. @headername{memory}
+  54:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****  */
+  55:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  56:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #ifndef _STL_CONSTRUCT_H
+  57:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #define _STL_CONSTRUCT_H 1
+  58:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  59:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #include <new>
+  60:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #include <bits/move.h>
+  61:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #include <ext/alloc_traits.h>
+  62:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  63:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** namespace std _GLIBCXX_VISIBILITY(default)
+  64:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** {
+  65:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  66:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  67:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   /**
+  68:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * Constructs an object in existing memory by invoking an allocated
+  69:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * object's constructor with an initializer.
+  70:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    */
+  71:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #if __cplusplus >= 201103L
+  72:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<typename _T1, typename... _Args>
+  73:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     inline void
+  74:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     _Construct(_T1* __p, _Args&&... __args)
+  75:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     { ::new(static_cast<void*>(__p)) _T1(std::forward<_Args>(__args)...); }
+  76:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #else
+  77:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<typename _T1, typename _T2>
+  78:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     inline void
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     _Construct(_T1* __p, const _T2& __value)
+  80:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+  81:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  82:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       // 402. wrong new expression in [some_]allocator::construct
+  83:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       ::new(static_cast<void*>(__p)) _T1(__value);
+  84:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     }
+  85:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** #endif
+  86:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  87:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   /**
+  88:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * Destroy the object pointed to by a pointer type.
+  89:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    */
+  90:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<typename _Tp>
+  91:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     inline void
+  92:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     _Destroy(_Tp* __pointer)
+  93:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     { __pointer->~_Tp(); }
+  94:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+  95:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<bool>
+  96:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     struct _Destroy_aux
+  97:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+  98:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       template<typename _ForwardIterator>
+  99:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****         static void
+ 100:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****         __destroy(_ForwardIterator __first, _ForwardIterator __last)
+ 101:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	{
+ 102:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	  for (; __first != __last; ++__first)
+ 103:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	    std::_Destroy(std::__addressof(*__first));
+ 104:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	}
+ 105:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     };
+ 106:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+ 107:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<>
+ 108:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     struct _Destroy_aux<true>
+ 109:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+ 110:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       template<typename _ForwardIterator>
+ 111:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****         static void
+ 112:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****         __destroy(_ForwardIterator, _ForwardIterator) { }
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     };
+ 114:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+ 115:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   /**
+ 116:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * Destroy a range of objects.  If the value_type of the object has
+ 117:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * a trivial destructor, the compiler should optimize all of this
+ 118:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * away, otherwise the objects' destructors must be invoked.
+ 119:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    */
+ 120:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<typename _ForwardIterator>
+ 121:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     inline void
+ 122:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+ 123:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+ 124:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       typedef typename iterator_traits<_ForwardIterator>::value_type
+ 125:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****                        _Value_type;
+ 126:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+ 127:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	__destroy(__first, __last);
+ 128:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     }
+ 129:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+ 130:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   /**
+ 131:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * Destroy a range of objects using the supplied allocator.  For
+ 132:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * nondefault allocators we do not optimize away invocation of 
+ 133:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    * destroy() even if _Tp has a trivial destructor.
+ 134:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****    */
+ 135:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+ 136:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<typename _ForwardIterator, typename _Allocator>
+ 137:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     void
+ 138:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+ 139:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	     _Allocator& __alloc)
+ 140:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+ 141:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       typedef __gnu_cxx::__alloc_traits<_Allocator> __traits;
+ 142:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       for (; __first != __last; ++__first)
+ 143:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	__traits::destroy(__alloc, std::__addressof(*__first));
+ 144:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     }
+ 145:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+ 146:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****   template<typename _ForwardIterator, typename _Tp>
+ 147:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     inline void
+ 148:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+ 619              	.LM26:
+ 620              	.LFBB10:
+ 621 0000 80B5     	 push {r7,lr}
+ 622 0002 84B0     	 sub sp,sp,#16
+ 623 0004 00AF     	 add r7,sp,#0
+ 624 0006 F860     	 str r0,[r7,#12]
+ 625 0008 B960     	 str r1,[r7,#8]
+ 626 000a 7A60     	 str r2,[r7,#4]
+ 149:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	     allocator<_Tp>&)
+ 150:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+ 151:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****       _Destroy(__first, __last);
+ 628              	.LM27:
+ 629 000c FA68     	 ldr r2,[r7,#12]
+ 630 000e BB68     	 ldr r3,[r7,#8]
+ 631 0010 101C     	 mov r0,r2
+ 632 0012 191C     	 mov r1,r3
+ 633 0014 FFF7FEFF 	 bl _ZSt8_DestroyIPP4LampEvT_S3_
+ 152:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     }
+ 635              	.LM28:
+ 636 0018 BD46     	 mov sp,r7
+ 637 001a 04B0     	 add sp,sp,#16
+ 638              	 
+ 639 001c 80BD     	 pop {r7,pc}
+ 641              	.Lscope10:
+ 643              	 .stabd 78,0,0
+ 644 001e C046     	 .section .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev,"axG",%progbits,_ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC5Ev,comdat
+ 645              	 .align 2
+ 648              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev
+ 649              	 .code 16
+ 650              	 .thumb_func
+ 652              	_ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev:
+ 653              	 .stabd 46,0,0
+ 655              	.Ltext3:
+  86:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	: _Tp_alloc_type(), _M_start(0), _M_finish(0), _M_end_of_storage(0)
+ 657              	.LM29:
+ 658              	.LFBB11:
+ 659 0000 80B5     	 push {r7,lr}
+ 660 0002 82B0     	 sub sp,sp,#8
+ 661 0004 00AF     	 add r7,sp,#0
+ 662 0006 7860     	 str r0,[r7,#4]
+ 663              	.LBB9:
+  87:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	{ }
+ 665              	.LM30:
+ 666 0008 7B68     	 ldr r3,[r7,#4]
+ 667 000a 181C     	 mov r0,r3
+ 668 000c FFF7FEFF 	 bl _ZNSaIP4LampEC2Ev
+ 669 0010 7B68     	 ldr r3,[r7,#4]
+ 670 0012 0022     	 mov r2,#0
+ 671 0014 1A60     	 str r2,[r3]
+ 672 0016 7B68     	 ldr r3,[r7,#4]
+ 673 0018 0022     	 mov r2,#0
+ 674 001a 5A60     	 str r2,[r3,#4]
+ 675 001c 7B68     	 ldr r3,[r7,#4]
+ 676 001e 0022     	 mov r2,#0
+ 677 0020 9A60     	 str r2,[r3,#8]
+ 678              	.LBE9:
+  88:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 680              	.LM31:
+ 681 0022 7B68     	 ldr r3,[r7,#4]
+ 682 0024 181C     	 mov r0,r3
+ 683 0026 BD46     	 mov sp,r7
+ 684 0028 02B0     	 add sp,sp,#8
+ 685              	 
+ 686 002a 80BD     	 pop {r7,pc}
+ 688              	.Lscope11:
+ 690              	 .stabd 78,0,0
+ 691              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC1Ev
+ 692              	 .thumb_set _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC1Ev,_ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev
+ 693              	 .section .text._ZNSaIP4LampED2Ev,"axG",%progbits,_ZNSaIP4LampED5Ev,comdat
+ 694              	 .align 2
+ 697              	 .weak _ZNSaIP4LampED2Ev
+ 698              	 .code 16
+ 699              	 .thumb_func
+ 701              	_ZNSaIP4LampED2Ev:
+ 702              	 .stabd 46,0,0
+ 704              	.Ltext4:
+   1:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // Allocators -*- C++ -*-
+   2:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+   3:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // Copyright (C) 2001-2014 Free Software Foundation, Inc.
+   4:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** //
+   5:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // software; you can redistribute it and/or modify it under the
+   7:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // terms of the GNU General Public License as published by the
+   8:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // any later version.
+  10:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  11:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // This library is distributed in the hope that it will be useful,
+  12:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // GNU General Public License for more details.
+  15:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  16:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // 3.1, as published by the Free Software Foundation.
+  19:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  20:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // You should have received a copy of the GNU General Public License and
+  21:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** // <http://www.gnu.org/licenses/>.
+  24:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  25:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** /*
+  26:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * Copyright (c) 1996-1997
+  27:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * Silicon Graphics Computer Systems, Inc.
+  28:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  *
+  29:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * Permission to use, copy, modify, distribute and sell this software
+  30:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * and its documentation for any purpose is hereby granted without fee,
+  31:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * provided that the above copyright notice appear in all copies and
+  32:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * that both that copyright notice and this permission notice appear
+  33:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * in supporting documentation.  Silicon Graphics makes no
+  34:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * representations about the suitability of this software for any
+  35:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  * purpose.  It is provided "as is" without express or implied warranty.
+  36:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  */
+  37:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  38:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** /** @file bits/allocator.h
+  39:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  *  This is an internal header file, included by other library headers.
+  40:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  *  Do not attempt to use it directly. @headername{memory}
+  41:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****  */
+  42:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  43:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #ifndef _ALLOCATOR_H
+  44:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #define _ALLOCATOR_H 1
+  45:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  46:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #include <bits/c++allocator.h> // Define the base class to std::allocator.
+  47:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #include <bits/memoryfwd.h>
+  48:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #if __cplusplus >= 201103L
+  49:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #include <type_traits>
+  50:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #endif
+  51:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  52:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** namespace std _GLIBCXX_VISIBILITY(default)
+  53:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** {
+  54:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  55:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  56:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****   /**
+  57:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *  @addtogroup allocators
+  58:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *  @{
+  59:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    */
+  60:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  61:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****   /// allocator<void> specialization.
+  62:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****   template<>
+  63:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****     class allocator<void>
+  64:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****     {
+  65:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****     public:
+  66:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef size_t      size_type;
+  67:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef ptrdiff_t   difference_type;
+  68:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef void*       pointer;
+  69:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef const void* const_pointer;
+  70:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef void        value_type;
+  71:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  72:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       template<typename _Tp1>
+  73:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****         struct rebind
+  74:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****         { typedef allocator<_Tp1> other; };
+  75:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  76:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #if __cplusplus >= 201103L
+  77:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  78:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       // 2103. std::allocator propagate_on_container_move_assignment
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef true_type propagate_on_container_move_assignment;
+  80:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #endif
+  81:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****     };
+  82:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+  83:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****   /**
+  84:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    * @brief  The @a standard allocator, as per [20.4].
+  85:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *
+  86:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *  See http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt04ch11.html
+  87:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *  for further details.
+  88:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *
+  89:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    *  @tparam  _Tp  Type of allocated object.
+  90:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    */
+  91:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****   template<typename _Tp>
+  92:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****     class allocator: public __allocator_base<_Tp>
+  93:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****     {
+  94:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****    public:
+  95:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef size_t     size_type;
+  96:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef ptrdiff_t  difference_type;
+  97:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef _Tp*       pointer;
+  98:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef const _Tp* const_pointer;
+  99:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef _Tp&       reference;
+ 100:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef const _Tp& const_reference;
+ 101:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef _Tp        value_type;
+ 102:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 103:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       template<typename _Tp1>
+ 104:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****         struct rebind
+ 105:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****         { typedef allocator<_Tp1> other; };
+ 106:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 107:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #if __cplusplus >= 201103L
+ 108:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       // _GLIBCXX_RESOLVE_LIB_DEFECTS
+ 109:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       // 2103. std::allocator propagate_on_container_move_assignment
+ 110:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       typedef true_type propagate_on_container_move_assignment;
+ 111:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** #endif
+ 112:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       allocator() throw() { }
+ 114:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 115:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       allocator(const allocator& __a) throw()
+ 116:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       : __allocator_base<_Tp>(__a) { }
+ 117:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 118:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       template<typename _Tp1>
+ 119:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****         allocator(const allocator<_Tp1>&) throw() { }
+ 120:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 121:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h ****       ~allocator() throw() { }
+ 706              	.LM32:
+ 707              	.LFBB12:
+ 708 0000 80B5     	 push {r7,lr}
+ 709 0002 82B0     	 sub sp,sp,#8
+ 710 0004 00AF     	 add r7,sp,#0
+ 711 0006 7860     	 str r0,[r7,#4]
+ 712              	.LBB10:
+ 714              	.LM33:
+ 715 0008 7B68     	 ldr r3,[r7,#4]
+ 716 000a 181C     	 mov r0,r3
+ 717 000c FFF7FEFF 	 bl _ZN9__gnu_cxx13new_allocatorIP4LampED2Ev
+ 718              	.LBE10:
+ 719 0010 7B68     	 ldr r3,[r7,#4]
+ 720 0012 181C     	 mov r0,r3
+ 721 0014 BD46     	 mov sp,r7
+ 722 0016 02B0     	 add sp,sp,#8
+ 723              	 
+ 724 0018 80BD     	 pop {r7,pc}
+ 726              	.Lscope12:
+ 728              	 .stabd 78,0,0
+ 729              	 .weak _ZNSaIP4LampED1Ev
+ 730              	 .thumb_set _ZNSaIP4LampED1Ev,_ZNSaIP4LampED2Ev
+ 731 001a C046     	 .section .text._ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j,"axG",%progbits,_ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j,comdat
+ 732              	 .align 2
+ 737              	 .weak _ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j
+ 738              	 .code 16
+ 739              	 .thumb_func
+ 741              	_ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j:
+ 742              	 .stabd 46,0,0
+ 744              	.Ltext5:
+ 174:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       {
+ 746              	.LM34:
+ 747              	.LFBB13:
+ 748 0000 80B5     	 push {r7,lr}
+ 749 0002 84B0     	 sub sp,sp,#16
+ 750 0004 00AF     	 add r7,sp,#0
+ 751 0006 F860     	 str r0,[r7,#12]
+ 752 0008 B960     	 str r1,[r7,#8]
+ 753 000a 7A60     	 str r2,[r7,#4]
+ 754              	.LBB11:
+ 177:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 	  _Tr::deallocate(_M_impl, __p, __n);
+ 756              	.LM35:
+ 757 000c BB68     	 ldr r3,[r7,#8]
+ 758 000e 002B     	 cmp r3,#0
+ 759 0010 07D0     	 beq .L39
+ 178:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h ****       }
+ 761              	.LM36:
+ 762 0012 F968     	 ldr r1,[r7,#12]
+ 763 0014 BA68     	 ldr r2,[r7,#8]
+ 764 0016 7B68     	 ldr r3,[r7,#4]
+ 765 0018 081C     	 mov r0,r1
+ 766 001a 111C     	 mov r1,r2
+ 767 001c 1A1C     	 mov r2,r3
+ 768 001e FFF7FEFF 	 bl _ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j
+ 769              	.L39:
+ 770              	.LBE11:
+ 179:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_vector.h **** 
+ 772              	.LM37:
+ 773 0022 BD46     	 mov sp,r7
+ 774 0024 04B0     	 add sp,sp,#16
+ 775              	 
+ 776 0026 80BD     	 pop {r7,pc}
+ 778              	.Lscope13:
+ 780              	 .stabd 78,0,0
+ 781              	 .section .text._ZSt8_DestroyIPP4LampEvT_S3_,"axG",%progbits,_ZSt8_DestroyIPP4LampEvT_S3_,comdat
+ 782              	 .align 2
+ 786              	 .weak _ZSt8_DestroyIPP4LampEvT_S3_
+ 787              	 .code 16
+ 788              	 .thumb_func
+ 790              	_ZSt8_DestroyIPP4LampEvT_S3_:
+ 791              	 .stabd 46,0,0
+ 793              	.Ltext6:
+ 122:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     {
+ 795              	.LM38:
+ 796              	.LFBB14:
+ 797 0000 80B5     	 push {r7,lr}
+ 798 0002 82B0     	 sub sp,sp,#8
+ 799 0004 00AF     	 add r7,sp,#0
+ 800 0006 7860     	 str r0,[r7,#4]
+ 801 0008 3960     	 str r1,[r7]
+ 802              	.LBB12:
+ 126:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 	__destroy(__first, __last);
+ 804              	.LM39:
+ 805 000a 7A68     	 ldr r2,[r7,#4]
+ 806 000c 3B68     	 ldr r3,[r7]
+ 807 000e 101C     	 mov r0,r2
+ 808 0010 191C     	 mov r1,r3
+ 809 0012 FFF7FEFF 	 bl _ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_
+ 810              	.LBE12:
+ 128:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h **** 
+ 812              	.LM40:
+ 813 0016 BD46     	 mov sp,r7
+ 814 0018 02B0     	 add sp,sp,#8
+ 815              	 
+ 816 001a 80BD     	 pop {r7,pc}
+ 818              	.Lscope14:
+ 820              	 .stabd 78,0,0
+ 821              	 .section .text._ZNSaIP4LampEC2Ev,"axG",%progbits,_ZNSaIP4LampEC5Ev,comdat
+ 822              	 .align 2
+ 825              	 .weak _ZNSaIP4LampEC2Ev
+ 826              	 .code 16
+ 827              	 .thumb_func
+ 829              	_ZNSaIP4LampEC2Ev:
+ 830              	 .stabd 46,0,0
+ 832              	.Ltext7:
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 834              	.LM41:
+ 835              	.LFBB15:
+ 836 0000 80B5     	 push {r7,lr}
+ 837 0002 82B0     	 sub sp,sp,#8
+ 838 0004 00AF     	 add r7,sp,#0
+ 839 0006 7860     	 str r0,[r7,#4]
+ 840              	.LBB13:
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\allocator.h **** 
+ 842              	.LM42:
+ 843 0008 7B68     	 ldr r3,[r7,#4]
+ 844 000a 181C     	 mov r0,r3
+ 845 000c FFF7FEFF 	 bl _ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev
+ 846              	.LBE13:
+ 847 0010 7B68     	 ldr r3,[r7,#4]
+ 848 0012 181C     	 mov r0,r3
+ 849 0014 BD46     	 mov sp,r7
+ 850 0016 02B0     	 add sp,sp,#8
+ 851              	 
+ 852 0018 80BD     	 pop {r7,pc}
+ 854              	.Lscope15:
+ 856              	 .stabd 78,0,0
+ 857              	 .weak _ZNSaIP4LampEC1Ev
+ 858              	 .thumb_set _ZNSaIP4LampEC1Ev,_ZNSaIP4LampEC2Ev
+ 859 001a C046     	 .section .text._ZN9__gnu_cxx13new_allocatorIP4LampED2Ev,"axG",%progbits,_ZN9__gnu_cxx13new_allocatorIP4LampED5Ev,comdat
+ 860              	 .align 2
+ 863              	 .weak _ZN9__gnu_cxx13new_allocatorIP4LampED2Ev
+ 864              	 .code 16
+ 865              	 .thumb_func
+ 867              	_ZN9__gnu_cxx13new_allocatorIP4LampED2Ev:
+ 868              	 .stabd 46,0,0
+ 870              	.Ltext8:
+   1:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // Allocator that wraps operator new -*- C++ -*-
+   2:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+   3:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // Copyright (C) 2001-2014 Free Software Foundation, Inc.
+   4:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** //
+   5:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // software; you can redistribute it and/or modify it under the
+   7:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // terms of the GNU General Public License as published by the
+   8:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // any later version.
+  10:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  11:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // This library is distributed in the hope that it will be useful,
+  12:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // GNU General Public License for more details.
+  15:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  16:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // 3.1, as published by the Free Software Foundation.
+  19:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  20:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // You should have received a copy of the GNU General Public License and
+  21:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** // <http://www.gnu.org/licenses/>.
+  24:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  25:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** /** @file ext/new_allocator.h
+  26:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****  *  This file is a GNU extension to the Standard C++ Library.
+  27:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****  */
+  28:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  29:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #ifndef _NEW_ALLOCATOR_H
+  30:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #define _NEW_ALLOCATOR_H 1
+  31:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  32:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #include <bits/c++config.h>
+  33:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #include <new>
+  34:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #include <bits/functexcept.h>
+  35:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #include <bits/move.h>
+  36:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #if __cplusplus >= 201103L
+  37:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #include <type_traits>
+  38:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #endif
+  39:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  40:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** namespace __gnu_cxx _GLIBCXX_VISIBILITY(default)
+  41:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** {
+  42:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  43:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  44:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****   using std::size_t;
+  45:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****   using std::ptrdiff_t;
+  46:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  47:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****   /**
+  48:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *  @brief  An allocator that uses global new, as per [20.4].
+  49:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *  @ingroup allocators
+  50:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *
+  51:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *  This is precisely the allocator defined in the C++ Standard. 
+  52:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *    - all allocation calls operator new
+  53:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *    - all deallocation calls operator delete
+  54:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *
+  55:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    *  @tparam  _Tp  Type of allocated object.
+  56:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****    */
+  57:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****   template<typename _Tp>
+  58:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****     class new_allocator
+  59:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****     {
+  60:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****     public:
+  61:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef size_t     size_type;
+  62:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef ptrdiff_t  difference_type;
+  63:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef _Tp*       pointer;
+  64:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef const _Tp* const_pointer;
+  65:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef _Tp&       reference;
+  66:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef const _Tp& const_reference;
+  67:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef _Tp        value_type;
+  68:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  69:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       template<typename _Tp1>
+  70:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****         struct rebind
+  71:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****         { typedef new_allocator<_Tp1> other; };
+  72:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  73:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #if __cplusplus >= 201103L
+  74:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  75:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       // 2103. propagate_on_container_move_assignment
+  76:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       typedef std::true_type propagate_on_container_move_assignment;
+  77:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** #endif
+  78:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+  80:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  81:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+  82:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  83:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       template<typename _Tp1>
+  84:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****         new_allocator(const new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
+  85:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  86:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+ 872              	.LM43:
+ 873              	.LFBB16:
+ 874 0000 80B5     	 push {r7,lr}
+ 875 0002 82B0     	 sub sp,sp,#8
+ 876 0004 00AF     	 add r7,sp,#0
+ 877 0006 7860     	 str r0,[r7,#4]
+ 879              	.LM44:
+ 880 0008 7B68     	 ldr r3,[r7,#4]
+ 881 000a 181C     	 mov r0,r3
+ 882 000c BD46     	 mov sp,r7
+ 883 000e 02B0     	 add sp,sp,#8
+ 884              	 
+ 885 0010 80BD     	 pop {r7,pc}
+ 887              	.Lscope16:
+ 889              	 .stabd 78,0,0
+ 890              	 .weak _ZN9__gnu_cxx13new_allocatorIP4LampED1Ev
+ 891              	 .thumb_set _ZN9__gnu_cxx13new_allocatorIP4LampED1Ev,_ZN9__gnu_cxx13new_allocatorIP4LampED2Ev
+ 892 0012 C046     	 .section .text._ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j,"axG",%progbits,_ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j,comdat
+ 893              	 .align 2
+ 898              	 .weak _ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j
+ 899              	 .code 16
+ 900              	 .thumb_func
+ 902              	_ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j:
+ 903              	 .stabd 46,0,0
+ 905              	.Ltext9:
+   1:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // Allocator traits -*- C++ -*-
+   2:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+   3:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // Copyright (C) 2011-2014 Free Software Foundation, Inc.
+   4:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** //
+   5:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // software; you can redistribute it and/or modify it under the
+   7:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // terms of the GNU General Public License as published by the
+   8:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // any later version.
+  10:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  11:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // This library is distributed in the hope that it will be useful,
+  12:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // GNU General Public License for more details.
+  15:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  16:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // 3.1, as published by the Free Software Foundation.
+  19:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  20:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // You should have received a copy of the GNU General Public License and
+  21:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** // <http://www.gnu.org/licenses/>.
+  24:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  25:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** /** @file ext/alloc_traits.h
+  26:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****  *  This file is a GNU extension to the Standard C++ Library.
+  27:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****  */
+  28:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  29:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #ifndef _EXT_ALLOC_TRAITS_H
+  30:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #define _EXT_ALLOC_TRAITS_H 1
+  31:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  32:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #pragma GCC system_header
+  33:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  34:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #if __cplusplus >= 201103L
+  35:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** # include <bits/move.h>
+  36:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** # include <bits/alloc_traits.h>
+  37:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #else
+  38:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** # include <bits/allocator.h>  // for __alloc_swap
+  39:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #endif
+  40:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  41:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** namespace __gnu_cxx _GLIBCXX_VISIBILITY(default)
+  42:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** {
+  43:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  44:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  45:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #if __cplusplus >= 201103L
+  46:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Alloc>
+  47:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal : std::false_type { };
+  48:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  49:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp>
+  50:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<std::allocator<_Tp>>
+  51:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  52:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  53:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename, typename> struct array_allocator;
+  54:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  55:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp, typename _Array>
+  56:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<array_allocator<_Tp, _Array>>
+  57:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  58:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  59:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename> struct bitmap_allocator;
+  60:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  61:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp>
+  62:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<bitmap_allocator<_Tp>>
+  63:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  64:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  65:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename> struct malloc_allocator;
+  66:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  67:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp>
+  68:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<malloc_allocator<_Tp>>
+  69:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  70:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  71:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename> struct mt_allocator;
+  72:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  73:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp>
+  74:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<mt_allocator<_Tp>>
+  75:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  76:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  77:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename> struct new_allocator;
+  78:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp>
+  80:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<new_allocator<_Tp>>
+  81:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  82:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  83:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename> struct pool_allocator;
+  84:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  85:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   template<typename _Tp>
+  86:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     struct __allocator_always_compares_equal<pool_allocator<_Tp>>
+  87:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     : std::true_type { };
+  88:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #endif
+  89:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+  90:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** /**
+  91:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****  * @brief  Uniform interface to C++98 and C++0x allocators.
+  92:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****  * @ingroup allocators
+  93:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** */
+  94:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** template<typename _Alloc>
+  95:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   struct __alloc_traits
+  96:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #if __cplusplus >= 201103L
+  97:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   : std::allocator_traits<_Alloc>
+  98:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #endif
+  99:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   {
+ 100:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef _Alloc allocator_type;
+ 101:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #if __cplusplus >= 201103L
+ 102:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef std::allocator_traits<_Alloc>           _Base_type;
+ 103:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Base_type::value_type         value_type;
+ 104:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Base_type::pointer            pointer;
+ 105:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Base_type::const_pointer      const_pointer;
+ 106:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Base_type::size_type          size_type;
+ 107:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Base_type::difference_type    difference_type;
+ 108:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     // C++11 allocators do not define reference or const_reference
+ 109:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef value_type&                             reference;
+ 110:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef const value_type&                       const_reference;
+ 111:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     using _Base_type::allocate;
+ 112:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     using _Base_type::deallocate;
+ 113:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     using _Base_type::construct;
+ 114:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     using _Base_type::destroy;
+ 115:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     using _Base_type::max_size;
+ 116:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 117:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   private:
+ 118:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     template<typename _Ptr>
+ 119:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       using __is_custom_pointer
+ 120:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 	= std::__and_<std::is_same<pointer, _Ptr>,
+ 121:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 		      std::__not_<std::is_pointer<_Ptr>>>;
+ 122:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 123:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****   public:
+ 124:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     // overload construct for non-standard pointer types
+ 125:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     template<typename _Ptr, typename... _Args>
+ 126:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       static typename std::enable_if<__is_custom_pointer<_Ptr>::value>::type
+ 127:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       construct(_Alloc& __a, _Ptr __p, _Args&&... __args)
+ 128:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       {
+ 129:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 	_Base_type::construct(__a, std::addressof(*__p),
+ 130:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 			      std::forward<_Args>(__args)...);
+ 131:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       }
+ 132:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 133:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     // overload destroy for non-standard pointer types
+ 134:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     template<typename _Ptr>
+ 135:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       static typename std::enable_if<__is_custom_pointer<_Ptr>::value>::type
+ 136:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       destroy(_Alloc& __a, _Ptr __p)
+ 137:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       { _Base_type::destroy(__a, std::addressof(*__p)); }
+ 138:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 139:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static _Alloc _S_select_on_copy(const _Alloc& __a)
+ 140:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return _Base_type::select_on_container_copy_construction(__a); }
+ 141:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 142:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static void _S_on_swap(_Alloc& __a, _Alloc& __b)
+ 143:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { std::__alloc_on_swap(__a, __b); }
+ 144:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 145:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static constexpr bool _S_propagate_on_copy_assign()
+ 146:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return _Base_type::propagate_on_container_copy_assignment::value; }
+ 147:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 148:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static constexpr bool _S_propagate_on_move_assign()
+ 149:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return _Base_type::propagate_on_container_move_assignment::value; }
+ 150:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 151:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static constexpr bool _S_propagate_on_swap()
+ 152:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return _Base_type::propagate_on_container_swap::value; }
+ 153:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 154:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static constexpr bool _S_always_equal()
+ 155:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return __allocator_always_compares_equal<_Alloc>::value; }
+ 156:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 157:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static constexpr bool _S_nothrow_move()
+ 158:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return _S_propagate_on_move_assign() || _S_always_equal(); }
+ 159:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 160:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static constexpr bool _S_nothrow_swap()
+ 161:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     {
+ 162:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       using std::swap;
+ 163:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       return !_S_propagate_on_swap()
+ 164:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****        	|| noexcept(swap(std::declval<_Alloc&>(), std::declval<_Alloc&>()));
+ 165:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     }
+ 166:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 167:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     template<typename _Tp>
+ 168:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       struct rebind
+ 169:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****       { typedef typename _Base_type::template rebind_alloc<_Tp> other; };
+ 170:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** #else
+ 171:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 172:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::pointer                pointer;
+ 173:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::const_pointer          const_pointer;
+ 174:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::value_type             value_type;
+ 175:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::reference              reference;
+ 176:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::const_reference        const_reference;
+ 177:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::size_type              size_type;
+ 178:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     typedef typename _Alloc::difference_type        difference_type;
+ 179:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 180:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static pointer
+ 181:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     allocate(_Alloc& __a, size_type __n)
+ 182:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { return __a.allocate(__n); }
+ 183:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h **** 
+ 184:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     static void deallocate(_Alloc& __a, pointer __p, size_type __n)
+ 907              	.LM45:
+ 908              	.LFBB17:
+ 909 0000 80B5     	 push {r7,lr}
+ 910 0002 84B0     	 sub sp,sp,#16
+ 911 0004 00AF     	 add r7,sp,#0
+ 912 0006 F860     	 str r0,[r7,#12]
+ 913 0008 B960     	 str r1,[r7,#8]
+ 914 000a 7A60     	 str r2,[r7,#4]
+ 185:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\alloc_traits.h ****     { __a.deallocate(__p, __n); }
+ 916              	.LM46:
+ 917 000c F968     	 ldr r1,[r7,#12]
+ 918 000e BA68     	 ldr r2,[r7,#8]
+ 919 0010 7B68     	 ldr r3,[r7,#4]
+ 920 0012 081C     	 mov r0,r1
+ 921 0014 111C     	 mov r1,r2
+ 922 0016 1A1C     	 mov r2,r3
+ 923 0018 FFF7FEFF 	 bl _ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j
+ 924 001c BD46     	 mov sp,r7
+ 925 001e 04B0     	 add sp,sp,#16
+ 926              	 
+ 927 0020 80BD     	 pop {r7,pc}
+ 929              	.Lscope17:
+ 931              	 .stabd 78,0,0
+ 932 0022 C046     	 .section .text._ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_,"axG",%progbits,_ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_,comdat
+ 933              	 .align 2
+ 935              	 .weak _ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_
+ 936              	 .code 16
+ 937              	 .thumb_func
+ 939              	_ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_:
+ 940              	 .stabd 46,0,0
+ 942              	.Ltext10:
+ 112:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     };
+ 944              	.LM47:
+ 945              	.LFBB18:
+ 946 0000 80B5     	 push {r7,lr}
+ 947 0002 82B0     	 sub sp,sp,#8
+ 948 0004 00AF     	 add r7,sp,#0
+ 949 0006 7860     	 str r0,[r7,#4]
+ 950 0008 3960     	 str r1,[r7]
+ 112:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\bits\stl_construct.h ****     };
+ 952              	.LM48:
+ 953 000a BD46     	 mov sp,r7
+ 954 000c 02B0     	 add sp,sp,#8
+ 955              	 
+ 956 000e 80BD     	 pop {r7,pc}
+ 958              	.Lscope18:
+ 960              	 .stabd 78,0,0
+ 961              	 .section .text._ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev,"axG",%progbits,_ZN9__gnu_cxx13new_allocatorIP4LampEC5Ev,comdat
+ 962              	 .align 2
+ 965              	 .weak _ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev
+ 966              	 .code 16
+ 967              	 .thumb_func
+ 969              	_ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev:
+ 970              	 .stabd 46,0,0
+ 972              	.Ltext11:
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+ 974              	.LM49:
+ 975              	.LFBB19:
+ 976 0000 80B5     	 push {r7,lr}
+ 977 0002 82B0     	 sub sp,sp,#8
+ 978 0004 00AF     	 add r7,sp,#0
+ 979 0006 7860     	 str r0,[r7,#4]
+  79:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+ 981              	.LM50:
+ 982 0008 7B68     	 ldr r3,[r7,#4]
+ 983 000a 181C     	 mov r0,r3
+ 984 000c BD46     	 mov sp,r7
+ 985 000e 02B0     	 add sp,sp,#8
+ 986              	 
+ 987 0010 80BD     	 pop {r7,pc}
+ 989              	.Lscope19:
+ 991              	 .stabd 78,0,0
+ 992              	 .weak _ZN9__gnu_cxx13new_allocatorIP4LampEC1Ev
+ 993              	 .thumb_set _ZN9__gnu_cxx13new_allocatorIP4LampEC1Ev,_ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev
+ 994 0012 C046     	 .section .text._ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j,"axG",%progbits,_ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j,comdat
+ 995              	 .align 2
+ 999              	 .weak _ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j
+ 1000              	 .code 16
+ 1001              	 .thumb_func
+ 1003              	_ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j:
+ 1004              	 .stabd 46,0,0
+  87:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  88:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       pointer
+  89:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       address(reference __x) const _GLIBCXX_NOEXCEPT
+  90:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       { return std::__addressof(__x); }
+  91:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  92:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       const_pointer
+  93:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       address(const_reference __x) const _GLIBCXX_NOEXCEPT
+  94:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       { return std::__addressof(__x); }
+  95:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+  96:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       // NB: __n is permitted to be 0.  The C++ standard says nothing
+  97:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       // about what the return value is when __n == 0.
+  98:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       pointer
+  99:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       allocate(size_type __n, const void* = 0)
+ 100:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       { 
+ 101:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 	if (__n > this->max_size())
+ 102:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 	  std::__throw_bad_alloc();
+ 103:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+ 104:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+ 105:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       }
+ 106:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h **** 
+ 107:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       // __p is not permitted to be a null pointer.
+ 108:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       void
+ 109:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       deallocate(pointer __p, size_type)
+ 1006              	.LM51:
+ 1007              	.LFBB20:
+ 1008 0000 80B5     	 push {r7,lr}
+ 1009 0002 84B0     	 sub sp,sp,#16
+ 1010 0004 00AF     	 add r7,sp,#0
+ 1011 0006 F860     	 str r0,[r7,#12]
+ 1012 0008 B960     	 str r1,[r7,#8]
+ 1013 000a 7A60     	 str r2,[r7,#4]
+ 110:c:\davev4-64bit\dave-4.3.2\eclipse\arm-gcc-49\arm-none-eabi\include\c++\4.9.3\ext\new_allocator.h ****       { ::operator delete(__p); }
+ 1015              	.LM52:
+ 1016 000c BB68     	 ldr r3,[r7,#8]
+ 1017 000e 181C     	 mov r0,r3
+ 1018 0010 FFF7FEFF 	 bl _ZdlPv
+ 1019 0014 BD46     	 mov sp,r7
+ 1020 0016 04B0     	 add sp,sp,#16
+ 1021              	 
+ 1022 0018 80BD     	 pop {r7,pc}
+ 1024              	.Lscope20:
+ 1026              	 .stabd 78,0,0
+ 1027              	 .global _ZTV9LampArray
+ 1028 001a C046     	 .section .rodata._ZTV9LampArray,"a",%progbits
+ 1029              	 .align 3
+ 1032              	_ZTV9LampArray:
+ 1033 0000 00000000 	 .word 0
+ 1034 0004 00000000 	 .word 0
+ 1035 0008 00000000 	 .word _ZN9LampArrayD1Ev
+ 1036 000c 00000000 	 .word _ZN9LampArrayD0Ev
+ 1037              	 .text
+ 1039              	.Letext0:
+ 1040              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 LampArray.cpp
+    {standard input}:222    .text._ZN9LampArrayC2Ev:00000000 $t
+    {standard input}:229    .text._ZN9LampArrayC2Ev:00000000 _ZN9LampArrayC2Ev
+    {standard input}:367    .text._ZNSt6vectorIP4LampSaIS1_EEC2Ev:00000000 _ZNSt6vectorIP4LampSaIS1_EEC1Ev
+    {standard input}:260    .text._ZN9LampArrayC2Ev:00000024 $d
+    {standard input}:1032   .rodata._ZTV9LampArray:00000000 _ZTV9LampArray
+    {standard input}:229    .text._ZN9LampArrayC2Ev:00000000 _ZN9LampArrayC1Ev
+    {standard input}:268    .text._ZN9LampArrayD2Ev:00000000 $t
+    {standard input}:275    .text._ZN9LampArrayD2Ev:00000000 _ZN9LampArrayD2Ev
+    {standard input}:405    .text._ZNSt6vectorIP4LampSaIS1_EED2Ev:00000000 _ZNSt6vectorIP4LampSaIS1_EED1Ev
+    {standard input}:317    .text._ZN9LampArrayD2Ev:00000030 $d
+    {standard input}:275    .text._ZN9LampArrayD2Ev:00000000 _ZN9LampArrayD1Ev
+    {standard input}:325    .text._ZN9LampArrayD0Ev:00000000 $t
+    {standard input}:332    .text._ZN9LampArrayD0Ev:00000000 _ZN9LampArrayD0Ev
+    {standard input}:360    .text._ZNSt6vectorIP4LampSaIS1_EEC2Ev:00000000 $t
+    {standard input}:367    .text._ZNSt6vectorIP4LampSaIS1_EEC2Ev:00000000 _ZNSt6vectorIP4LampSaIS1_EEC2Ev
+    {standard input}:493    .text._ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev
+    {standard input}:398    .text._ZNSt6vectorIP4LampSaIS1_EED2Ev:00000000 $t
+    {standard input}:405    .text._ZNSt6vectorIP4LampSaIS1_EED2Ev:00000000 _ZNSt6vectorIP4LampSaIS1_EED2Ev
+    {standard input}:584    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv
+    {standard input}:614    .text._ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E:00000000 _ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E
+    {standard input}:529    .text._ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev
+    {standard input}:450    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev:00000000 $t
+    {standard input}:457    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev
+    {standard input}:701    .text._ZNSaIP4LampED2Ev:00000000 _ZNSaIP4LampED2Ev
+    {standard input}:457    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD1Ev
+    {standard input}:486    .text._ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev:00000000 $t
+    {standard input}:652    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC1Ev
+    {standard input}:493    .text._ZNSt12_Vector_baseIP4LampSaIS1_EEC2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EEC1Ev
+    {standard input}:522    .text._ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev:00000000 $t
+    {standard input}:741    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j
+    {standard input}:529    .text._ZNSt12_Vector_baseIP4LampSaIS1_EED2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EED1Ev
+    {standard input}:577    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE19_M_get_Tp_allocatorEv:00000000 $t
+    {standard input}:606    .text._ZSt8_DestroyIPP4LampS1_EvT_S3_RSaIT0_E:00000000 $t
+    {standard input}:790    .text._ZSt8_DestroyIPP4LampEvT_S3_:00000000 _ZSt8_DestroyIPP4LampEvT_S3_
+    {standard input}:645    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev:00000000 $t
+    {standard input}:652    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC2Ev
+    {standard input}:829    .text._ZNSaIP4LampEC2Ev:00000000 _ZNSaIP4LampEC2Ev
+    {standard input}:694    .text._ZNSaIP4LampED2Ev:00000000 $t
+    {standard input}:867    .text._ZN9__gnu_cxx13new_allocatorIP4LampED2Ev:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampED2Ev
+    {standard input}:701    .text._ZNSaIP4LampED2Ev:00000000 _ZNSaIP4LampED1Ev
+    {standard input}:732    .text._ZNSt12_Vector_baseIP4LampSaIS1_EE13_M_deallocateEPS1_j:00000000 $t
+    {standard input}:902    .text._ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j:00000000 _ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j
+    {standard input}:782    .text._ZSt8_DestroyIPP4LampEvT_S3_:00000000 $t
+    {standard input}:939    .text._ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_:00000000 _ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_
+    {standard input}:822    .text._ZNSaIP4LampEC2Ev:00000000 $t
+    {standard input}:969    .text._ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev
+    {standard input}:829    .text._ZNSaIP4LampEC2Ev:00000000 _ZNSaIP4LampEC1Ev
+    {standard input}:860    .text._ZN9__gnu_cxx13new_allocatorIP4LampED2Ev:00000000 $t
+    {standard input}:867    .text._ZN9__gnu_cxx13new_allocatorIP4LampED2Ev:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampED1Ev
+    {standard input}:893    .text._ZN9__gnu_cxx14__alloc_traitsISaIP4LampEE10deallocateERS3_PS2_j:00000000 $t
+    {standard input}:1003   .text._ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j
+    {standard input}:933    .text._ZNSt12_Destroy_auxILb1EE9__destroyIPP4LampEEvT_S5_:00000000 $t
+    {standard input}:962    .text._ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev:00000000 $t
+    {standard input}:969    .text._ZN9__gnu_cxx13new_allocatorIP4LampEC2Ev:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampEC1Ev
+    {standard input}:995    .text._ZN9__gnu_cxx13new_allocatorIP4LampE10deallocateEPS2_j:00000000 $t
+    {standard input}:1029   .rodata._ZTV9LampArray:00000000 $d
+                           .group:00000000 _ZNSt6vectorIP4LampSaIS1_EEC5Ev
+                           .group:00000000 _ZNSt6vectorIP4LampSaIS1_EED5Ev
+                           .group:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implD5Ev
+                           .group:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EEC5Ev
+                           .group:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EED5Ev
+                           .group:00000000 _ZNSt12_Vector_baseIP4LampSaIS1_EE12_Vector_implC5Ev
+                           .group:00000000 _ZNSaIP4LampED5Ev
+                           .group:00000000 _ZNSaIP4LampEC5Ev
+                           .group:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampED5Ev
+                           .group:00000000 _ZN9__gnu_cxx13new_allocatorIP4LampEC5Ev
+
+UNDEFINED SYMBOLS
+_ZdlPv
