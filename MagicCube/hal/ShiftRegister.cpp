@@ -18,7 +18,7 @@ ShiftRegister::~ShiftRegister() {
 
 void ShiftRegister::push(uint8_t value){
 	for(int i = 0; i < 8; i++){
-		push(((value >> i) & 0x01) == 0);
+		push(((value >> i) & 0x01) != 0);
 	}
 }
 
@@ -32,7 +32,7 @@ void ShiftRegister::push(bool value){
 
 void ShiftRegister::cpush(uint8_t value){
 	for(int i = 0; i < 8; i++){
-		cpush(((value >> i) & 0x01) == 0);
+		cpush(((value >> i) & 0x01) != 0);
 	}
 }
 
@@ -43,9 +43,9 @@ void ShiftRegister::cpush(bool value){
 }
 
 void ShiftRegister::clkHigh(void){
-	SET_BIT(PORT1->OUT, 0);
+	//SET_BIT(PORT1->OUT, 0);
 	delay(DELAY_TIME);
-	CLR_BIT(PORT1->OUT, 0);
+	//CLR_BIT(PORT1->OUT, 0);
 
 	SET_BIT(*clk_->port,clk_->pin);
 

@@ -20,7 +20,7 @@ void Cube::addFloor(Floor* floor){
 void Cube::play(Floor* floor, FloorRegister* reg){
 	for(unsigned int i = 0; i < reg->count(); i++){
 		floor->begin();
-		floor->push(reg->getValue(i));
+		//floor->push(reg->getValue(i));
 		floor->end();
 	}
 }

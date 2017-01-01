@@ -24,7 +24,7 @@ public:
 
 	void begin(void);
 	void end(void);
-	void push(uint8_t value);
+	void push(uint8_t* values);
 	void setRegisterArray(ShiftRegisterArray* shiftRegisterArray);
 
 private:

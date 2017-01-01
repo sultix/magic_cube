@@ -20,9 +20,9 @@
 #include "cube/Floor.h"
 #include "framesdata.h"
 
-void delay(unsigned len)
-{
-	while(len--);
+void delay(unsigned len) {
+	while (len--)
+		;
 }
 
 void initApplication() {
@@ -30,24 +30,25 @@ void initApplication() {
 	// Clock configuration
 	SCU_GENERAL->PASSWD = 0x000000C0UL; // disable bit protection
 	SCU_CLK->CLKCR = 0x3FF00400UL; // MCLK = 8MHz, PCLK = 8MHz
-	while((SCU_CLK->CLKCR & SCU_CLK_CLKCR_VDDC2LOW_Msk));
+	while ((SCU_CLK->CLKCR & SCU_CLK_CLKCR_VDDC2LOW_Msk))
+		;
 	SCU_GENERAL->PASSWD = 0x000000C3UL; // enable bit protection
 	SystemCoreClockUpdate();
 
 	// Konfiguriere Pin1.0 als Ausgang
-	PORT1->IOCR0 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 0 * 8);		//RED LED PIN 1.0
-	PORT1->IOCR0 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 1 * 8);		//RED LED PIN 1.1
+	PORT1->IOCR0 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 0 * 8);//RED LED PIN 1.0
+	PORT1->IOCR0 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 1 * 8);//RED LED PIN 1.1
 
-	PORT2->IOCR8 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 2 * 8); 		//1 Floor PIN 2.10
-	PORT2->IOCR8 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 3 * 8); 		//2 Floor PIN 2.11
-	PORT0->IOCR4 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 2 * 8); 		//3 Floor PIN 0.6
-	PORT0->IOCR4 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 3 * 8); 		//4 Floor PIN 0.7
+	PORT2->IOCR8 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 2 * 8); //1 Floor PIN 2.10
+	PORT2->IOCR8 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 3 * 8); //2 Floor PIN 2.11
+	PORT0->IOCR4 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 2 * 8); //3 Floor PIN 0.6
+	PORT0->IOCR4 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 3 * 8); //4 Floor PIN 0.7
 
-	PORT0->IOCR0 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 0 * 8);		//DATA1 PIN 0.0
-	PORT0->IOCR4 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 1 * 8);		//DATA2 PIN 0.5
+	PORT0->IOCR0 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 0 * 8);	//DATA1 PIN 0.0
+	PORT0->IOCR4 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 1 * 8);	//DATA2 PIN 0.5
 
-	PORT0->IOCR8 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 1 * 8);		//CLK PIN 0.9
-	PORT0->IOCR12 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 2 * 8);		//CLK PIN 0.14
+	PORT0->IOCR8 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 1 * 8);	//CLK PIN 0.9
+	PORT0->IOCR12 |= (XMC_GPIO_MODE_OUTPUT_PUSH_PULL << 2 * 8);	//CLK PIN 0.14
 
 	// Konfiguriere Pin1.15 als Eingang ohne PullUp
 	//PORT1->IOCR12 |= (XMC_GPIO_MODE_INPUT_TRISTATE <<3*8);
@@ -73,7 +74,6 @@ void initApplication() {
 	delay(50000);
 	SET_BIT(PORT0->OUT, PIN_VCC);
 }
-
 
 int main(void) {
 	DAVE_STATUS_t status;
@@ -135,43 +135,67 @@ int main(void) {
 	//frame.init(frameData);
 	//cube.play(&frame);
 
-	floor1.begin();
-	floor1.push((uint8_t)0xA5);
-	floor1.end();
+	int i = 5;
+	//int div = 1;
+	uint8_t cntr1 = 0;
+	uint8_t cntr2 = 0xFF;
 
-	int i = 0;
+	//uint8_t argArr[2] = { 0x00, 0x00 };
 	Floor* curentFloor;
-	while(1U){
-
-		if(i == 0){
+	while (1U) {
+		i--; if(i==0) i=4;
+		if (i == 1) {
 			curentFloor = &floor1;
-		} else if(i == 2){
+			//curentFloor->off();
+			uint8_t argArr[2] = { cntr1, cntr2 };
+			curentFloor->push(argArr);
+			curentFloor->on();
+		} else if (i == 2) {
 			curentFloor = &floor2;
-		} else if(i == 4){
+			//curentFloor->off();
+			//uint8_t argArr[2] = { cntr2, cntr1 };
+			uint8_t argArr[2] = { cntr1, cntr2 };
+			curentFloor->push(argArr);
+			curentFloor->on();
+		} else if (i == 3) {
 			curentFloor = &floor3;
-		} else if(i == 6){
+			//curentFloor->off();
+			uint8_t argArr[2] = { cntr1, cntr2 };
+			curentFloor->push(argArr);
+			curentFloor->on();
+		} else if (i == 4) {
 			curentFloor = &floor4;
-			i = -1;
+			//curentFloor->off();
+			//uint8_t argArr[2] = { cntr2, cntr1 };
+			uint8_t argArr[2] = { cntr1, cntr2 };
+			curentFloor->push(argArr);
+			curentFloor->on();
+			//i = 0;
 		}
 
-
-		curentFloor->delay(150000 / 2);
-
+		curentFloor->delay(150000 *2);
 		curentFloor->off();
-		curentFloor->push((uint8_t)0xA5 + i);
-		curentFloor->on();
+		//curentFloor->delay(150000 / 3);
 
-		curentFloor->delay(150000 / 2);
+		cntr1++;
+		cntr2--;
 
-		curentFloor->off();
-		curentFloor->push((uint8_t)0x5A + i);
-		curentFloor->on();
+//		curentFloor->off();
+//		uint8_t argArr[2] = {0xF0,0x00};
+//		curentFloor->push(argArr);
+//		curentFloor->on();
+//
+//		curentFloor->delay(150000 / div);
+//
+//		curentFloor->off();
+////		curentFloor->push((uint8_t)0x5A + i);
+//		curentFloor->on();
+//
+//		curentFloor->delay(150000 / div);
+//
+//		curentFloor->off();
 
-		curentFloor->delay(150000 / 2);
-
-		curentFloor->off();
-
-		i++;
+		//i++;
 
 	}
 }
@@ -182,11 +206,11 @@ extern "C" void SysTick_Handler(void) {
 	counter++;
 	if (counter == 50) {
 		//SET_BIT(PORT1->OUT, 0);
-		CLR_BIT(PORT1->OUT, 1);
+		//CLR_BIT(PORT1->OUT, 1);
 	}
 	if (counter > 100) {
 		//CLR_BIT(PORT1->OUT, 0);
-		SET_BIT(PORT1->OUT, 1);
+		//SET_BIT(PORT1->OUT, 1);
 		counter = 0;
 	}
 }

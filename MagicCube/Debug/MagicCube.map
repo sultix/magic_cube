@@ -483,6 +483,10 @@ Discarded input sections
  .text          0x00000000        0x0 ./hal/ShiftRegisterArray.o
  .data          0x00000000        0x0 ./hal/ShiftRegisterArray.o
  .bss           0x00000000        0x0 ./hal/ShiftRegisterArray.o
+ .text._ZN18ShiftRegisterArray5beginEv
+                0x00000000       0x18 ./hal/ShiftRegisterArray.o
+ .text._ZN18ShiftRegisterArray3endEv
+                0x00000000       0x18 ./hal/ShiftRegisterArray.o
  .comment       0x00000000       0x71 ./hal/ShiftRegisterArray.o
  .text          0x00000000        0x0 ./hal/Timer.o
  .data          0x00000000        0x0 ./hal/Timer.o
@@ -1109,8 +1113,8 @@ Discarded input sections
  .text          0x00000000        0x0 ./cube/Cube.o
  .data          0x00000000        0x0 ./cube/Cube.o
  .bss           0x00000000        0x0 ./cube/Cube.o
- .stab          0x00000000     0x36e4 ./cube/Cube.o
-                               0x36f0 (size before relaxing)
+ .stab          0x00000000     0x36d8 ./cube/Cube.o
+                               0x36e4 (size before relaxing)
  .text._ZnwjPv  0x00000000       0x14 ./cube/Cube.o
  .text._ZL20__gthread_key_deletei
                 0x00000000       0x14 ./cube/Cube.o
@@ -1123,7 +1127,7 @@ Discarded input sections
  .text._ZN4Cube8addFloorEP5Floor
                 0x00000000       0x20 ./cube/Cube.o
  .text._ZN4Cube4playEP5FloorP13FloorRegister
-                0x00000000       0x60 ./cube/Cube.o
+                0x00000000       0x48 ./cube/Cube.o
  .text._ZN4Cube4playEP5Frame
                 0x00000000       0x74 ./cube/Cube.o
  .text._ZN4Cube4playESt6vectorIP5FrameSaIS2_EE
@@ -1247,6 +1251,10 @@ Discarded input sections
  .text          0x00000000        0x0 ./cube/Floor.o
  .data          0x00000000        0x0 ./cube/Floor.o
  .bss           0x00000000        0x0 ./cube/Floor.o
+ .text._ZN5Floor5beginEv
+                0x00000000       0x20 ./cube/Floor.o
+ .text._ZN5Floor3endEv
+                0x00000000       0x20 ./cube/Floor.o
  .comment       0x00000000       0x71 ./cube/Floor.o
  .text          0x00000000        0x0 ./Startup/startup_XMC1100.o
  .data          0x00000000        0x0 ./Startup/startup_XMC1100.o
@@ -7823,7 +7831,7 @@ END GROUP
                 0x00000400                stack_size = DEFINED (stack_size)?stack_size:0x400
                 0x00000004                no_init_size = 0x4
 
-.text           0x10001000     0x233c
+.text           0x10001000     0x22ec
                 0x10001000                sText = .
  *(.reset)
  .reset         0x10001000       0x9c ./Startup/startup_XMC1100.o
@@ -7898,416 +7906,404 @@ END GROUP
                 0x100012fc       0x38 ./hal/ShiftRegister.o
                 0x100012fc                ShiftRegister::cpush(bool)
  .text._ZN13ShiftRegister7clkHighEv
-                0x10001334       0x5c ./hal/ShiftRegister.o
+                0x10001334       0x40 ./hal/ShiftRegister.o
                 0x10001334                ShiftRegister::clkHigh()
  .text._ZN13ShiftRegister6clkLowEv
-                0x10001390       0x44 ./hal/ShiftRegister.o
-                0x10001390                ShiftRegister::clkLow()
+                0x10001374       0x44 ./hal/ShiftRegister.o
+                0x10001374                ShiftRegister::clkLow()
  .text._ZN13ShiftRegister5delayEj
-                0x100013d4       0x20 ./hal/ShiftRegister.o
-                0x100013d4                ShiftRegister::delay(unsigned int)
- .text._ZnwjPv  0x100013f4       0x14 ./hal/ShiftRegisterArray.o
-                0x100013f4                operator new(unsigned int, void*)
+                0x100013b8       0x20 ./hal/ShiftRegister.o
+                0x100013b8                ShiftRegister::delay(unsigned int)
+ .text._ZnwjPv  0x100013d8       0x14 ./hal/ShiftRegisterArray.o
+                0x100013d8                operator new(unsigned int, void*)
  .text._ZN18ShiftRegisterArrayC2EP13__AccessPoint
-                0x10001408       0x34 ./hal/ShiftRegisterArray.o
-                0x10001408                ShiftRegisterArray::ShiftRegisterArray(__AccessPoint*)
-                0x10001408                ShiftRegisterArray::ShiftRegisterArray(__AccessPoint*)
+                0x100013ec       0x34 ./hal/ShiftRegisterArray.o
+                0x100013ec                ShiftRegisterArray::ShiftRegisterArray(__AccessPoint*)
+                0x100013ec                ShiftRegisterArray::ShiftRegisterArray(__AccessPoint*)
  .text._ZN18ShiftRegisterArrayD2Ev
-                0x1000143c       0x3c ./hal/ShiftRegisterArray.o
-                0x1000143c                ShiftRegisterArray::~ShiftRegisterArray()
-                0x1000143c                ShiftRegisterArray::~ShiftRegisterArray()
+                0x10001420       0x3c ./hal/ShiftRegisterArray.o
+                0x10001420                ShiftRegisterArray::~ShiftRegisterArray()
+                0x10001420                ShiftRegisterArray::~ShiftRegisterArray()
  .text._ZN18ShiftRegisterArrayD0Ev
-                0x10001478       0x24 ./hal/ShiftRegisterArray.o
-                0x10001478                ShiftRegisterArray::~ShiftRegisterArray()
- .text._ZN18ShiftRegisterArray4pushEh
-                0x1000149c       0x90 ./hal/ShiftRegisterArray.o
-                0x1000149c                ShiftRegisterArray::push(unsigned char)
+                0x1000145c       0x24 ./hal/ShiftRegisterArray.o
+                0x1000145c                ShiftRegisterArray::~ShiftRegisterArray()
+ .text._ZN18ShiftRegisterArray4pushEPh
+                0x10001480       0x90 ./hal/ShiftRegisterArray.o
+                0x10001480                ShiftRegisterArray::push(unsigned char*)
  .text._ZN18ShiftRegisterArray16addShiftRegisterEP13ShiftRegister
-                0x1000152c       0x20 ./hal/ShiftRegisterArray.o
-                0x1000152c                ShiftRegisterArray::addShiftRegister(ShiftRegister*)
- .text._ZN18ShiftRegisterArray5beginEv
-                0x1000154c       0x18 ./hal/ShiftRegisterArray.o
-                0x1000154c                ShiftRegisterArray::begin()
- .text._ZN18ShiftRegisterArray3endEv
-                0x10001564       0x18 ./hal/ShiftRegisterArray.o
-                0x10001564                ShiftRegisterArray::end()
+                0x10001510       0x20 ./hal/ShiftRegisterArray.o
+                0x10001510                ShiftRegisterArray::addShiftRegister(ShiftRegister*)
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EEC2Ev
-                0x1000157c       0x1c ./hal/ShiftRegisterArray.o
-                0x1000157c                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::vector()
-                0x1000157c                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::vector()
+                0x10001530       0x1c ./hal/ShiftRegisterArray.o
+                0x10001530                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::vector()
+                0x10001530                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::vector()
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EED2Ev
-                0x10001598       0x38 ./hal/ShiftRegisterArray.o
-                0x10001598                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::~vector()
-                0x10001598                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::~vector()
+                0x1000154c       0x38 ./hal/ShiftRegisterArray.o
+                0x1000154c                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::~vector()
+                0x1000154c                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::~vector()
  .text._ZNKSt6vectorIP13ShiftRegisterSaIS1_EE4sizeEv
-                0x100015d0       0x20 ./hal/ShiftRegisterArray.o
-                0x100015d0                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::size() const
+                0x10001584       0x20 ./hal/ShiftRegisterArray.o
+                0x10001584                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::size() const
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EEixEj
-                0x100015f0       0x1c ./hal/ShiftRegisterArray.o
-                0x100015f0                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::operator[](unsigned int)
+                0x100015a4       0x1c ./hal/ShiftRegisterArray.o
+                0x100015a4                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::operator[](unsigned int)
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EE9push_backERKS1_
-                0x1000160c       0x50 ./hal/ShiftRegisterArray.o
-                0x1000160c                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::push_back(ShiftRegister* const&)
+                0x100015c0       0x50 ./hal/ShiftRegisterArray.o
+                0x100015c0                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::push_back(ShiftRegister* const&)
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EE12_Vector_implD2Ev
-                0x1000165c       0x1c ./hal/ShiftRegisterArray.o
-                0x1000165c                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::~_Vector_impl()
-                0x1000165c                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::~_Vector_impl()
+                0x10001610       0x1c ./hal/ShiftRegisterArray.o
+                0x10001610                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::~_Vector_impl()
+                0x10001610                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::~_Vector_impl()
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EEC2Ev
-                0x10001678       0x1c ./hal/ShiftRegisterArray.o
-                0x10001678                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_base()
-                0x10001678                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_base()
+                0x1000162c       0x1c ./hal/ShiftRegisterArray.o
+                0x1000162c                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_base()
+                0x1000162c                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_base()
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EED2Ev
-                0x10001694       0x3c ./hal/ShiftRegisterArray.o
-                0x10001694                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::~_Vector_base()
-                0x10001694                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::~_Vector_base()
+                0x10001648       0x3c ./hal/ShiftRegisterArray.o
+                0x10001648                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::~_Vector_base()
+                0x10001648                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::~_Vector_base()
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EE19_M_get_Tp_allocatorEv
-                0x100016d0       0x14 ./hal/ShiftRegisterArray.o
-                0x100016d0                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_get_Tp_allocator()
+                0x10001684       0x14 ./hal/ShiftRegisterArray.o
+                0x10001684                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_get_Tp_allocator()
  .text._ZSt8_DestroyIPP13ShiftRegisterS1_EvT_S3_RSaIT0_E
-                0x100016e4       0x20 ./hal/ShiftRegisterArray.o
-                0x100016e4                void std::_Destroy<ShiftRegister**, ShiftRegister*>(ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*>&)
+                0x10001698       0x20 ./hal/ShiftRegisterArray.o
+                0x10001698                void std::_Destroy<ShiftRegister**, ShiftRegister*>(ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*>&)
  .text._ZN9__gnu_cxx14__alloc_traitsISaIP13ShiftRegisterEE9constructIS2_EEvRS3_PS2_RKT_
-                0x10001704       0x24 ./hal/ShiftRegisterArray.o
-                0x10001704                void __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::construct<ShiftRegister*>(std::allocator<ShiftRegister*>&, ShiftRegister**, ShiftRegister* const&)
+                0x100016b8       0x24 ./hal/ShiftRegisterArray.o
+                0x100016b8                void __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::construct<ShiftRegister*>(std::allocator<ShiftRegister*>&, ShiftRegister**, ShiftRegister* const&)
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS1_S3_EERKS1_
-                0x10001728      0x194 ./hal/ShiftRegisterArray.o
-                0x10001728                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >, ShiftRegister* const&)
+                0x100016dc      0x194 ./hal/ShiftRegisterArray.o
+                0x100016dc                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >, ShiftRegister* const&)
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EE3endEv
-                0x100018bc       0x24 ./hal/ShiftRegisterArray.o
-                0x100018bc                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::end()
+                0x10001870       0x24 ./hal/ShiftRegisterArray.o
+                0x10001870                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::end()
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EE12_Vector_implC2Ev
-                0x100018e0       0x2c ./hal/ShiftRegisterArray.o
-                0x100018e0                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::_Vector_impl()
-                0x100018e0                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::_Vector_impl()
+                0x10001894       0x2c ./hal/ShiftRegisterArray.o
+                0x10001894                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::_Vector_impl()
+                0x10001894                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_Vector_impl::_Vector_impl()
  .text._ZNSaIP13ShiftRegisterED2Ev
-                0x1000190c       0x1c ./hal/ShiftRegisterArray.o
-                0x1000190c                std::allocator<ShiftRegister*>::~allocator()
-                0x1000190c                std::allocator<ShiftRegister*>::~allocator()
+                0x100018c0       0x1c ./hal/ShiftRegisterArray.o
+                0x100018c0                std::allocator<ShiftRegister*>::~allocator()
+                0x100018c0                std::allocator<ShiftRegister*>::~allocator()
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EE13_M_deallocateEPS1_j
-                0x10001928       0x28 ./hal/ShiftRegisterArray.o
-                0x10001928                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_deallocate(ShiftRegister**, unsigned int)
+                0x100018dc       0x28 ./hal/ShiftRegisterArray.o
+                0x100018dc                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_deallocate(ShiftRegister**, unsigned int)
  .text._ZSt8_DestroyIPP13ShiftRegisterEvT_S3_
-                0x10001950       0x1c ./hal/ShiftRegisterArray.o
-                0x10001950                void std::_Destroy<ShiftRegister**>(ShiftRegister**, ShiftRegister**)
+                0x10001904       0x1c ./hal/ShiftRegisterArray.o
+                0x10001904                void std::_Destroy<ShiftRegister**>(ShiftRegister**, ShiftRegister**)
  .text._ZN9__gnu_cxx13new_allocatorIP13ShiftRegisterE9constructEPS2_RKS2_
-                0x1000196c       0x28 ./hal/ShiftRegisterArray.o
-                0x1000196c                __gnu_cxx::new_allocator<ShiftRegister*>::construct(ShiftRegister**, ShiftRegister* const&)
+                0x10001920       0x28 ./hal/ShiftRegisterArray.o
+                0x10001920                __gnu_cxx::new_allocator<ShiftRegister*>::construct(ShiftRegister**, ShiftRegister* const&)
  .text._ZNK9__gnu_cxx17__normal_iteratorIPP13ShiftRegisterSt6vectorIS2_SaIS2_EEE4baseEv
-                0x10001994       0x14 ./hal/ShiftRegisterArray.o
-                0x10001994                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::base() const
+                0x10001948       0x14 ./hal/ShiftRegisterArray.o
+                0x10001948                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::base() const
  .text._ZSt13copy_backwardIPP13ShiftRegisterS2_ET0_T_S4_S3_
-                0x100019a8       0x38 ./hal/ShiftRegisterArray.o
-                0x100019a8                ShiftRegister** std::copy_backward<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x1000195c       0x38 ./hal/ShiftRegisterArray.o
+                0x1000195c                ShiftRegister** std::copy_backward<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZNK9__gnu_cxx17__normal_iteratorIPP13ShiftRegisterSt6vectorIS2_SaIS2_EEEdeEv
-                0x100019e0       0x14 ./hal/ShiftRegisterArray.o
-                0x100019e0                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::operator*() const
+                0x10001994       0x14 ./hal/ShiftRegisterArray.o
+                0x10001994                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::operator*() const
  .text._ZNKSt6vectorIP13ShiftRegisterSaIS1_EE12_M_check_lenEjPKc
-                0x100019f4       0x9c ./hal/ShiftRegisterArray.o
-                0x100019f4                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_check_len(unsigned int, char const*) const
+                0x100019a8       0x9c ./hal/ShiftRegisterArray.o
+                0x100019a8                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_check_len(unsigned int, char const*) const
  .text._ZNSt6vectorIP13ShiftRegisterSaIS1_EE5beginEv
-                0x10001a90       0x20 ./hal/ShiftRegisterArray.o
-                0x10001a90                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::begin()
+                0x10001a44       0x20 ./hal/ShiftRegisterArray.o
+                0x10001a44                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::begin()
  .text._ZN9__gnu_cxxmiIPP13ShiftRegisterSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_
-                0x10001ab0       0x30 ./hal/ShiftRegisterArray.o
-                0x10001ab0                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::difference_type __gnu_cxx::operator-<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >(__gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > > const&, __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > > const&)
+                0x10001a64       0x30 ./hal/ShiftRegisterArray.o
+                0x10001a64                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::difference_type __gnu_cxx::operator-<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >(__gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > > const&, __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > > const&)
  .text._ZNSt12_Vector_baseIP13ShiftRegisterSaIS1_EE11_M_allocateEj
-                0x10001ae0       0x2c ./hal/ShiftRegisterArray.o
-                0x10001ae0                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_allocate(unsigned int)
+                0x10001a94       0x2c ./hal/ShiftRegisterArray.o
+                0x10001a94                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_allocate(unsigned int)
  .text._ZSt34__uninitialized_move_if_noexcept_aIPP13ShiftRegisterS2_SaIS1_EET0_T_S5_S4_RT1_
-                0x10001b0c       0x24 ./hal/ShiftRegisterArray.o
-                0x10001b0c                ShiftRegister** std::__uninitialized_move_if_noexcept_a<ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*> >(ShiftRegister**, ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*>&)
+                0x10001ac0       0x24 ./hal/ShiftRegisterArray.o
+                0x10001ac0                ShiftRegister** std::__uninitialized_move_if_noexcept_a<ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*> >(ShiftRegister**, ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*>&)
  .text._ZN9__gnu_cxx17__normal_iteratorIPP13ShiftRegisterSt6vectorIS2_SaIS2_EEEC2ERKS3_
-                0x10001b30       0x1c ./hal/ShiftRegisterArray.o
-                0x10001b30                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::__normal_iterator(ShiftRegister** const&)
-                0x10001b30                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::__normal_iterator(ShiftRegister** const&)
+                0x10001ae4       0x1c ./hal/ShiftRegisterArray.o
+                0x10001ae4                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::__normal_iterator(ShiftRegister** const&)
+                0x10001ae4                __gnu_cxx::__normal_iterator<ShiftRegister**, std::vector<ShiftRegister*, std::allocator<ShiftRegister*> > >::__normal_iterator(ShiftRegister** const&)
  .text._ZNSaIP13ShiftRegisterEC2Ev
-                0x10001b4c       0x1c ./hal/ShiftRegisterArray.o
-                0x10001b4c                std::allocator<ShiftRegister*>::allocator()
-                0x10001b4c                std::allocator<ShiftRegister*>::allocator()
+                0x10001b00       0x1c ./hal/ShiftRegisterArray.o
+                0x10001b00                std::allocator<ShiftRegister*>::allocator()
+                0x10001b00                std::allocator<ShiftRegister*>::allocator()
  .text._ZN9__gnu_cxx13new_allocatorIP13ShiftRegisterED2Ev
-                0x10001b68       0x14 ./hal/ShiftRegisterArray.o
-                0x10001b68                __gnu_cxx::new_allocator<ShiftRegister*>::~new_allocator()
-                0x10001b68                __gnu_cxx::new_allocator<ShiftRegister*>::~new_allocator()
+                0x10001b1c       0x14 ./hal/ShiftRegisterArray.o
+                0x10001b1c                __gnu_cxx::new_allocator<ShiftRegister*>::~new_allocator()
+                0x10001b1c                __gnu_cxx::new_allocator<ShiftRegister*>::~new_allocator()
  .text._ZN9__gnu_cxx14__alloc_traitsISaIP13ShiftRegisterEE10deallocateERS3_PS2_j
-                0x10001b7c       0x24 ./hal/ShiftRegisterArray.o
-                0x10001b7c                __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::deallocate(std::allocator<ShiftRegister*>&, ShiftRegister**, unsigned int)
+                0x10001b30       0x24 ./hal/ShiftRegisterArray.o
+                0x10001b30                __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::deallocate(std::allocator<ShiftRegister*>&, ShiftRegister**, unsigned int)
  .text._ZNSt12_Destroy_auxILb1EE9__destroyIPP13ShiftRegisterEEvT_S5_
-                0x10001ba0       0x10 ./hal/ShiftRegisterArray.o
-                0x10001ba0                void std::_Destroy_aux<true>::__destroy<ShiftRegister**>(ShiftRegister**, ShiftRegister**)
+                0x10001b54       0x10 ./hal/ShiftRegisterArray.o
+                0x10001b54                void std::_Destroy_aux<true>::__destroy<ShiftRegister**>(ShiftRegister**, ShiftRegister**)
  .text._ZSt12__miter_baseIPP13ShiftRegisterENSt11_Miter_baseIT_E13iterator_typeES4_
-                0x10001bb0       0x1c ./hal/ShiftRegisterArray.o
-                0x10001bb0                std::_Miter_base<ShiftRegister**>::iterator_type std::__miter_base<ShiftRegister**>(ShiftRegister**)
+                0x10001b64       0x1c ./hal/ShiftRegisterArray.o
+                0x10001b64                std::_Miter_base<ShiftRegister**>::iterator_type std::__miter_base<ShiftRegister**>(ShiftRegister**)
  .text._ZSt23__copy_move_backward_a2ILb0EPP13ShiftRegisterS2_ET1_T0_S4_S3_
-                0x10001bcc       0x40 ./hal/ShiftRegisterArray.o
-                0x10001bcc                ShiftRegister** std::__copy_move_backward_a2<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001b80       0x40 ./hal/ShiftRegisterArray.o
+                0x10001b80                ShiftRegister** std::__copy_move_backward_a2<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZNKSt6vectorIP13ShiftRegisterSaIS1_EE8max_sizeEv
-                0x10001c0c       0x24 ./hal/ShiftRegisterArray.o
-                0x10001c0c                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::max_size() const
+                0x10001bc0       0x24 ./hal/ShiftRegisterArray.o
+                0x10001bc0                std::vector<ShiftRegister*, std::allocator<ShiftRegister*> >::max_size() const
  .text._ZSt3maxIjERKT_S2_S2_
-                0x10001c30       0x24 ./hal/ShiftRegisterArray.o
-                0x10001c30                unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&)
+                0x10001be4       0x24 ./hal/ShiftRegisterArray.o
+                0x10001be4                unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&)
  .text._ZN9__gnu_cxx14__alloc_traitsISaIP13ShiftRegisterEE8allocateERS3_j
-                0x10001c54       0x24 ./hal/ShiftRegisterArray.o
-                0x10001c54                __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::allocate(std::allocator<ShiftRegister*>&, unsigned int)
+                0x10001c08       0x24 ./hal/ShiftRegisterArray.o
+                0x10001c08                __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::allocate(std::allocator<ShiftRegister*>&, unsigned int)
  .text._ZSt22__uninitialized_copy_aIPP13ShiftRegisterS2_S1_ET0_T_S4_S3_RSaIT1_E
-                0x10001c78       0x28 ./hal/ShiftRegisterArray.o
-                0x10001c78                ShiftRegister** std::__uninitialized_copy_a<ShiftRegister**, ShiftRegister**, ShiftRegister*>(ShiftRegister**, ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*>&)
+                0x10001c2c       0x28 ./hal/ShiftRegisterArray.o
+                0x10001c2c                ShiftRegister** std::__uninitialized_copy_a<ShiftRegister**, ShiftRegister**, ShiftRegister*>(ShiftRegister**, ShiftRegister**, ShiftRegister**, std::allocator<ShiftRegister*>&)
  .text._ZN9__gnu_cxx13new_allocatorIP13ShiftRegisterEC2Ev
-                0x10001ca0       0x14 ./hal/ShiftRegisterArray.o
-                0x10001ca0                __gnu_cxx::new_allocator<ShiftRegister*>::new_allocator()
-                0x10001ca0                __gnu_cxx::new_allocator<ShiftRegister*>::new_allocator()
+                0x10001c54       0x14 ./hal/ShiftRegisterArray.o
+                0x10001c54                __gnu_cxx::new_allocator<ShiftRegister*>::new_allocator()
+                0x10001c54                __gnu_cxx::new_allocator<ShiftRegister*>::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorIP13ShiftRegisterE10deallocateEPS2_j
-                0x10001cb4       0x1c ./hal/ShiftRegisterArray.o
-                0x10001cb4                __gnu_cxx::new_allocator<ShiftRegister*>::deallocate(ShiftRegister**, unsigned int)
+                0x10001c68       0x1c ./hal/ShiftRegisterArray.o
+                0x10001c68                __gnu_cxx::new_allocator<ShiftRegister*>::deallocate(ShiftRegister**, unsigned int)
  .text._ZNSt10_Iter_baseIPP13ShiftRegisterLb0EE7_S_baseES2_
-                0x10001cd0       0x14 ./hal/ShiftRegisterArray.o
-                0x10001cd0                std::_Iter_base<ShiftRegister**, false>::_S_base(ShiftRegister**)
+                0x10001c84       0x14 ./hal/ShiftRegisterArray.o
+                0x10001c84                std::_Iter_base<ShiftRegister**, false>::_S_base(ShiftRegister**)
  .text._ZSt12__niter_baseIPP13ShiftRegisterENSt11_Niter_baseIT_E13iterator_typeES4_
-                0x10001ce4       0x1c ./hal/ShiftRegisterArray.o
-                0x10001ce4                std::_Niter_base<ShiftRegister**>::iterator_type std::__niter_base<ShiftRegister**>(ShiftRegister**)
+                0x10001c98       0x1c ./hal/ShiftRegisterArray.o
+                0x10001c98                std::_Niter_base<ShiftRegister**>::iterator_type std::__niter_base<ShiftRegister**>(ShiftRegister**)
  .text._ZSt22__copy_move_backward_aILb0EPP13ShiftRegisterS2_ET1_T0_S4_S3_
-                0x10001d00       0x30 ./hal/ShiftRegisterArray.o
-                0x10001d00                ShiftRegister** std::__copy_move_backward_a<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001cb4       0x30 ./hal/ShiftRegisterArray.o
+                0x10001cb4                ShiftRegister** std::__copy_move_backward_a<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZN9__gnu_cxx14__alloc_traitsISaIP13ShiftRegisterEE8max_sizeERKS3_
-                0x10001d30       0x1c ./hal/ShiftRegisterArray.o
-                0x10001d30                __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::max_size(std::allocator<ShiftRegister*> const&)
+                0x10001ce4       0x1c ./hal/ShiftRegisterArray.o
+                0x10001ce4                __gnu_cxx::__alloc_traits<std::allocator<ShiftRegister*> >::max_size(std::allocator<ShiftRegister*> const&)
  .text._ZNKSt12_Vector_baseIP13ShiftRegisterSaIS1_EE19_M_get_Tp_allocatorEv
-                0x10001d4c       0x14 ./hal/ShiftRegisterArray.o
-                0x10001d4c                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_get_Tp_allocator() const
+                0x10001d00       0x14 ./hal/ShiftRegisterArray.o
+                0x10001d00                std::_Vector_base<ShiftRegister*, std::allocator<ShiftRegister*> >::_M_get_Tp_allocator() const
  .text._ZN9__gnu_cxx13new_allocatorIP13ShiftRegisterE8allocateEjPKv
-                0x10001d60       0x3c ./hal/ShiftRegisterArray.o
-                0x10001d60                __gnu_cxx::new_allocator<ShiftRegister*>::allocate(unsigned int, void const*)
+                0x10001d14       0x3c ./hal/ShiftRegisterArray.o
+                0x10001d14                __gnu_cxx::new_allocator<ShiftRegister*>::allocate(unsigned int, void const*)
  .text._ZSt18uninitialized_copyIPP13ShiftRegisterS2_ET0_T_S4_S3_
-                0x10001d9c       0x30 ./hal/ShiftRegisterArray.o
-                0x10001d9c                ShiftRegister** std::uninitialized_copy<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001d50       0x30 ./hal/ShiftRegisterArray.o
+                0x10001d50                ShiftRegister** std::uninitialized_copy<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZNSt20__copy_move_backwardILb0ELb1ESt26random_access_iterator_tagE13__copy_move_bIP13ShiftRegisterEEPT_PKS5_S8_S6_
-                0x10001dcc       0x48 ./hal/ShiftRegisterArray.o
-                0x10001dcc                ShiftRegister** std::__copy_move_backward<false, true, std::random_access_iterator_tag>::__copy_move_b<ShiftRegister*>(ShiftRegister* const*, ShiftRegister* const*, ShiftRegister**)
+                0x10001d80       0x48 ./hal/ShiftRegisterArray.o
+                0x10001d80                ShiftRegister** std::__copy_move_backward<false, true, std::random_access_iterator_tag>::__copy_move_b<ShiftRegister*>(ShiftRegister* const*, ShiftRegister* const*, ShiftRegister**)
  .text._ZNK9__gnu_cxx13new_allocatorIP13ShiftRegisterE8max_sizeEv
-                0x10001e14       0x18 ./hal/ShiftRegisterArray.o
-                0x10001e14                __gnu_cxx::new_allocator<ShiftRegister*>::max_size() const
+                0x10001dc8       0x18 ./hal/ShiftRegisterArray.o
+                0x10001dc8                __gnu_cxx::new_allocator<ShiftRegister*>::max_size() const
  .text._ZNSt20__uninitialized_copyILb1EE13__uninit_copyIPP13ShiftRegisterS4_EET0_T_S6_S5_
-                0x10001e2c       0x28 ./hal/ShiftRegisterArray.o
-                0x10001e2c                ShiftRegister** std::__uninitialized_copy<true>::__uninit_copy<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001de0       0x28 ./hal/ShiftRegisterArray.o
+                0x10001de0                ShiftRegister** std::__uninitialized_copy<true>::__uninit_copy<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZSt4copyIPP13ShiftRegisterS2_ET0_T_S4_S3_
-                0x10001e54       0x38 ./hal/ShiftRegisterArray.o
-                0x10001e54                ShiftRegister** std::copy<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001e08       0x38 ./hal/ShiftRegisterArray.o
+                0x10001e08                ShiftRegister** std::copy<ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZSt14__copy_move_a2ILb0EPP13ShiftRegisterS2_ET1_T0_S4_S3_
-                0x10001e8c       0x40 ./hal/ShiftRegisterArray.o
-                0x10001e8c                ShiftRegister** std::__copy_move_a2<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001e40       0x40 ./hal/ShiftRegisterArray.o
+                0x10001e40                ShiftRegister** std::__copy_move_a2<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZSt13__copy_move_aILb0EPP13ShiftRegisterS2_ET1_T0_S4_S3_
-                0x10001ecc       0x30 ./hal/ShiftRegisterArray.o
-                0x10001ecc                ShiftRegister** std::__copy_move_a<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
+                0x10001e80       0x30 ./hal/ShiftRegisterArray.o
+                0x10001e80                ShiftRegister** std::__copy_move_a<false, ShiftRegister**, ShiftRegister**>(ShiftRegister**, ShiftRegister**, ShiftRegister**)
  .text._ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIP13ShiftRegisterEEPT_PKS5_S8_S6_
-                0x10001efc       0x40 ./hal/ShiftRegisterArray.o
-                0x10001efc                ShiftRegister** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<ShiftRegister*>(ShiftRegister* const*, ShiftRegister* const*, ShiftRegister**)
+                0x10001eb0       0x40 ./hal/ShiftRegisterArray.o
+                0x10001eb0                ShiftRegister** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<ShiftRegister*>(ShiftRegister* const*, ShiftRegister* const*, ShiftRegister**)
  .text._ZN5FloorC2EPVmm
-                0x10001f3c       0x44 ./cube/Floor.o
-                0x10001f3c                Floor::Floor(unsigned long volatile*, unsigned long)
-                0x10001f3c                Floor::Floor(unsigned long volatile*, unsigned long)
+                0x10001ef0       0x44 ./cube/Floor.o
+                0x10001ef0                Floor::Floor(unsigned long volatile*, unsigned long)
+                0x10001ef0                Floor::Floor(unsigned long volatile*, unsigned long)
  .text._ZN5FloorD2Ev
-                0x10001f80       0x48 ./cube/Floor.o
-                0x10001f80                Floor::~Floor()
-                0x10001f80                Floor::~Floor()
+                0x10001f34       0x48 ./cube/Floor.o
+                0x10001f34                Floor::~Floor()
+                0x10001f34                Floor::~Floor()
  .text._ZThn12_N5FloorD1Ev
-                0x10001fc8       0x10 ./cube/Floor.o
-                0x10001fc8                non-virtual thunk to Floor::~Floor()
+                0x10001f7c       0x10 ./cube/Floor.o
+                0x10001f7c                non-virtual thunk to Floor::~Floor()
  .text._ZN5FloorD0Ev
-                0x10001fd8       0x24 ./cube/Floor.o
-                0x10001fd8                Floor::~Floor()
+                0x10001f8c       0x24 ./cube/Floor.o
+                0x10001f8c                Floor::~Floor()
  .text._ZThn12_N5FloorD0Ev
-                0x10001ffc       0x10 ./cube/Floor.o
-                0x10001ffc                non-virtual thunk to Floor::~Floor()
+                0x10001fb0       0x10 ./cube/Floor.o
+                0x10001fb0                non-virtual thunk to Floor::~Floor()
  .text._ZN5Floor16setRegisterArrayEP18ShiftRegisterArray
-                0x1000200c       0x18 ./cube/Floor.o
-                0x1000200c                Floor::setRegisterArray(ShiftRegisterArray*)
+                0x10001fc0       0x18 ./cube/Floor.o
+                0x10001fc0                Floor::setRegisterArray(ShiftRegisterArray*)
  .text._ZN5Floor2onEv
-                0x10002024       0x18 ./cube/Floor.o
-                0x10002024                Floor::on()
+                0x10001fd8       0x18 ./cube/Floor.o
+                0x10001fd8                Floor::on()
  .text._ZN5Floor3offEv
-                0x1000203c       0x18 ./cube/Floor.o
-                0x1000203c                Floor::off()
- .text._ZN5Floor4pushEh
-                0x10002054       0x2c ./cube/Floor.o
-                0x10002054                Floor::push(unsigned char)
- .text._ZN5Floor5beginEv
-                0x10002080       0x20 ./cube/Floor.o
-                0x10002080                Floor::begin()
- .text._ZN5Floor3endEv
-                0x100020a0       0x20 ./cube/Floor.o
-                0x100020a0                Floor::end()
+                0x10001ff0       0x18 ./cube/Floor.o
+                0x10001ff0                Floor::off()
+ .text._ZN5Floor4pushEPh
+                0x10002008       0x28 ./cube/Floor.o
+                0x10002008                Floor::push(unsigned char*)
  .text.SystemInit
-                0x100020c0       0x10 ./Startup/system_XMC1100.o
-                0x100020c0                SystemInit
+                0x10002030       0x10 ./Startup/system_XMC1100.o
+                0x10002030                SystemInit
  .text.SystemCoreSetup
-                0x100020d0       0x34 ./Startup/system_XMC1100.o
-                0x100020d0                SystemCoreSetup
+                0x10002040       0x34 ./Startup/system_XMC1100.o
+                0x10002040                SystemCoreSetup
  .text.SystemCoreClockSetup
-                0x10002104       0x38 ./Startup/system_XMC1100.o
-                0x10002104                SystemCoreClockSetup
+                0x10002074       0x38 ./Startup/system_XMC1100.o
+                0x10002074                SystemCoreClockSetup
  .text.SystemCoreClockUpdate
-                0x1000213c       0x68 ./Startup/system_XMC1100.o
-                0x1000213c                SystemCoreClockUpdate
- .text._sbrk    0x100021a4       0x68 ./Libraries/Newlib/syscalls.o
-                0x100021a4                _sbrk
- .text._init    0x1000220c        0x8 ./Libraries/Newlib/syscalls.o
-                0x1000220c                _init
+                0x100020ac       0x68 ./Startup/system_XMC1100.o
+                0x100020ac                SystemCoreClockUpdate
+ .text._sbrk    0x10002114       0x68 ./Libraries/Newlib/syscalls.o
+                0x10002114                _sbrk
+ .text._init    0x1000217c        0x8 ./Libraries/Newlib/syscalls.o
+                0x1000217c                _init
  .text.DAVE_Init
-                0x10002214       0x18 ./Dave/Generated/DAVE.o
-                0x10002214                DAVE_Init
+                0x10002184       0x18 ./Dave/Generated/DAVE.o
+                0x10002184                DAVE_Init
  .text._ZN7XObjectC2Ev
-                0x1000222c       0x1c ./XObject.o
-                0x1000222c                XObject::XObject()
-                0x1000222c                XObject::XObject()
+                0x1000219c       0x1c ./XObject.o
+                0x1000219c                XObject::XObject()
+                0x1000219c                XObject::XObject()
  .text._ZN7XObjectD2Ev
-                0x10002248       0x2c ./XObject.o
-                0x10002248                XObject::~XObject()
-                0x10002248                XObject::~XObject()
+                0x100021b8       0x2c ./XObject.o
+                0x100021b8                XObject::~XObject()
+                0x100021b8                XObject::~XObject()
  .text._ZN7XObjectD0Ev
-                0x10002274       0x24 ./XObject.o
-                0x10002274                XObject::~XObject()
+                0x100021e4       0x24 ./XObject.o
+                0x100021e4                XObject::~XObject()
  .text._ZN7XObject5delayEj
-                0x10002298       0x20 ./XObject.o
-                0x10002298                XObject::delay(unsigned int)
+                0x10002208       0x20 ./XObject.o
+                0x10002208                XObject::delay(unsigned int)
  .text.NVIC_SetPriority
-                0x100022b8       0xd4 ./main.o
+                0x10002228       0xd4 ./main.o
  .text.SysTick_Config
-                0x1000238c       0x48 ./main.o
+                0x100022fc       0x48 ./main.o
  .text._ZL19P2_7_enable_digitalv
-                0x100023d4       0x18 ./main.o
+                0x10002344       0x18 ./main.o
  .text._ZL19P2_9_enable_digitalv
-                0x100023ec       0x1c ./main.o
+                0x1000235c       0x1c ./main.o
  .text._ZL20P2_10_enable_digitalv
-                0x10002408       0x1c ./main.o
+                0x10002378       0x1c ./main.o
  .text._ZL20P2_11_enable_digitalv
-                0x10002424       0x1c ./main.o
+                0x10002394       0x1c ./main.o
  .text._Z5delayj
-                0x10002440       0x20 ./main.o
-                0x10002440                delay(unsigned int)
+                0x100023b0       0x20 ./main.o
+                0x100023b0                delay(unsigned int)
  .text._Z15initApplicationv
-                0x10002460      0x188 ./main.o
-                0x10002460                initApplication()
- .text.main     0x100025e8      0x274 ./main.o
-                0x100025e8                main
+                0x100023d0      0x188 ./main.o
+                0x100023d0                initApplication()
+ .text.main     0x10002558      0x2d0 ./main.o
+                0x10002558                main
  .text.SysTick_Handler
-                0x1000285c       0x48 ./main.o
-                0x1000285c                SysTick_Handler
+                0x10002828       0x24 ./main.o
+                0x10002828                SysTick_Handler
  .text._Z41__static_initialization_and_destruction_0ii
-                0x100028a4       0x68 ./main.o
+                0x1000284c       0x68 ./main.o
  .text._GLOBAL__sub_I_frameData
-                0x1000290c       0x18 ./main.o
- .text._Znwj    0x10002924       0x24 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(new_op.o)
-                0x10002924                operator new(unsigned int)
- .text._ZdlPv   0x10002948        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(del_op.o)
-                0x10002948                operator delete(void*)
+                0x100028b4       0x18 ./main.o
+ .text._Znwj    0x100028cc       0x24 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(new_op.o)
+                0x100028cc                operator new(unsigned int)
+ .text._ZdlPv   0x100028f0        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(del_op.o)
+                0x100028f0                operator delete(void*)
  .text._ZSt15get_new_handlerv
-                0x10002950        0xc c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(new_handler.o)
-                0x10002950                std::get_new_handler()
+                0x100028f8        0xc c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(new_handler.o)
+                0x100028f8                std::get_new_handler()
  .text.__aeabi_atexit
-                0x1000295c        0xe c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(atexit_arm.o)
-                0x1000295c                __aeabi_atexit
+                0x10002904        0xe c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(atexit_arm.o)
+                0x10002904                __aeabi_atexit
  .text._ZNSaIcEC2Ev
-                0x1000296a        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(allocator-inst.o)
-                0x1000296a                std::allocator<char>::allocator()
-                0x1000296a                std::allocator<char>::allocator()
+                0x10002912        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(allocator-inst.o)
+                0x10002912                std::allocator<char>::allocator()
+                0x10002912                std::allocator<char>::allocator()
  .text._ZNSaIcED2Ev
-                0x1000296c        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(allocator-inst.o)
-                0x1000296c                std::allocator<char>::~allocator()
-                0x1000296c                std::allocator<char>::~allocator()
+                0x10002914        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(allocator-inst.o)
+                0x10002914                std::allocator<char>::~allocator()
+                0x10002914                std::allocator<char>::~allocator()
  .text._ZSt17__throw_bad_allocv
-                0x1000296e        0x6 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(functexcept.o)
-                0x1000296e                std::__throw_bad_alloc()
+                0x10002916        0x6 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(functexcept.o)
+                0x10002916                std::__throw_bad_alloc()
  .text._ZSt19__throw_logic_errorPKc
-                0x10002974        0x6 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(functexcept.o)
-                0x10002974                std::__throw_logic_error(char const*)
+                0x1000291c        0x6 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(functexcept.o)
+                0x1000291c                std::__throw_logic_error(char const*)
  .text._ZSt20__throw_length_errorPKc
-                0x1000297a        0x6 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(functexcept.o)
-                0x1000297a                std::__throw_length_error(char const*)
+                0x10002922        0x6 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(functexcept.o)
+                0x10002922                std::__throw_length_error(char const*)
  .text._ZNSs7_M_copyEPcPKcj
-                0x10002980       0x12 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x10002980                std::string::_M_copy(char*, char const*, unsigned int)
+                0x10002928       0x12 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x10002928                std::string::_M_copy(char*, char const*, unsigned int)
  .text._ZNSs13_S_copy_charsEPcPKcS1_
-                0x10002992        0xa c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x10002992                std::string::_S_copy_chars(char*, char const*, char const*)
+                0x1000293a        0xa c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x1000293a                std::string::_S_copy_chars(char*, char const*, char const*)
  .text._ZNSs4_Rep26_M_set_length_and_sharableEj
-                0x1000299c       0x18 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x1000299c                std::string::_Rep::_M_set_length_and_sharable(unsigned int)
+                0x10002944       0x18 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x10002944                std::string::_Rep::_M_set_length_and_sharable(unsigned int)
  .text._ZNSs4_Rep9_S_createEjjRKSaIcE
-                0x100029b4       0x58 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x100029b4                std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)
+                0x1000295c       0x58 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x1000295c                std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)
  .text._ZNSs4_Rep10_M_disposeERKSaIcE
-                0x10002a0c       0x1c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x10002a0c                std::string::_Rep::_M_dispose(std::allocator<char> const&)
+                0x100029b4       0x1c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x100029b4                std::string::_Rep::_M_dispose(std::allocator<char> const&)
  .text._ZNSsD2Ev
-                0x10002a28       0x12 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x10002a28                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
-                0x10002a28                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
- *fill*         0x10002a3a        0x2 
+                0x100029d0       0x12 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x100029d0                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+                0x100029d0                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+ *fill*         0x100029e2        0x2 
  .text._ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag
-                0x10002a3c       0x4c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x10002a3c                char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
+                0x100029e4       0x4c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x100029e4                char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
  .text._ZNSsC2EPKcRKSaIcE
-                0x10002a88       0x2a c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
-                0x10002a88                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
-                0x10002a88                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
- *fill*         0x10002ab2        0x2 
+                0x10002a30       0x2a c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x10002a30                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+                0x10002a30                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+ *fill*         0x10002a5a        0x2 
  .text.startup._GLOBAL__sub_I__ZTSSt21__ctype_abstract_baseIcE
-                0x10002ab4       0xc4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(locale-inst.o)
+                0x10002a5c       0xc4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(locale-inst.o)
  .text.startup._GLOBAL__sub_I__ZTSSt16__numpunct_cacheIwE
-                0x10002b78       0xc4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(wlocale-inst.o)
- .text          0x10002c3c      0x120 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
-                0x10002c3c                __aeabi_uidiv
-                0x10002c3c                __udivsi3
-                0x10002d48                __aeabi_uidivmod
- .text          0x10002d5c        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x10002d5c                __aeabi_idiv0
-                0x10002d5c                __aeabi_ldiv0
- .text.abort    0x10002d60        0xe c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-abort.o)
-                0x10002d60                abort
- *fill*         0x10002d6e        0x2 
+                0x10002b20       0xc4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(wlocale-inst.o)
+ .text          0x10002be4      0x120 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x10002be4                __aeabi_uidiv
+                0x10002be4                __udivsi3
+                0x10002cf0                __aeabi_uidivmod
+ .text          0x10002d04        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x10002d04                __aeabi_idiv0
+                0x10002d04                __aeabi_ldiv0
+ .text.abort    0x10002d08        0xe c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-abort.o)
+                0x10002d08                abort
+ *fill*         0x10002d16        0x2 
  .text.__cxa_atexit
-                0x10002d70       0x1c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-cxa_atexit.o)
-                0x10002d70                __cxa_atexit
- .text.__errno  0x10002d8c        0xc c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
-                0x10002d8c                __errno
+                0x10002d18       0x1c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-cxa_atexit.o)
+                0x10002d18                __cxa_atexit
+ .text.__errno  0x10002d34        0xc c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x10002d34                __errno
  .text.__libc_init_array
-                0x10002d98       0x4c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x10002d98                __libc_init_array
- .text.malloc   0x10002de4       0x14 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
-                0x10002de4                malloc
- .text.free     0x10002df8       0x14 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
-                0x10002df8                free
- .text.memcpy   0x10002e0c       0x12 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
-                0x10002e0c                memcpy
- .text.memmove  0x10002e1e       0x28 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
-                0x10002e1e                memmove
- *fill*         0x10002e46        0x2 
- .text._free_r  0x10002e48       0x8c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
-                0x10002e48                _free_r
+                0x10002d40       0x4c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x10002d40                __libc_init_array
+ .text.malloc   0x10002d8c       0x14 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+                0x10002d8c                malloc
+ .text.free     0x10002da0       0x14 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+                0x10002da0                free
+ .text.memcpy   0x10002db4       0x12 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+                0x10002db4                memcpy
+ .text.memmove  0x10002dc6       0x28 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+                0x10002dc6                memmove
+ *fill*         0x10002dee        0x2 
+ .text._free_r  0x10002df0       0x8c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+                0x10002df0                _free_r
  .text._malloc_r
-                0x10002ed4       0xb0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x10002ed4                _malloc_r
- .text._sbrk_r  0x10002f84       0x24 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
-                0x10002f84                _sbrk_r
+                0x10002e7c       0xb0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x10002e7c                _malloc_r
+ .text._sbrk_r  0x10002f2c       0x24 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+                0x10002f2c                _sbrk_r
  .text._raise_r
-                0x10002fa8       0x54 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signal.o)
-                0x10002fa8                _raise_r
- .text.raise    0x10002ffc       0x14 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signal.o)
-                0x10002ffc                raise
- .text._kill_r  0x10003010       0x24 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signalr.o)
-                0x10003010                _kill_r
+                0x10002f50       0x54 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signal.o)
+                0x10002f50                _raise_r
+ .text.raise    0x10002fa4       0x14 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signal.o)
+                0x10002fa4                raise
+ .text._kill_r  0x10002fb8       0x24 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signalr.o)
+                0x10002fb8                _kill_r
  .text._getpid_r
-                0x10003034        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signalr.o)
-                0x10003034                _getpid_r
- .text.strlen   0x1000303c        0xe c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
-                0x1000303c                strlen
- *fill*         0x1000304a        0x2 
- .text._getpid  0x1000304c       0x10 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(getpid.o)
-                0x1000304c                _getpid
- .text._kill    0x1000305c       0x10 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(kill.o)
-                0x1000305c                _kill
- .text._exit    0x1000306c        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
-                0x1000306c                _exit
+                0x10002fdc        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-signalr.o)
+                0x10002fdc                _getpid_r
+ .text.strlen   0x10002fe4        0xe c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+                0x10002fe4                strlen
+ *fill*         0x10002ff2        0x2 
+ .text._getpid  0x10002ff4       0x10 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(getpid.o)
+                0x10002ff4                _getpid
+ .text._kill    0x10003004       0x10 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(kill.o)
+                0x10003004                _kill
+ .text._exit    0x10003014        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
+                0x10003014                _exit
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -8322,73 +8318,73 @@ END GROUP
  *(.dtors)
  *(.rodata .rodata.*)
  .rodata._ZTV7PinBase
-                0x10003070       0x10 ./hal/PinBase.o
-                0x10003070                vtable for PinBase
+                0x10003018       0x10 ./hal/PinBase.o
+                0x10003018                vtable for PinBase
  .rodata._ZTV13ShiftRegister
-                0x10003080       0x20 ./hal/ShiftRegister.o
-                0x10003080                vtable for ShiftRegister
- .rodata        0x100030a0       0x18 ./hal/ShiftRegisterArray.o
+                0x10003028       0x20 ./hal/ShiftRegister.o
+                0x10003028                vtable for ShiftRegister
+ .rodata        0x10003048       0x18 ./hal/ShiftRegisterArray.o
  .rodata._ZTV18ShiftRegisterArray
-                0x100030b8       0x20 ./hal/ShiftRegisterArray.o
-                0x100030b8                vtable for ShiftRegisterArray
+                0x10003060       0x28 ./hal/ShiftRegisterArray.o
+                0x10003060                vtable for ShiftRegisterArray
  .rodata._ZTV5Floor
-                0x100030d8       0x20 ./cube/Floor.o
-                0x100030d8                vtable for Floor
+                0x10003088       0x20 ./cube/Floor.o
+                0x10003088                vtable for Floor
  .rodata._ZTV7XObject
-                0x100030f8       0x10 ./XObject.o
-                0x100030f8                vtable for XObject
- .rodata        0x10003108       0x20 ./main.o
+                0x100030a8       0x10 ./XObject.o
+                0x100030a8                vtable for XObject
+ .rodata        0x100030b8       0x20 ./main.o
  .rodata.str1.1
-                0x10003128      0x1b1 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
+                0x100030d8      0x1b1 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_nano.a(string-inst.o)
  .rodata.str1.1
-                0x100032d9        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
- *fill*         0x100032db        0x1 
+                0x10003289        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ *fill*         0x1000328b        0x1 
  .rodata.__sf_fake_stdin
-                0x100032dc       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-findfp.o)
-                0x100032dc                __sf_fake_stdin
+                0x1000328c       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-findfp.o)
+                0x1000328c                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x100032fc       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-findfp.o)
-                0x100032fc                __sf_fake_stdout
+                0x100032ac       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-findfp.o)
+                0x100032ac                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x1000331c       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-findfp.o)
-                0x1000331c                __sf_fake_stderr
+                0x100032cc       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-findfp.o)
+                0x100032cc                __sf_fake_stderr
  *(.gnu.linkonce.r*)
 
-.glue_7         0x1000333c        0x0
+.glue_7         0x100032ec        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x1000333c        0x0
+.glue_7t        0x100032ec        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x1000333c        0x0
+.vfp11_veneer   0x100032ec        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x1000333c        0x0
+.v4_bx          0x100032ec        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x1000333c        0x0
+.iplt           0x100032ec        0x0
  .iplt          0x00000000        0x0 ./hal/PinBase.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x1000333c        0x0
+.eh_frame       0x100032ec        0x0
  *(.eh_frame)
- .eh_frame      0x1000333c        0x0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .eh_frame      0x100032ec        0x0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
                                  0x28 (size before relaxing)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1000333c                . = ALIGN (0x4)
-                0x1000333c                __exidx_start = .
+                0x100032ec                . = ALIGN (0x4)
+                0x100032ec                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1000333c                __exidx_end = .
-                0x1000333c                . = ALIGN (0x4)
-                0x1000333c                eROData = .
+                0x100032ec                __exidx_end = .
+                0x100032ec                . = ALIGN (0x4)
+                0x100032ec                eROData = .
 
-.VENEER_Code    0x2000000c      0x110 load address 0x1000333c
+.VENEER_Code    0x2000000c      0x110 load address 0x100032ec
                 0x2000000c                . = ALIGN (0x4)
                 0x2000000c                VeneerStart = .
  *(.XmcVeneerCode)
@@ -8421,7 +8417,7 @@ END GROUP
                 0x2000011c                VeneerEnd = .
                 0x00000110                VeneerSize = (ABSOLUTE (VeneerEnd) - ABSOLUTE (VeneerStart))
 
-.rel.dyn        0x2000011c        0x0 load address 0x1000344c
+.rel.dyn        0x2000011c        0x0 load address 0x100033fc
  .rel.iplt      0x00000000        0x0 ./hal/PinBase.o
 
 Stack           0x2000011c      0x404 load address 0x00000000
@@ -8430,9 +8426,9 @@ Stack           0x2000011c      0x404 load address 0x00000000
                 0x20000520                . = (. + stack_size)
  *fill*         0x20000120      0x400 
                 0x20000520                __initial_sp = .
-                0x1000344c                DataLoadAddr = (eROData + VeneerSize)
+                0x100033fc                DataLoadAddr = (eROData + VeneerSize)
 
-.data           0x20000520       0x70 load address 0x1000344c
+.data           0x20000520       0x70 load address 0x100033fc
                 0x20000520                . = ALIGN (0x4)
                 0x20000520                __data_start = .
  *(vtable)
@@ -8466,19 +8462,19 @@ Stack           0x2000011c      0x404 load address 0x00000000
                 0x20000590                __data_end = .
                 0x00000070                __data_size = (__data_end - __data_start)
 
-.igot.plt       0x20000590        0x0 load address 0x100034bc
+.igot.plt       0x20000590        0x0 load address 0x1000346c
  .igot.plt      0x00000000        0x0 ./hal/PinBase.o
 
-.ram_code       0x20000590        0x0 load address 0x100034bc
+.ram_code       0x20000590        0x0 load address 0x1000346c
                 0x20000590                . = ALIGN (0x4)
                 0x20000590                __ram_code_start = .
  *(.ram_code)
                 0x20000590                . = ALIGN (0x4)
                 0x20000590                __ram_code_end = .
-                0x100034bc                __ram_code_load = LOADADDR (.ram_code)
+                0x1000346c                __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                __ram_code_size = (__ram_code_end - __ram_code_start)
 
-.bss            0x20000590       0x98 load address 0x100034bc
+.bss            0x20000590       0x98 load address 0x1000346c
                 0x20000590                . = ALIGN (0x4)
                 0x20000590                __bss_start = .
  *(.bss)
@@ -8590,7 +8586,7 @@ Stack           0x2000011c      0x404 load address 0x00000000
                 0x20000628                Heap_Bank1_Start = .
                 0x00000098                __bss_size = (__bss_end - __bss_start)
 
-.no_init        0x20003ffc        0x4 load address 0x10006f28
+.no_init        0x20003ffc        0x4 load address 0x10006ed8
                 0x20003ffc                Heap_Bank1_End = .
  *(.no_init)
  .no_init       0x20003ffc        0x4 ./Startup/system_XMC1100.o
@@ -8601,35 +8597,35 @@ Stack           0x2000011c      0x404 load address 0x00000000
 /DISCARD/
  *(.comment)
 
-.stab           0x00000000     0x9c00
+.stab           0x00000000     0x9b40
  *(.stab)
  .stab          0x00000000      0xc9c ./hal/PinBase.o
- .stab          0x00000c9c     0x105c ./hal/ShiftRegister.o
-                               0x11a0 (size before relaxing)
- .stab          0x00001cf8     0x30a8 ./hal/ShiftRegisterArray.o
+ .stab          0x00000c9c     0x1044 ./hal/ShiftRegister.o
+                               0x1188 (size before relaxing)
+ .stab          0x00001ce0     0x3000 ./hal/ShiftRegisterArray.o
                                0x30b4 (size before relaxing)
- .stab          0x00004da0     0x1548 ./cube/Floor.o
+ .stab          0x00004ce0     0x1488 ./cube/Floor.o
                                0x1554 (size before relaxing)
- .stab          0x000062e8      0x4f8 ./Startup/startup_XMC1100.o
+ .stab          0x00006168      0x4f8 ./Startup/startup_XMC1100.o
                                 0x504 (size before relaxing)
- .stab          0x000067e0      0x63c ./Startup/system_XMC1100.o
+ .stab          0x00006660      0x63c ./Startup/system_XMC1100.o
                                 0x894 (size before relaxing)
- .stab          0x00006e1c      0x45c ./Libraries/Newlib/syscalls.o
+ .stab          0x00006c9c      0x45c ./Libraries/Newlib/syscalls.o
                                 0x9d8 (size before relaxing)
- .stab          0x00007278      0x3b4 ./Dave/Generated/DAVE.o
+ .stab          0x000070f8      0x3b4 ./Dave/Generated/DAVE.o
                                 0x990 (size before relaxing)
- .stab          0x0000762c      0x48c ./XObject.o
+ .stab          0x000074ac      0x48c ./XObject.o
                                 0x498 (size before relaxing)
- .stab          0x00007ab8     0x2118 ./main.o
-                               0x2184 (size before relaxing)
- .stab          0x00009bd0       0x18 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(getpid.o)
+ .stab          0x00007938     0x21d8 ./main.o
+                               0x2244 (size before relaxing)
+ .stab          0x00009b10       0x18 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(getpid.o)
                                  0x24 (size before relaxing)
- .stab          0x00009be8       0x18 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(kill.o)
+ .stab          0x00009b28       0x18 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(kill.o)
                                  0x24 (size before relaxing)
 
-.stabstr        0x00000000    0x7a532
+.stabstr        0x00000000    0x7a8aa
  *(.stabstr)
- .stabstr       0x00000000    0x7a532 ./hal/PinBase.o
+ .stabstr       0x00000000    0x7a8aa ./hal/PinBase.o
 
 .debug
  *(.debug)

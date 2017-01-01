@@ -208,7 +208,7 @@
  455 0010 FB60     	 str r3,[r7,#12]
  456 0012 14E0     	 b .L21
  457              	.L22:
-  21:../hal/ShiftRegister.cpp **** 		push(((value >> i) & 0x01) == 0);
+  21:../hal/ShiftRegister.cpp **** 		push(((value >> i) & 0x01) != 0);
  459              	.LM15:
  460 0014 7B68     	 ldr r3,[r7,#4]
  461 0016 1B68     	 ldr r3,[r3]
@@ -221,8 +221,8 @@
  468 0024 0A1C     	 mov r2,r1
  469 0026 0121     	 mov r1,#1
  470 0028 0A40     	 and r2,r1
- 471 002a 5142     	 neg r1,r2
- 472 002c 4A41     	 adc r2,r2,r1
+ 471 002a 511E     	 sub r1,r2,#1
+ 472 002c 8A41     	 sbc r2,r2,r1
  473 002e D2B2     	 uxtb r2,r2
  474 0030 7968     	 ldr r1,[r7,#4]
  475 0032 081C     	 mov r0,r1
@@ -348,7 +348,7 @@
  605 0010 FB60     	 str r3,[r7,#12]
  606 0012 14E0     	 b .L27
  607              	.L28:
-  35:../hal/ShiftRegister.cpp **** 		cpush(((value >> i) & 0x01) == 0);
+  35:../hal/ShiftRegister.cpp **** 		cpush(((value >> i) & 0x01) != 0);
  609              	.LM26:
  610 0014 7B68     	 ldr r3,[r7,#4]
  611 0016 1B68     	 ldr r3,[r3]
@@ -361,8 +361,8 @@
  618 0024 0A1C     	 mov r2,r1
  619 0026 0121     	 mov r1,#1
  620 0028 0A40     	 and r2,r1
- 621 002a 5142     	 neg r1,r2
- 622 002c 4A41     	 adc r2,r2,r1
+ 621 002a 511E     	 sub r1,r2,#1
+ 622 002c 8A41     	 sbc r2,r2,r1
  623 002e D2B2     	 uxtb r2,r2
  624 0030 7968     	 ldr r1,[r7,#4]
  625 0032 081C     	 mov r0,r1
@@ -453,282 +453,264 @@
  721 0002 82B0     	 sub sp,sp,#8
  722 0004 00AF     	 add r7,sp,#0
  723 0006 7860     	 str r0,[r7,#4]
-  46:../hal/ShiftRegister.cpp **** 	SET_BIT(PORT1->OUT, 0);
- 725              	.LM36:
- 726 0008 134B     	 ldr r3,.L31
- 727 000a 134A     	 ldr r2,.L31
- 728 000c 1268     	 ldr r2,[r2]
- 729 000e 0121     	 mov r1,#1
- 730 0010 0A43     	 orr r2,r1
- 731 0012 1A60     	 str r2,[r3]
+  46:../hal/ShiftRegister.cpp **** 	//SET_BIT(PORT1->OUT, 0);
   47:../hal/ShiftRegister.cpp **** 	delay(DELAY_TIME);
- 733              	.LM37:
- 734 0014 7B68     	 ldr r3,[r7,#4]
- 735 0016 181C     	 mov r0,r3
- 736 0018 0021     	 mov r1,#0
- 737 001a FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
-  48:../hal/ShiftRegister.cpp **** 	CLR_BIT(PORT1->OUT, 0);
- 739              	.LM38:
- 740 001e 0E4B     	 ldr r3,.L31
- 741 0020 0D4A     	 ldr r2,.L31
- 742 0022 1268     	 ldr r2,[r2]
- 743 0024 0121     	 mov r1,#1
- 744 0026 8A43     	 bic r2,r1
- 745 0028 1A60     	 str r2,[r3]
+ 725              	.LM36:
+ 726 0008 7B68     	 ldr r3,[r7,#4]
+ 727 000a 181C     	 mov r0,r3
+ 728 000c 0021     	 mov r1,#0
+ 729 000e FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
+  48:../hal/ShiftRegister.cpp **** 	//CLR_BIT(PORT1->OUT, 0);
   49:../hal/ShiftRegister.cpp **** 
   50:../hal/ShiftRegister.cpp **** 	SET_BIT(*clk_->port,clk_->pin);
- 747              	.LM39:
- 748 002a 7B68     	 ldr r3,[r7,#4]
- 749 002c 5B68     	 ldr r3,[r3,#4]
- 750 002e 1B68     	 ldr r3,[r3]
- 751 0030 7A68     	 ldr r2,[r7,#4]
- 752 0032 5268     	 ldr r2,[r2,#4]
- 753 0034 1268     	 ldr r2,[r2]
- 754 0036 1168     	 ldr r1,[r2]
- 755 0038 7A68     	 ldr r2,[r7,#4]
- 756 003a 5268     	 ldr r2,[r2,#4]
- 757 003c 5268     	 ldr r2,[r2,#4]
- 758 003e 101C     	 mov r0,r2
- 759 0040 0122     	 mov r2,#1
- 760 0042 8240     	 lsl r2,r2,r0
- 761 0044 0A43     	 orr r2,r1
- 762 0046 1A60     	 str r2,[r3]
+ 731              	.LM37:
+ 732 0012 7B68     	 ldr r3,[r7,#4]
+ 733 0014 5B68     	 ldr r3,[r3,#4]
+ 734 0016 1B68     	 ldr r3,[r3]
+ 735 0018 7A68     	 ldr r2,[r7,#4]
+ 736 001a 5268     	 ldr r2,[r2,#4]
+ 737 001c 1268     	 ldr r2,[r2]
+ 738 001e 1168     	 ldr r1,[r2]
+ 739 0020 7A68     	 ldr r2,[r7,#4]
+ 740 0022 5268     	 ldr r2,[r2,#4]
+ 741 0024 5268     	 ldr r2,[r2,#4]
+ 742 0026 101C     	 mov r0,r2
+ 743 0028 0122     	 mov r2,#1
+ 744 002a 8240     	 lsl r2,r2,r0
+ 745 002c 0A43     	 orr r2,r1
+ 746 002e 1A60     	 str r2,[r3]
   51:../hal/ShiftRegister.cpp **** 
   52:../hal/ShiftRegister.cpp **** 	delay(DELAY_TIME);
- 764              	.LM40:
- 765 0048 7B68     	 ldr r3,[r7,#4]
- 766 004a 181C     	 mov r0,r3
- 767 004c 0021     	 mov r1,#0
- 768 004e FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
+ 748              	.LM38:
+ 749 0030 7B68     	 ldr r3,[r7,#4]
+ 750 0032 181C     	 mov r0,r3
+ 751 0034 0021     	 mov r1,#0
+ 752 0036 FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
   53:../hal/ShiftRegister.cpp **** }
- 770              	.LM41:
- 771 0052 BD46     	 mov sp,r7
- 772 0054 02B0     	 add sp,sp,#8
- 773              	 
- 774 0056 80BD     	 pop {r7,pc}
- 775              	.L32:
- 776              	 .align 2
- 777              	.L31:
- 778 0058 00010440 	 .word 1074004224
- 780              	.Lscope9:
- 782              	 .stabd 78,0,0
- 783              	 .section .text._ZN13ShiftRegister6clkLowEv,"ax",%progbits
- 784              	 .align 2
- 787              	 .global _ZN13ShiftRegister6clkLowEv
- 788              	 .code 16
- 789              	 .thumb_func
- 791              	_ZN13ShiftRegister6clkLowEv:
- 792              	 .stabd 46,0,0
+ 754              	.LM39:
+ 755 003a BD46     	 mov sp,r7
+ 756 003c 02B0     	 add sp,sp,#8
+ 757              	 
+ 758 003e 80BD     	 pop {r7,pc}
+ 760              	.Lscope9:
+ 762              	 .stabd 78,0,0
+ 763              	 .section .text._ZN13ShiftRegister6clkLowEv,"ax",%progbits
+ 764              	 .align 2
+ 767              	 .global _ZN13ShiftRegister6clkLowEv
+ 768              	 .code 16
+ 769              	 .thumb_func
+ 771              	_ZN13ShiftRegister6clkLowEv:
+ 772              	 .stabd 46,0,0
   54:../hal/ShiftRegister.cpp **** 
   55:../hal/ShiftRegister.cpp **** void ShiftRegister::clkLow(void){
- 794              	.LM42:
- 795              	.LFBB10:
- 796 0000 80B5     	 push {r7,lr}
- 797 0002 82B0     	 sub sp,sp,#8
- 798 0004 00AF     	 add r7,sp,#0
- 799 0006 7860     	 str r0,[r7,#4]
+ 774              	.LM40:
+ 775              	.LFBB10:
+ 776 0000 80B5     	 push {r7,lr}
+ 777 0002 82B0     	 sub sp,sp,#8
+ 778 0004 00AF     	 add r7,sp,#0
+ 779 0006 7860     	 str r0,[r7,#4]
   56:../hal/ShiftRegister.cpp **** 	delay(DELAY_TIME);
- 801              	.LM43:
- 802 0008 7B68     	 ldr r3,[r7,#4]
- 803 000a 181C     	 mov r0,r3
- 804 000c 0021     	 mov r1,#0
- 805 000e FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
+ 781              	.LM41:
+ 782 0008 7B68     	 ldr r3,[r7,#4]
+ 783 000a 181C     	 mov r0,r3
+ 784 000c 0021     	 mov r1,#0
+ 785 000e FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
   57:../hal/ShiftRegister.cpp **** 	CLR_BIT(*clk_->port,clk_->pin);
- 807              	.LM44:
- 808 0012 7B68     	 ldr r3,[r7,#4]
- 809 0014 5B68     	 ldr r3,[r3,#4]
- 810 0016 1B68     	 ldr r3,[r3]
- 811 0018 7A68     	 ldr r2,[r7,#4]
- 812 001a 5268     	 ldr r2,[r2,#4]
- 813 001c 1268     	 ldr r2,[r2]
- 814 001e 1168     	 ldr r1,[r2]
- 815 0020 7A68     	 ldr r2,[r7,#4]
- 816 0022 5268     	 ldr r2,[r2,#4]
- 817 0024 5268     	 ldr r2,[r2,#4]
- 818 0026 101C     	 mov r0,r2
- 819 0028 0122     	 mov r2,#1
- 820 002a 8240     	 lsl r2,r2,r0
- 821 002c D243     	 mvn r2,r2
- 822 002e 0A40     	 and r2,r1
- 823 0030 1A60     	 str r2,[r3]
+ 787              	.LM42:
+ 788 0012 7B68     	 ldr r3,[r7,#4]
+ 789 0014 5B68     	 ldr r3,[r3,#4]
+ 790 0016 1B68     	 ldr r3,[r3]
+ 791 0018 7A68     	 ldr r2,[r7,#4]
+ 792 001a 5268     	 ldr r2,[r2,#4]
+ 793 001c 1268     	 ldr r2,[r2]
+ 794 001e 1168     	 ldr r1,[r2]
+ 795 0020 7A68     	 ldr r2,[r7,#4]
+ 796 0022 5268     	 ldr r2,[r2,#4]
+ 797 0024 5268     	 ldr r2,[r2,#4]
+ 798 0026 101C     	 mov r0,r2
+ 799 0028 0122     	 mov r2,#1
+ 800 002a 8240     	 lsl r2,r2,r0
+ 801 002c D243     	 mvn r2,r2
+ 802 002e 0A40     	 and r2,r1
+ 803 0030 1A60     	 str r2,[r3]
   58:../hal/ShiftRegister.cpp **** 	delay(DELAY_TIME);
- 825              	.LM45:
- 826 0032 7B68     	 ldr r3,[r7,#4]
- 827 0034 181C     	 mov r0,r3
- 828 0036 0021     	 mov r1,#0
- 829 0038 FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
+ 805              	.LM43:
+ 806 0032 7B68     	 ldr r3,[r7,#4]
+ 807 0034 181C     	 mov r0,r3
+ 808 0036 0021     	 mov r1,#0
+ 809 0038 FFF7FEFF 	 bl _ZN13ShiftRegister5delayEj
   59:../hal/ShiftRegister.cpp **** }
- 831              	.LM46:
- 832 003c BD46     	 mov sp,r7
- 833 003e 02B0     	 add sp,sp,#8
- 834              	 
- 835 0040 80BD     	 pop {r7,pc}
- 837              	.Lscope10:
- 839              	 .stabd 78,0,0
- 840 0042 C046     	 .section .text._ZN13ShiftRegister11getDataPortEv,"ax",%progbits
- 841              	 .align 2
- 844              	 .global _ZN13ShiftRegister11getDataPortEv
- 845              	 .code 16
- 846              	 .thumb_func
- 848              	_ZN13ShiftRegister11getDataPortEv:
- 849              	 .stabd 46,0,0
+ 811              	.LM44:
+ 812 003c BD46     	 mov sp,r7
+ 813 003e 02B0     	 add sp,sp,#8
+ 814              	 
+ 815 0040 80BD     	 pop {r7,pc}
+ 817              	.Lscope10:
+ 819              	 .stabd 78,0,0
+ 820 0042 C046     	 .section .text._ZN13ShiftRegister11getDataPortEv,"ax",%progbits
+ 821              	 .align 2
+ 824              	 .global _ZN13ShiftRegister11getDataPortEv
+ 825              	 .code 16
+ 826              	 .thumb_func
+ 828              	_ZN13ShiftRegister11getDataPortEv:
+ 829              	 .stabd 46,0,0
   60:../hal/ShiftRegister.cpp **** 
   61:../hal/ShiftRegister.cpp **** volatile uint32_t* ShiftRegister::getDataPort(void){
- 851              	.LM47:
- 852              	.LFBB11:
- 853 0000 80B5     	 push {r7,lr}
- 854 0002 82B0     	 sub sp,sp,#8
- 855 0004 00AF     	 add r7,sp,#0
- 856 0006 7860     	 str r0,[r7,#4]
+ 831              	.LM45:
+ 832              	.LFBB11:
+ 833 0000 80B5     	 push {r7,lr}
+ 834 0002 82B0     	 sub sp,sp,#8
+ 835 0004 00AF     	 add r7,sp,#0
+ 836 0006 7860     	 str r0,[r7,#4]
   62:../hal/ShiftRegister.cpp **** 	return data_->port;
- 858              	.LM48:
- 859 0008 7B68     	 ldr r3,[r7,#4]
- 860 000a 9B68     	 ldr r3,[r3,#8]
- 861 000c 1B68     	 ldr r3,[r3]
+ 838              	.LM46:
+ 839 0008 7B68     	 ldr r3,[r7,#4]
+ 840 000a 9B68     	 ldr r3,[r3,#8]
+ 841 000c 1B68     	 ldr r3,[r3]
   63:../hal/ShiftRegister.cpp **** }
- 863              	.LM49:
- 864 000e 181C     	 mov r0,r3
- 865 0010 BD46     	 mov sp,r7
- 866 0012 02B0     	 add sp,sp,#8
- 867              	 
- 868 0014 80BD     	 pop {r7,pc}
- 870              	.Lscope11:
- 872              	 .stabd 78,0,0
- 873 0016 C046     	 .section .text._ZN13ShiftRegister10getDataPinEv,"ax",%progbits
- 874              	 .align 2
- 877              	 .global _ZN13ShiftRegister10getDataPinEv
- 878              	 .code 16
- 879              	 .thumb_func
- 881              	_ZN13ShiftRegister10getDataPinEv:
- 882              	 .stabd 46,0,0
+ 843              	.LM47:
+ 844 000e 181C     	 mov r0,r3
+ 845 0010 BD46     	 mov sp,r7
+ 846 0012 02B0     	 add sp,sp,#8
+ 847              	 
+ 848 0014 80BD     	 pop {r7,pc}
+ 850              	.Lscope11:
+ 852              	 .stabd 78,0,0
+ 853 0016 C046     	 .section .text._ZN13ShiftRegister10getDataPinEv,"ax",%progbits
+ 854              	 .align 2
+ 857              	 .global _ZN13ShiftRegister10getDataPinEv
+ 858              	 .code 16
+ 859              	 .thumb_func
+ 861              	_ZN13ShiftRegister10getDataPinEv:
+ 862              	 .stabd 46,0,0
   64:../hal/ShiftRegister.cpp **** 
   65:../hal/ShiftRegister.cpp **** uint32_t ShiftRegister::getDataPin(void){
- 884              	.LM50:
- 885              	.LFBB12:
- 886 0000 80B5     	 push {r7,lr}
- 887 0002 82B0     	 sub sp,sp,#8
- 888 0004 00AF     	 add r7,sp,#0
- 889 0006 7860     	 str r0,[r7,#4]
+ 864              	.LM48:
+ 865              	.LFBB12:
+ 866 0000 80B5     	 push {r7,lr}
+ 867 0002 82B0     	 sub sp,sp,#8
+ 868 0004 00AF     	 add r7,sp,#0
+ 869 0006 7860     	 str r0,[r7,#4]
   66:../hal/ShiftRegister.cpp **** 	return data_->pin;
- 891              	.LM51:
- 892 0008 7B68     	 ldr r3,[r7,#4]
- 893 000a 9B68     	 ldr r3,[r3,#8]
- 894 000c 5B68     	 ldr r3,[r3,#4]
+ 871              	.LM49:
+ 872 0008 7B68     	 ldr r3,[r7,#4]
+ 873 000a 9B68     	 ldr r3,[r3,#8]
+ 874 000c 5B68     	 ldr r3,[r3,#4]
   67:../hal/ShiftRegister.cpp **** }
- 896              	.LM52:
- 897 000e 181C     	 mov r0,r3
- 898 0010 BD46     	 mov sp,r7
- 899 0012 02B0     	 add sp,sp,#8
- 900              	 
- 901 0014 80BD     	 pop {r7,pc}
- 903              	.Lscope12:
- 905              	 .stabd 78,0,0
- 906 0016 C046     	 .section .text._ZN13ShiftRegister9delay_1msEv,"ax",%progbits
- 907              	 .align 2
- 910              	 .global _ZN13ShiftRegister9delay_1msEv
- 911              	 .code 16
- 912              	 .thumb_func
- 914              	_ZN13ShiftRegister9delay_1msEv:
- 915              	 .stabd 46,0,0
+ 876              	.LM50:
+ 877 000e 181C     	 mov r0,r3
+ 878 0010 BD46     	 mov sp,r7
+ 879 0012 02B0     	 add sp,sp,#8
+ 880              	 
+ 881 0014 80BD     	 pop {r7,pc}
+ 883              	.Lscope12:
+ 885              	 .stabd 78,0,0
+ 886 0016 C046     	 .section .text._ZN13ShiftRegister9delay_1msEv,"ax",%progbits
+ 887              	 .align 2
+ 890              	 .global _ZN13ShiftRegister9delay_1msEv
+ 891              	 .code 16
+ 892              	 .thumb_func
+ 894              	_ZN13ShiftRegister9delay_1msEv:
+ 895              	 .stabd 46,0,0
   68:../hal/ShiftRegister.cpp **** 
   69:../hal/ShiftRegister.cpp **** 
   70:../hal/ShiftRegister.cpp **** volatile void ShiftRegister::delay_1ms(void){
- 917              	.LM53:
- 918              	.LFBB13:
- 919 0000 80B5     	 push {r7,lr}
- 920 0002 84B0     	 sub sp,sp,#16
- 921 0004 00AF     	 add r7,sp,#0
- 922 0006 7860     	 str r0,[r7,#4]
- 923              	.LBB9:
- 924              	.LBB10:
+ 897              	.LM51:
+ 898              	.LFBB13:
+ 899 0000 80B5     	 push {r7,lr}
+ 900 0002 84B0     	 sub sp,sp,#16
+ 901 0004 00AF     	 add r7,sp,#0
+ 902 0006 7860     	 str r0,[r7,#4]
+ 903              	.LBB9:
+ 904              	.LBB10:
   71:../hal/ShiftRegister.cpp **** 	for(int i= 0; i < DELAY_MS_LENGTH * 100; i++){
- 926              	.LM54:
- 927 0008 0023     	 mov r3,#0
- 928 000a FB60     	 str r3,[r7,#12]
- 929 000c 02E0     	 b .L39
- 930              	.L40:
- 932              	.LM55:
- 933 000e FB68     	 ldr r3,[r7,#12]
- 934 0010 0133     	 add r3,r3,#1
- 935 0012 FB60     	 str r3,[r7,#12]
- 936              	.L39:
- 938              	.LM56:
- 939 0014 FB68     	 ldr r3,[r7,#12]
- 940 0016 034A     	 ldr r2,.L41
- 941 0018 9342     	 cmp r3,r2
- 942 001a F8DD     	 ble .L40
- 943              	.LBE10:
- 944              	.LBE9:
+ 906              	.LM52:
+ 907 0008 0023     	 mov r3,#0
+ 908 000a FB60     	 str r3,[r7,#12]
+ 909 000c 02E0     	 b .L37
+ 910              	.L38:
+ 912              	.LM53:
+ 913 000e FB68     	 ldr r3,[r7,#12]
+ 914 0010 0133     	 add r3,r3,#1
+ 915 0012 FB60     	 str r3,[r7,#12]
+ 916              	.L37:
+ 918              	.LM54:
+ 919 0014 FB68     	 ldr r3,[r7,#12]
+ 920 0016 034A     	 ldr r2,.L39
+ 921 0018 9342     	 cmp r3,r2
+ 922 001a F8DD     	 ble .L38
+ 923              	.LBE10:
+ 924              	.LBE9:
   72:../hal/ShiftRegister.cpp **** 	}
   73:../hal/ShiftRegister.cpp **** }
- 946              	.LM57:
- 947 001c BD46     	 mov sp,r7
- 948 001e 04B0     	 add sp,sp,#16
- 949              	 
- 950 0020 80BD     	 pop {r7,pc}
- 951              	.L42:
- 952 0022 C046     	 .align 2
- 953              	.L41:
- 954 0024 FFD33000 	 .word 3199999
- 959              	.Lscope13:
- 961              	 .stabd 78,0,0
- 962              	 .section .text._ZN13ShiftRegister5delayEj,"ax",%progbits
- 963              	 .align 2
- 967              	 .global _ZN13ShiftRegister5delayEj
- 968              	 .code 16
- 969              	 .thumb_func
- 971              	_ZN13ShiftRegister5delayEj:
- 972              	 .stabd 46,0,0
+ 926              	.LM55:
+ 927 001c BD46     	 mov sp,r7
+ 928 001e 04B0     	 add sp,sp,#16
+ 929              	 
+ 930 0020 80BD     	 pop {r7,pc}
+ 931              	.L40:
+ 932 0022 C046     	 .align 2
+ 933              	.L39:
+ 934 0024 FFD33000 	 .word 3199999
+ 939              	.Lscope13:
+ 941              	 .stabd 78,0,0
+ 942              	 .section .text._ZN13ShiftRegister5delayEj,"ax",%progbits
+ 943              	 .align 2
+ 947              	 .global _ZN13ShiftRegister5delayEj
+ 948              	 .code 16
+ 949              	 .thumb_func
+ 951              	_ZN13ShiftRegister5delayEj:
+ 952              	 .stabd 46,0,0
   74:../hal/ShiftRegister.cpp **** 
   75:../hal/ShiftRegister.cpp **** void ShiftRegister::delay(unsigned len)
   76:../hal/ShiftRegister.cpp **** {
- 974              	.LM58:
- 975              	.LFBB14:
- 976 0000 80B5     	 push {r7,lr}
- 977 0002 82B0     	 sub sp,sp,#8
- 978 0004 00AF     	 add r7,sp,#0
- 979 0006 7860     	 str r0,[r7,#4]
- 980 0008 3960     	 str r1,[r7]
- 981              	.L44:
+ 954              	.LM56:
+ 955              	.LFBB14:
+ 956 0000 80B5     	 push {r7,lr}
+ 957 0002 82B0     	 sub sp,sp,#8
+ 958 0004 00AF     	 add r7,sp,#0
+ 959 0006 7860     	 str r0,[r7,#4]
+ 960 0008 3960     	 str r1,[r7]
+ 961              	.L42:
   77:../hal/ShiftRegister.cpp **** 	while(len--);
- 983              	.LM59:
- 984 000a 3B68     	 ldr r3,[r7]
- 985 000c 5A1E     	 sub r2,r3,#1
- 986 000e 3A60     	 str r2,[r7]
- 987 0010 5A1E     	 sub r2,r3,#1
- 988 0012 9341     	 sbc r3,r3,r2
- 989 0014 DBB2     	 uxtb r3,r3
- 990 0016 002B     	 cmp r3,#0
- 991 0018 F7D1     	 bne .L44
+ 963              	.LM57:
+ 964 000a 3B68     	 ldr r3,[r7]
+ 965 000c 5A1E     	 sub r2,r3,#1
+ 966 000e 3A60     	 str r2,[r7]
+ 967 0010 5A1E     	 sub r2,r3,#1
+ 968 0012 9341     	 sbc r3,r3,r2
+ 969 0014 DBB2     	 uxtb r3,r3
+ 970 0016 002B     	 cmp r3,#0
+ 971 0018 F7D1     	 bne .L42
   78:../hal/ShiftRegister.cpp **** }
- 993              	.LM60:
- 994 001a BD46     	 mov sp,r7
- 995 001c 02B0     	 add sp,sp,#8
- 996              	 
- 997 001e 80BD     	 pop {r7,pc}
- 999              	.Lscope14:
- 1001              	 .stabd 78,0,0
- 1002              	 .global _ZTV13ShiftRegister
- 1003              	 .section .rodata._ZTV13ShiftRegister,"a",%progbits
- 1004              	 .align 3
- 1007              	_ZTV13ShiftRegister:
- 1008 0000 00000000 	 .word 0
- 1009 0004 00000000 	 .word 0
- 1010 0008 00000000 	 .word _ZN13ShiftRegisterD1Ev
- 1011 000c 00000000 	 .word _ZN13ShiftRegisterD0Ev
- 1012 0010 00000000 	 .word _ZN13ShiftRegister4pushEh
- 1013 0014 00000000 	 .word _ZN13ShiftRegister4pushEb
- 1014 0018 00000000 	 .word _ZN13ShiftRegister5cpushEh
- 1015 001c 00000000 	 .word _ZN13ShiftRegister5cpushEb
- 1016              	 .text
- 1018              	.Letext0:
- 1019              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+ 973              	.LM58:
+ 974 001a BD46     	 mov sp,r7
+ 975 001c 02B0     	 add sp,sp,#8
+ 976              	 
+ 977 001e 80BD     	 pop {r7,pc}
+ 979              	.Lscope14:
+ 981              	 .stabd 78,0,0
+ 982              	 .global _ZTV13ShiftRegister
+ 983              	 .section .rodata._ZTV13ShiftRegister,"a",%progbits
+ 984              	 .align 3
+ 987              	_ZTV13ShiftRegister:
+ 988 0000 00000000 	 .word 0
+ 989 0004 00000000 	 .word 0
+ 990 0008 00000000 	 .word _ZN13ShiftRegisterD1Ev
+ 991 000c 00000000 	 .word _ZN13ShiftRegisterD0Ev
+ 992 0010 00000000 	 .word _ZN13ShiftRegister4pushEh
+ 993 0014 00000000 	 .word _ZN13ShiftRegister4pushEb
+ 994 0018 00000000 	 .word _ZN13ShiftRegister5cpushEh
+ 995 001c 00000000 	 .word _ZN13ShiftRegister5cpushEb
+ 996              	 .text
+ 998              	.Letext0:
+ 999              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
 DEFINED SYMBOLS
                             *ABS*:00000000 ShiftRegister.cpp
     {standard input}:243    .text._ZN13ShiftRegisterC2EP13__AccessPoint:00000000 $t
     {standard input}:251    .text._ZN13ShiftRegisterC2EP13__AccessPoint:00000000 _ZN13ShiftRegisterC2EP13__AccessPoint
     {standard input}:282    .text._ZN13ShiftRegisterC2EP13__AccessPoint:00000020 $d
-    {standard input}:1007   .rodata._ZTV13ShiftRegister:00000000 _ZTV13ShiftRegister
+    {standard input}:987    .rodata._ZTV13ShiftRegister:00000000 _ZTV13ShiftRegister
     {standard input}:251    .text._ZN13ShiftRegisterC2EP13__AccessPoint:00000000 _ZN13ShiftRegisterC1EP13__AccessPoint
     {standard input}:290    .text._ZN13ShiftRegisterC2EP13__AccessPointS1_:00000000 $t
     {standard input}:299    .text._ZN13ShiftRegisterC2EP13__AccessPointS1_:00000000 _ZN13ShiftRegisterC2EP13__AccessPointS1_
@@ -748,21 +730,20 @@ DEFINED SYMBOLS
     {standard input}:588    .text._ZN13ShiftRegister5cpushEh:00000000 _ZN13ShiftRegister5cpushEh
     {standard input}:655    .text._ZN13ShiftRegister5cpushEb:00000000 $t
     {standard input}:663    .text._ZN13ShiftRegister5cpushEb:00000000 _ZN13ShiftRegister5cpushEb
-    {standard input}:791    .text._ZN13ShiftRegister6clkLowEv:00000000 _ZN13ShiftRegister6clkLowEv
+    {standard input}:771    .text._ZN13ShiftRegister6clkLowEv:00000000 _ZN13ShiftRegister6clkLowEv
     {standard input}:715    .text._ZN13ShiftRegister7clkHighEv:00000000 _ZN13ShiftRegister7clkHighEv
     {standard input}:708    .text._ZN13ShiftRegister7clkHighEv:00000000 $t
-    {standard input}:971    .text._ZN13ShiftRegister5delayEj:00000000 _ZN13ShiftRegister5delayEj
-    {standard input}:778    .text._ZN13ShiftRegister7clkHighEv:00000058 $d
-    {standard input}:784    .text._ZN13ShiftRegister6clkLowEv:00000000 $t
-    {standard input}:841    .text._ZN13ShiftRegister11getDataPortEv:00000000 $t
-    {standard input}:848    .text._ZN13ShiftRegister11getDataPortEv:00000000 _ZN13ShiftRegister11getDataPortEv
-    {standard input}:874    .text._ZN13ShiftRegister10getDataPinEv:00000000 $t
-    {standard input}:881    .text._ZN13ShiftRegister10getDataPinEv:00000000 _ZN13ShiftRegister10getDataPinEv
-    {standard input}:907    .text._ZN13ShiftRegister9delay_1msEv:00000000 $t
-    {standard input}:914    .text._ZN13ShiftRegister9delay_1msEv:00000000 _ZN13ShiftRegister9delay_1msEv
-    {standard input}:954    .text._ZN13ShiftRegister9delay_1msEv:00000024 $d
-    {standard input}:963    .text._ZN13ShiftRegister5delayEj:00000000 $t
-    {standard input}:1004   .rodata._ZTV13ShiftRegister:00000000 $d
+    {standard input}:951    .text._ZN13ShiftRegister5delayEj:00000000 _ZN13ShiftRegister5delayEj
+    {standard input}:764    .text._ZN13ShiftRegister6clkLowEv:00000000 $t
+    {standard input}:821    .text._ZN13ShiftRegister11getDataPortEv:00000000 $t
+    {standard input}:828    .text._ZN13ShiftRegister11getDataPortEv:00000000 _ZN13ShiftRegister11getDataPortEv
+    {standard input}:854    .text._ZN13ShiftRegister10getDataPinEv:00000000 $t
+    {standard input}:861    .text._ZN13ShiftRegister10getDataPinEv:00000000 _ZN13ShiftRegister10getDataPinEv
+    {standard input}:887    .text._ZN13ShiftRegister9delay_1msEv:00000000 $t
+    {standard input}:894    .text._ZN13ShiftRegister9delay_1msEv:00000000 _ZN13ShiftRegister9delay_1msEv
+    {standard input}:934    .text._ZN13ShiftRegister9delay_1msEv:00000024 $d
+    {standard input}:943    .text._ZN13ShiftRegister5delayEj:00000000 $t
+    {standard input}:984    .rodata._ZTV13ShiftRegister:00000000 $d
 
 UNDEFINED SYMBOLS
 _ZdlPv

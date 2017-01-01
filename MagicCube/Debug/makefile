@@ -62,7 +62,7 @@ LIST_FILES = $(addsuffix .o.lst, $(basename $(OBJS)))
 MAP_FILE = "MagicCube.map"
 
 TOOLCHAIN_ROOT=C:/DAVEv4-64Bit/DAVE-4.3.2/eclipse/ARM-GCC-49
-PROJECT_LOC=C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/MagicCube
+PROJECT_LOC=C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube
 
 # All Target
 all: MagicCube.elf secondary-outputs

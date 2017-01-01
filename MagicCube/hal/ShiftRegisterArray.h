@@ -17,7 +17,7 @@ public:
 	virtual ~ShiftRegisterArray();
 
 	void addShiftRegister(ShiftRegister* shiftRegister);
-	virtual void push(uint8_t value);
+	virtual void push(uint8_t* values);
 
 	void begin(void);
 	void end(void);

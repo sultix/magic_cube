@@ -25,8 +25,8 @@ void Floor::off(void){
 	low();
 }
 
-void Floor::push(uint8_t value){
-	shiftRegisterArray_->push(value);
+void Floor::push(uint8_t* values){
+	shiftRegisterArray_->push(values);
 }
 
 void Floor::begin(void){

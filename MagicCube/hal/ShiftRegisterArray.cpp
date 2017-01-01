@@ -14,11 +14,11 @@ ShiftRegisterArray::ShiftRegisterArray(AccessPoint* clk) :
 ShiftRegisterArray::~ShiftRegisterArray() {
 }
 
-void ShiftRegisterArray::push(uint8_t value) {
+void ShiftRegisterArray::push(uint8_t* values) {
 	for(int i = 0; i < 8; i++){
 		clkLow();
 		for(unsigned int regNum = 0; regNum < registers_.size(); regNum++){
-			registers_[regNum]->push(((value >> i) & 0x01) == 0);
+			registers_[regNum]->push(((values[regNum] >> i) & 0x01) != 0);
 		}
 		clkHigh();
 	}
