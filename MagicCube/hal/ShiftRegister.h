@@ -28,10 +28,10 @@ public:
 
 	volatile uint32_t* getDataPort();
 	uint32_t getDataPin();
-
-protected:
 	void clkHigh();
 	void clkLow();
+
+protected:
 	volatile void delay_1ms(void);
 	void delay(unsigned len);
 

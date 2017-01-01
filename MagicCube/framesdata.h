@@ -9,7 +9,9 @@
 #define FRAMESDATA_H_
 
 #include <string>
+#include <stdint.h>
+#include "declarations.h"
 
-std::string frameData = "0xA5,0x5A;0xA5,0x5A;0xA5,0x5A";
+uint8_t two[LAYERS_COUNT] = {0xCC,0xCC, 0x33,0x33};
 
 #endif /* FRAMESDATA_H_ */

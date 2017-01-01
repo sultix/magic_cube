@@ -12,11 +12,14 @@
 
 #include <cstddef>
 #include <vector>
-#include <string>
-#include <stdint.h>
+#include <inttypes.h>
+#include <stdio.h>
+#include <stddef.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdint.h>
+#include <inttypes.h>
 
+#include "declarations.h"
 #include "FloorRegister.h"
 
 class Frame {
@@ -24,21 +27,22 @@ public:
 	Frame();
 	virtual ~Frame();
 
-	void addFloorData(FloorRegister* data);
 	void setDuration(unsigned int duration);
 
-	void init(std::string data);
+	void init(uint8_t* data, int length);
 
-	FloorRegister* getFloorData(unsigned int floorIndex);
 	unsigned int getDuration(void);
-	unsigned int getFloorsCount(void);
+	int getFloorsCount(void);
+
+	void addValue(uint8_t value);
+	uint8_t getValue(int index);
+	unsigned int count(void);
 
 private:
 	std::vector<FloorRegister*> floorData_;
 	unsigned int duration_;
 
-	char* strsep(char **stringp, const char *delim);
-	std::vector<char*> split(const std::string &s, char delim);
+	std::vector<uint8_t> values_;
 };
 
 #endif /* FRAMES_FRAME_H_ */

@@ -20,10 +20,12 @@ public:
 	virtual ~Cube();
 
 	void addFloor(Floor* floor);
+	Floor* getFloor(unsigned int index);
 
 	void play(std::vector<Frame*> frames);
-	void play(Floor* floor, FloorRegister* reg);
+	void playSymbol(Frame* frame, int reg, int shift);
 	void play(Frame* frame);
+	void off();
 
 private:
 	std::vector<Floor*> floors_;

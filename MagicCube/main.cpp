@@ -112,8 +112,6 @@ int main(void) {
 	shiftRegisterArray.addShiftRegister(&shiftRegister1);
 	shiftRegisterArray.addShiftRegister(&shiftRegister2);
 
-	//Cube cube;
-
 	Floor floor1(&PORT2->OUT, PIN_1_FLOOR);
 	floor1.setRegisterArray(&shiftRegisterArray);
 
@@ -126,78 +124,47 @@ int main(void) {
 	Floor floor4(&PORT0->OUT, PIN_4_FLOOR);
 	floor4.setRegisterArray(&shiftRegisterArray);
 
-//	cube.addFloor(&floor1);
-//	cube.addFloor(&floor2);
-//	cube.addFloor(&floor3);
-//	cube.addFloor(&floor4);
+	Cube cube;
+	cube.addFloor(&floor1);
+	cube.addFloor(&floor2);
+	cube.addFloor(&floor3);
+	cube.addFloor(&floor4);
 
-	//Frame frame;
-	//frame.init(frameData);
-	//cube.play(&frame);
+	Frame frame;
+	frame.init(two, LAYERS_COUNT);
+	cube.play(&frame);
 
-	int i = 5;
-	//int div = 1;
-	uint8_t cntr1 = 0;
-	uint8_t cntr2 = 0xFF;
-
-	//uint8_t argArr[2] = { 0x00, 0x00 };
-	Floor* curentFloor;
-	while (1U) {
-		i--; if(i==0) i=4;
-		if (i == 1) {
-			curentFloor = &floor1;
-			//curentFloor->off();
-			uint8_t argArr[2] = { cntr1, cntr2 };
-			curentFloor->push(argArr);
-			curentFloor->on();
-		} else if (i == 2) {
-			curentFloor = &floor2;
-			//curentFloor->off();
-			//uint8_t argArr[2] = { cntr2, cntr1 };
-			uint8_t argArr[2] = { cntr1, cntr2 };
-			curentFloor->push(argArr);
-			curentFloor->on();
-		} else if (i == 3) {
-			curentFloor = &floor3;
-			//curentFloor->off();
-			uint8_t argArr[2] = { cntr1, cntr2 };
-			curentFloor->push(argArr);
-			curentFloor->on();
-		} else if (i == 4) {
-			curentFloor = &floor4;
-			//curentFloor->off();
-			//uint8_t argArr[2] = { cntr2, cntr1 };
-			uint8_t argArr[2] = { cntr1, cntr2 };
-			curentFloor->push(argArr);
-			curentFloor->on();
-			//i = 0;
-		}
-
-		curentFloor->delay(150000 *2);
-		curentFloor->off();
-		//curentFloor->delay(150000 / 3);
-
-		cntr1++;
-		cntr2--;
-
+//	unsigned int i = 0;
+//	int div = 65;
+//
+//	uint8_t argArr[2] = {0x00,0x00};
+//	int symbols[4] = {2,0,1,7};
+//	Floor* curentFloor;
+//
+//	while (1U) {
+//
+//		curentFloor = cube.getFloor(i);
+//
+//		if(i == 0){
+//			argArr[0] = 0x01;
+//		} else if(i == 1){
+//			argArr[0] = 0x01;
+//		} else if(i == 2){
+//			argArr[0] = 0x11;
+//		}else{
+//			argArr[0] = 0x01;
+//		}
+//
 //		curentFloor->off();
-//		uint8_t argArr[2] = {0xF0,0x00};
 //		curentFloor->push(argArr);
 //		curentFloor->on();
 //
 //		curentFloor->delay(150000 / div);
 //
 //		curentFloor->off();
-////		curentFloor->push((uint8_t)0x5A + i);
-//		curentFloor->on();
 //
-//		curentFloor->delay(150000 / div);
-//
-//		curentFloor->off();
-
-		//i++;
-
-	}
+//		i = (i >= 3) ? 0 : ++i;
+//	}
 }
 
 extern "C" void SysTick_Handler(void) {
@@ -205,12 +172,12 @@ extern "C" void SysTick_Handler(void) {
 	static int counter = 0;
 	counter++;
 	if (counter == 50) {
-		//SET_BIT(PORT1->OUT, 0);
-		//CLR_BIT(PORT1->OUT, 1);
+		SET_BIT(PORT1->OUT, 0);
+		CLR_BIT(PORT1->OUT, 1);
 	}
 	if (counter > 100) {
-		//CLR_BIT(PORT1->OUT, 0);
-		//SET_BIT(PORT1->OUT, 1);
+		CLR_BIT(PORT1->OUT, 0);
+		SET_BIT(PORT1->OUT, 1);
 		counter = 0;
 	}
 }

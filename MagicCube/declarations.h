@@ -23,6 +23,7 @@
 
 
 #define DELAY_TIME 0
+#define LAYERS_COUNT 4
 
 
 struct __AccessPoint{

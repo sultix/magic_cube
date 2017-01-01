@@ -28,6 +28,10 @@ void ShiftRegisterArray::addShiftRegister(ShiftRegister* shiftRegister){
 	registers_.push_back(shiftRegister);
 }
 
+ShiftRegister* ShiftRegisterArray::getShiftRegisterAt(int index){
+	return registers_[index];
+}
+
 void ShiftRegisterArray::begin(void){
 	clkLow();
 }

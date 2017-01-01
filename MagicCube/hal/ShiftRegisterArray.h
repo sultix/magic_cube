@@ -17,6 +17,7 @@ public:
 	virtual ~ShiftRegisterArray();
 
 	void addShiftRegister(ShiftRegister* shiftRegister);
+	ShiftRegister* getShiftRegisterAt(int index);
 	virtual void push(uint8_t* values);
 
 	void begin(void);

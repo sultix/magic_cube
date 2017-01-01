@@ -138,26 +138,26 @@
  511              	_ZThn12_N5FloorD1Ev:
  512              	 .stabd 46,0,0
  514              	.Ltext1:
-   1:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** /*
-   2:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  * Floor.h
-   3:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  *
-   4:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  *  Created on: Dec 30, 2016
-   5:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  *      Author: alex
-   6:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  */
-   7:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 
-   8:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #ifndef CUBE_FLOOR_H_
-   9:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #define CUBE_FLOOR_H_
-  10:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 
-  11:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include <vector>
-  12:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "hal/PinBase.h"
-  13:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "hal/ShiftRegister.h"
-  14:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "hal/ShiftRegisterArray.h"
-  15:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "XObject.h"
-  16:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 
-  17:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** class Floor : public PinBase, public XObject {
-  18:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** public:
-  19:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 	Floor(volatile uint32_t* port, uint32_t pin);
-  20:C:/Users/USER/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 	virtual ~Floor();
+   1:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** /*
+   2:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  * Floor.h
+   3:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  *
+   4:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  *  Created on: Dec 30, 2016
+   5:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  *      Author: alex
+   6:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h ****  */
+   7:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 
+   8:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #ifndef CUBE_FLOOR_H_
+   9:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #define CUBE_FLOOR_H_
+  10:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 
+  11:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include <vector>
+  12:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "hal/PinBase.h"
+  13:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "hal/ShiftRegister.h"
+  14:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "hal/ShiftRegisterArray.h"
+  15:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** #include "XObject.h"
+  16:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 
+  17:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** class Floor : public PinBase, public XObject {
+  18:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** public:
+  19:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 	Floor(volatile uint32_t* port, uint32_t pin);
+  20:C:/Workspaces/DAVE-4.3-64Bit/WS_2016_09_02/magic_cube/MagicCube/cube/Floor.h **** 	virtual ~Floor();
  516              	.LM8:
  517              	.LFBB3:
  518 0000 08B4     	 push {r3}
@@ -306,132 +306,182 @@
  685 0014 80BD     	 pop {r7,pc}
  687              	.Lscope8:
  689              	 .stabd 78,0,0
- 690 0016 C046     	 .section .text._ZN5Floor4pushEPh,"ax",%progbits
+ 690 0016 C046     	 .section .text._ZN5Floor4pushEih,"ax",%progbits
  691              	 .align 2
- 695              	 .global _ZN5Floor4pushEPh
- 696              	 .code 16
- 697              	 .thumb_func
- 699              	_ZN5Floor4pushEPh:
- 700              	 .stabd 46,0,0
+ 696              	 .global _ZN5Floor4pushEih
+ 697              	 .code 16
+ 698              	 .thumb_func
+ 700              	_ZN5Floor4pushEih:
+ 701              	 .stabd 46,0,0
   27:../cube/Floor.cpp **** 
-  28:../cube/Floor.cpp **** void Floor::push(uint8_t* values){
- 702              	.LM21:
- 703              	.LFBB9:
- 704 0000 80B5     	 push {r7,lr}
- 705 0002 82B0     	 sub sp,sp,#8
- 706 0004 00AF     	 add r7,sp,#0
- 707 0006 7860     	 str r0,[r7,#4]
- 708 0008 3960     	 str r1,[r7]
-  29:../cube/Floor.cpp **** 	shiftRegisterArray_->push(values);
- 710              	.LM22:
- 711 000a 7B68     	 ldr r3,[r7,#4]
- 712 000c 1B69     	 ldr r3,[r3,#16]
- 713 000e 1B68     	 ldr r3,[r3]
- 714 0010 1833     	 add r3,r3,#24
- 715 0012 1A68     	 ldr r2,[r3]
- 716 0014 7B68     	 ldr r3,[r7,#4]
- 717 0016 1969     	 ldr r1,[r3,#16]
- 718 0018 3B68     	 ldr r3,[r7]
- 719 001a 081C     	 mov r0,r1
- 720 001c 191C     	 mov r1,r3
- 721 001e 9047     	 blx r2
-  30:../cube/Floor.cpp **** }
- 723              	.LM23:
- 724 0020 BD46     	 mov sp,r7
- 725 0022 02B0     	 add sp,sp,#8
- 726              	 
- 727 0024 80BD     	 pop {r7,pc}
- 729              	.Lscope9:
- 731              	 .stabd 78,0,0
- 732 0026 C046     	 .section .text._ZN5Floor5beginEv,"ax",%progbits
- 733              	 .align 2
- 736              	 .global _ZN5Floor5beginEv
- 737              	 .code 16
- 738              	 .thumb_func
- 740              	_ZN5Floor5beginEv:
- 741              	 .stabd 46,0,0
-  31:../cube/Floor.cpp **** 
-  32:../cube/Floor.cpp **** void Floor::begin(void){
- 743              	.LM24:
- 744              	.LFBB10:
- 745 0000 80B5     	 push {r7,lr}
- 746 0002 82B0     	 sub sp,sp,#8
- 747 0004 00AF     	 add r7,sp,#0
- 748 0006 7860     	 str r0,[r7,#4]
-  33:../cube/Floor.cpp **** 	off();
- 750              	.LM25:
- 751 0008 7B68     	 ldr r3,[r7,#4]
- 752 000a 181C     	 mov r0,r3
- 753 000c FFF7FEFF 	 bl _ZN5Floor3offEv
-  34:../cube/Floor.cpp **** 	shiftRegisterArray_->begin();
- 755              	.LM26:
- 756 0010 7B68     	 ldr r3,[r7,#4]
- 757 0012 1B69     	 ldr r3,[r3,#16]
- 758 0014 181C     	 mov r0,r3
- 759 0016 FFF7FEFF 	 bl _ZN18ShiftRegisterArray5beginEv
+  28:../cube/Floor.cpp **** void Floor::push(int index, uint8_t value){
+ 703              	.LM21:
+ 704              	.LFBB9:
+ 705 0000 80B5     	 push {r7,lr}
+ 706 0002 86B0     	 sub sp,sp,#24
+ 707 0004 00AF     	 add r7,sp,#0
+ 708 0006 F860     	 str r0,[r7,#12]
+ 709 0008 B960     	 str r1,[r7,#8]
+ 710 000a FB1D     	 add r3,r7,#7
+ 711 000c 1A70     	 strb r2,[r3]
+ 712              	.LBB4:
+  29:../cube/Floor.cpp **** 	ShiftRegister* reg = shiftRegisterArray_->getShiftRegisterAt(index);
+ 714              	.LM22:
+ 715 000e FB68     	 ldr r3,[r7,#12]
+ 716 0010 1A69     	 ldr r2,[r3,#16]
+ 717 0012 BB68     	 ldr r3,[r7,#8]
+ 718 0014 101C     	 mov r0,r2
+ 719 0016 191C     	 mov r1,r3
+ 720 0018 FFF7FEFF 	 bl _ZN18ShiftRegisterArray18getShiftRegisterAtEi
+ 721 001c 031C     	 mov r3,r0
+ 722 001e 7B61     	 str r3,[r7,#20]
+  30:../cube/Floor.cpp **** 	reg->push(value);
+ 724              	.LM23:
+ 725 0020 7B69     	 ldr r3,[r7,#20]
+ 726 0022 1B68     	 ldr r3,[r3]
+ 727 0024 0833     	 add r3,r3,#8
+ 728 0026 1B68     	 ldr r3,[r3]
+ 729 0028 7969     	 ldr r1,[r7,#20]
+ 730 002a FA1D     	 add r2,r7,#7
+ 731 002c 1278     	 ldrb r2,[r2]
+ 732 002e 081C     	 mov r0,r1
+ 733 0030 111C     	 mov r1,r2
+ 734 0032 9847     	 blx r3
+ 735              	.LBE4:
+  31:../cube/Floor.cpp **** }
+ 737              	.LM24:
+ 738 0034 BD46     	 mov sp,r7
+ 739 0036 06B0     	 add sp,sp,#24
+ 740              	 
+ 741 0038 80BD     	 pop {r7,pc}
+ 746              	.Lscope9:
+ 748              	 .stabd 78,0,0
+ 749 003a C046     	 .section .text._ZN5Floor4pushEPh,"ax",%progbits
+ 750              	 .align 2
+ 754              	 .global _ZN5Floor4pushEPh
+ 755              	 .code 16
+ 756              	 .thumb_func
+ 758              	_ZN5Floor4pushEPh:
+ 759              	 .stabd 46,0,0
+  32:../cube/Floor.cpp **** 
+  33:../cube/Floor.cpp **** void Floor::push(uint8_t* values){
+ 761              	.LM25:
+ 762              	.LFBB10:
+ 763 0000 80B5     	 push {r7,lr}
+ 764 0002 82B0     	 sub sp,sp,#8
+ 765 0004 00AF     	 add r7,sp,#0
+ 766 0006 7860     	 str r0,[r7,#4]
+ 767 0008 3960     	 str r1,[r7]
+  34:../cube/Floor.cpp **** 	shiftRegisterArray_->push(values);
+ 769              	.LM26:
+ 770 000a 7B68     	 ldr r3,[r7,#4]
+ 771 000c 1B69     	 ldr r3,[r3,#16]
+ 772 000e 1B68     	 ldr r3,[r3]
+ 773 0010 1833     	 add r3,r3,#24
+ 774 0012 1A68     	 ldr r2,[r3]
+ 775 0014 7B68     	 ldr r3,[r7,#4]
+ 776 0016 1969     	 ldr r1,[r3,#16]
+ 777 0018 3B68     	 ldr r3,[r7]
+ 778 001a 081C     	 mov r0,r1
+ 779 001c 191C     	 mov r1,r3
+ 780 001e 9047     	 blx r2
   35:../cube/Floor.cpp **** }
- 761              	.LM27:
- 762 001a BD46     	 mov sp,r7
- 763 001c 02B0     	 add sp,sp,#8
- 764              	 
- 765 001e 80BD     	 pop {r7,pc}
- 767              	.Lscope10:
- 769              	 .stabd 78,0,0
- 770              	 .section .text._ZN5Floor3endEv,"ax",%progbits
- 771              	 .align 2
- 774              	 .global _ZN5Floor3endEv
- 775              	 .code 16
- 776              	 .thumb_func
- 778              	_ZN5Floor3endEv:
- 779              	 .stabd 46,0,0
+ 782              	.LM27:
+ 783 0020 BD46     	 mov sp,r7
+ 784 0022 02B0     	 add sp,sp,#8
+ 785              	 
+ 786 0024 80BD     	 pop {r7,pc}
+ 788              	.Lscope10:
+ 790              	 .stabd 78,0,0
+ 791 0026 C046     	 .section .text._ZN5Floor5beginEv,"ax",%progbits
+ 792              	 .align 2
+ 795              	 .global _ZN5Floor5beginEv
+ 796              	 .code 16
+ 797              	 .thumb_func
+ 799              	_ZN5Floor5beginEv:
+ 800              	 .stabd 46,0,0
   36:../cube/Floor.cpp **** 
-  37:../cube/Floor.cpp **** void Floor::end(void){
- 781              	.LM28:
- 782              	.LFBB11:
- 783 0000 80B5     	 push {r7,lr}
- 784 0002 82B0     	 sub sp,sp,#8
- 785 0004 00AF     	 add r7,sp,#0
- 786 0006 7860     	 str r0,[r7,#4]
-  38:../cube/Floor.cpp **** 	shiftRegisterArray_->end();
- 788              	.LM29:
- 789 0008 7B68     	 ldr r3,[r7,#4]
- 790 000a 1B69     	 ldr r3,[r3,#16]
- 791 000c 181C     	 mov r0,r3
- 792 000e FFF7FEFF 	 bl _ZN18ShiftRegisterArray3endEv
-  39:../cube/Floor.cpp **** 	on();
- 794              	.LM30:
- 795 0012 7B68     	 ldr r3,[r7,#4]
- 796 0014 181C     	 mov r0,r3
- 797 0016 FFF7FEFF 	 bl _ZN5Floor2onEv
+  37:../cube/Floor.cpp **** void Floor::begin(void){
+ 802              	.LM28:
+ 803              	.LFBB11:
+ 804 0000 80B5     	 push {r7,lr}
+ 805 0002 82B0     	 sub sp,sp,#8
+ 806 0004 00AF     	 add r7,sp,#0
+ 807 0006 7860     	 str r0,[r7,#4]
+  38:../cube/Floor.cpp **** 	off();
+ 809              	.LM29:
+ 810 0008 7B68     	 ldr r3,[r7,#4]
+ 811 000a 181C     	 mov r0,r3
+ 812 000c FFF7FEFF 	 bl _ZN5Floor3offEv
+  39:../cube/Floor.cpp **** 	shiftRegisterArray_->begin();
+ 814              	.LM30:
+ 815 0010 7B68     	 ldr r3,[r7,#4]
+ 816 0012 1B69     	 ldr r3,[r3,#16]
+ 817 0014 181C     	 mov r0,r3
+ 818 0016 FFF7FEFF 	 bl _ZN18ShiftRegisterArray5beginEv
   40:../cube/Floor.cpp **** }
- 799              	.LM31:
- 800 001a BD46     	 mov sp,r7
- 801 001c 02B0     	 add sp,sp,#8
- 802              	 
- 803 001e 80BD     	 pop {r7,pc}
- 805              	.Lscope11:
- 807              	 .stabd 78,0,0
- 808              	 .global _ZTV5Floor
- 809              	 .section .rodata._ZTV5Floor,"a",%progbits
- 810              	 .align 3
- 813              	_ZTV5Floor:
- 814 0000 00000000 	 .word 0
- 815 0004 00000000 	 .word 0
- 816 0008 00000000 	 .word _ZN5FloorD1Ev
- 817 000c 00000000 	 .word _ZN5FloorD0Ev
- 818 0010 F4FFFFFF 	 .word -12
- 819 0014 00000000 	 .word 0
- 820 0018 00000000 	 .word _ZThn12_N5FloorD1Ev
- 821 001c 00000000 	 .word _ZThn12_N5FloorD0Ev
- 822              	 .text
- 824              	.Letext0:
- 825              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+ 820              	.LM31:
+ 821 001a BD46     	 mov sp,r7
+ 822 001c 02B0     	 add sp,sp,#8
+ 823              	 
+ 824 001e 80BD     	 pop {r7,pc}
+ 826              	.Lscope11:
+ 828              	 .stabd 78,0,0
+ 829              	 .section .text._ZN5Floor3endEv,"ax",%progbits
+ 830              	 .align 2
+ 833              	 .global _ZN5Floor3endEv
+ 834              	 .code 16
+ 835              	 .thumb_func
+ 837              	_ZN5Floor3endEv:
+ 838              	 .stabd 46,0,0
+  41:../cube/Floor.cpp **** 
+  42:../cube/Floor.cpp **** void Floor::end(void){
+ 840              	.LM32:
+ 841              	.LFBB12:
+ 842 0000 80B5     	 push {r7,lr}
+ 843 0002 82B0     	 sub sp,sp,#8
+ 844 0004 00AF     	 add r7,sp,#0
+ 845 0006 7860     	 str r0,[r7,#4]
+  43:../cube/Floor.cpp **** 	shiftRegisterArray_->end();
+ 847              	.LM33:
+ 848 0008 7B68     	 ldr r3,[r7,#4]
+ 849 000a 1B69     	 ldr r3,[r3,#16]
+ 850 000c 181C     	 mov r0,r3
+ 851 000e FFF7FEFF 	 bl _ZN18ShiftRegisterArray3endEv
+  44:../cube/Floor.cpp **** 	on();
+ 853              	.LM34:
+ 854 0012 7B68     	 ldr r3,[r7,#4]
+ 855 0014 181C     	 mov r0,r3
+ 856 0016 FFF7FEFF 	 bl _ZN5Floor2onEv
+  45:../cube/Floor.cpp **** }
+ 858              	.LM35:
+ 859 001a BD46     	 mov sp,r7
+ 860 001c 02B0     	 add sp,sp,#8
+ 861              	 
+ 862 001e 80BD     	 pop {r7,pc}
+ 864              	.Lscope12:
+ 866              	 .stabd 78,0,0
+ 867              	 .global _ZTV5Floor
+ 868              	 .section .rodata._ZTV5Floor,"a",%progbits
+ 869              	 .align 3
+ 872              	_ZTV5Floor:
+ 873 0000 00000000 	 .word 0
+ 874 0004 00000000 	 .word 0
+ 875 0008 00000000 	 .word _ZN5FloorD1Ev
+ 876 000c 00000000 	 .word _ZN5FloorD0Ev
+ 877 0010 F4FFFFFF 	 .word -12
+ 878 0014 00000000 	 .word 0
+ 879 0018 00000000 	 .word _ZThn12_N5FloorD1Ev
+ 880 001c 00000000 	 .word _ZThn12_N5FloorD0Ev
+ 881              	 .text
+ 883              	.Letext0:
+ 884              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
 DEFINED SYMBOLS
                             *ABS*:00000000 Floor.cpp
     {standard input}:383    .text._ZN5FloorC2EPVmm:00000000 $t
     {standard input}:392    .text._ZN5FloorC2EPVmm:00000000 _ZN5FloorC2EPVmm
     {standard input}:435    .text._ZN5FloorC2EPVmm:0000003c $d
-    {standard input}:813    .rodata._ZTV5Floor:00000000 _ZTV5Floor
+    {standard input}:872    .rodata._ZTV5Floor:00000000 _ZTV5Floor
     {standard input}:392    .text._ZN5FloorC2EPVmm:00000000 _ZN5FloorC1EPVmm
     {standard input}:444    .text._ZN5FloorD2Ev:00000000 $t
     {standard input}:451    .text._ZN5FloorD2Ev:00000000 _ZN5FloorD2Ev
@@ -451,13 +501,15 @@ DEFINED SYMBOLS
     {standard input}:634    .text._ZN5Floor2onEv:00000000 _ZN5Floor2onEv
     {standard input}:659    .text._ZN5Floor3offEv:00000000 $t
     {standard input}:666    .text._ZN5Floor3offEv:00000000 _ZN5Floor3offEv
-    {standard input}:691    .text._ZN5Floor4pushEPh:00000000 $t
-    {standard input}:699    .text._ZN5Floor4pushEPh:00000000 _ZN5Floor4pushEPh
-    {standard input}:733    .text._ZN5Floor5beginEv:00000000 $t
-    {standard input}:740    .text._ZN5Floor5beginEv:00000000 _ZN5Floor5beginEv
-    {standard input}:771    .text._ZN5Floor3endEv:00000000 $t
-    {standard input}:778    .text._ZN5Floor3endEv:00000000 _ZN5Floor3endEv
-    {standard input}:810    .rodata._ZTV5Floor:00000000 $d
+    {standard input}:691    .text._ZN5Floor4pushEih:00000000 $t
+    {standard input}:700    .text._ZN5Floor4pushEih:00000000 _ZN5Floor4pushEih
+    {standard input}:750    .text._ZN5Floor4pushEPh:00000000 $t
+    {standard input}:758    .text._ZN5Floor4pushEPh:00000000 _ZN5Floor4pushEPh
+    {standard input}:792    .text._ZN5Floor5beginEv:00000000 $t
+    {standard input}:799    .text._ZN5Floor5beginEv:00000000 _ZN5Floor5beginEv
+    {standard input}:830    .text._ZN5Floor3endEv:00000000 $t
+    {standard input}:837    .text._ZN5Floor3endEv:00000000 _ZN5Floor3endEv
+    {standard input}:869    .rodata._ZTV5Floor:00000000 $d
 
 UNDEFINED SYMBOLS
 _ZN7PinBaseC2EPVmm
@@ -467,5 +519,6 @@ _ZN7PinBaseD2Ev
 _ZdlPv
 _ZN7PinBase4highEv
 _ZN7PinBase3lowEv
+_ZN18ShiftRegisterArray18getShiftRegisterAtEi
 _ZN18ShiftRegisterArray5beginEv
 _ZN18ShiftRegisterArray3endEv
