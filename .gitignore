@@ -28,4 +28,4 @@
 *.out
 *.app
 
-MagicCube/Debug/
+#MagicCube/Debug/
